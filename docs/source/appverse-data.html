@@ -625,6 +625,24 @@ Unity.IO.IOHeaders = {
  * @version 1.0
  */
 Unity.IO.IORequest = {
+<span id='Unity-IO-IORequest-property-Method'>	/**
+</span>     * The request method (please use uppercase).
+     * In case this method attribute is specified on the IORequest object, 
+	 * its value would override the req-method mapped for the service (service type configuration) for that particular request call.&lt;br/&gt;&lt;br/&gt;
+	 * @version 3.8
+     * @type {String}
+     */
+	Method : '',
+	
+<span id='Unity-IO-IORequest-property-ProtocolVersion'>	/**
+</span>     * The HTTP procotol version to be used for this request.
+	 * &lt;br/&gt;Possible values: 
+	 * {@link Unity.IO#HTTP_PROTOCOL_VERSION_1_0 HTTP_PROTOCOL_VERSION_1_0},
+	 * {@link Unity.IO#HTTP_PROTOCOL_VERSION_1_1 HTTP_PROTOCOL_VERSION_1_1} &lt;br/&gt;&lt;br/&gt;
+	 * @version 3.8
+	 * @type {int}
+     */
+	ProtocolVersion : 0,
 };
 
 <span id='Unity-IO-IOResponse'>/**
