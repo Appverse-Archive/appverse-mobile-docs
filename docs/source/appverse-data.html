@@ -1219,6 +1219,8 @@ Unity.Messaging.AttachmentData = {
 <span id='Unity-Messaging-AttachmentData-property-MimeType'>	/**
 </span>     * The mime type of the current attachment.
 	 * @type {String}
+	 * &lt;br/&gt;&lt;br/&gt; &lt;img src=&quot;resources/images/warning.png&quot;/&gt; &amp;nbsp; When attaching &lt;b&gt;PDF&lt;/b&gt; files to an email in &lt;b&gt;iOS&lt;/b&gt;, you should take into account that a file with the &lt;b&gt;&quot;application/pdf&quot;&lt;/b&gt; mime type (the default type for those files) could be attached in some cases as an &lt;b&gt;inline&lt;/b&gt; image, rather than an attached file. To avoid those situations and always attach PDF files as attachments you should use the &lt;b&gt;&quot;text/x-pdf&quot;&lt;/b&gt; mime type.
+	 * 
      */
 	MimeType: '',
 	
