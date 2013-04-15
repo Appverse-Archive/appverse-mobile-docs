@@ -34,13 +34,13 @@ Unity = new function() {
 };
 
 Unity={
-	version:&quot;3.8&quot;,
+	version:&quot;3.8.5&quot;,
 	
 <span id='Unity-method-init'>	/**
 </span>     * Initialization function
      */
 	init : function() {
-		this.is = post_to_url(Unity.System.serviceName, &quot;GetUnityContext&quot;, null, &quot;POST&quot;);;
+		this.is = post_to_url(Unity.System.serviceName, &quot;GetUnityContext&quot;, null, &quot;POST&quot;);
 	}
 };
 
@@ -325,6 +325,18 @@ Net.prototype.IsNetworkReachable = function(url)
 	return post_to_url(Unity.Net.serviceName, &quot;IsNetworkReachable&quot;, get_params([url]), &quot;POST&quot;);
 };
 
+<span id='Unity-Net-method-GetNetworkData'>/**
+</span> * Gets the network information. &lt;br/&gt;For further information see, {@link Unity.Net.NetworkData NetworkData}.
+ * &lt;br&gt; @version 3.8.5
+ * @return {NetworkData} NetworkData object. 
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+Net.prototype.GetNetworkData = function()
+{
+	return post_to_url(Unity.Net.serviceName, &quot;GetNetworkData&quot;, null, &quot;POST&quot;);
+};
+
 <span id='Unity-Net-method-GetNetworkTypeSupported'>/**
 </span> * Gets the network types currently supported by this device.
  * &lt;br&gt; @version 1.0
@@ -460,6 +472,18 @@ Net.prototype.Async = {
 IsNetworkReachable : function(url, callbackFunctionName, callbackId)
 {
 	post_to_url_async(Unity.Net.serviceName, &quot;IsNetworkReachable&quot;, get_params([url]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-Net-Async-method-GetNetworkData'>/**
+</span> * Gets ASYNC the network information. &lt;br/&gt;For further information see, {@link Unity.Net.NetworkData NetworkData}.
+ * &lt;br&gt; @version 3.8.5
+ * @return {NetworkData} NetworkData object. 
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+GetNetworkData : function(callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.Net.serviceName, &quot;GetNetworkData&quot;, null, callbackFunctionName, callbackId);
 },
 
 <span id='Unity-Net-Async-method-GetNetworkTypeSupported'>/**
@@ -875,7 +899,7 @@ System.prototype.GetLocaleCurrent = function()
  * &amp; {@link Unity.System#INPUTCAPABILITY_VOICE_RECOGNITION INPUTCAPABILITY_VOICE_RECOGNITION} 
  * @return {int[]} List of input methods supported by the device.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetInputMethods = function()
 {
@@ -887,7 +911,7 @@ System.prototype.GetInputMethods = function()
  * &lt;br&gt; @version 1.0
  * @return {int[]} List of input gestures supported by the device.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetInputGestures = function()
 {
@@ -899,7 +923,7 @@ System.prototype.GetInputGestures = function()
  * &lt;br&gt; @version 1.0
  * @return {int[]} List of input buttons supported by the device.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetInputButtons = function()
 {
@@ -921,7 +945,7 @@ System.prototype.GetInputButtons = function()
  * &amp; {@link Unity.System#INPUTCAPABILITY_VOICE_RECOGNITION INPUTCAPABILITY_VOICE_RECOGNITION} 
  * @return {int} Current input method.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetInputMethodCurrent = function()
 {
@@ -943,7 +967,7 @@ System.prototype.GetInputMethodCurrent = function()
  * @param {int} memType The memory type. Optional parameter.
  * @return {long} The memory available in bytes.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetMemoryAvailable = function(memUse, memType)
 {
@@ -963,7 +987,7 @@ System.prototype.GetMemoryAvailable = function(memUse, memType)
  * &amp; {@link Unity.System#MEMORYTYPE_UNKNOWN MEMORYTYPE_UNKNOWN} 
  * @return {int[]} The installed storage types.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetMemoryAvailableTypes = function()
 {
@@ -982,7 +1006,7 @@ System.prototype.GetMemoryAvailableTypes = function()
  * @param {int} memType The type of memory to check for status. Optional parameter.
  * @return {MemoryStatus} The memory status information.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetMemoryStatus = function(memType)
 {
@@ -1002,7 +1026,7 @@ System.prototype.GetMemoryStatus = function(memType)
  * &amp; {@link Unity.System#MEMORYTYPE_UNKNOWN MEMORYTYPE_UNKNOWN} 
  * @return {int[]} The available storafe types.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/information.png&quot;/&gt; *harcoded values | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/information.png&quot;/&gt; *harcoded values | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetMemoryTypes = function()
 {
@@ -1018,7 +1042,7 @@ System.prototype.GetMemoryTypes = function()
  * &amp; {@link Unity.System#MEMORYUSE_OTHER MEMORYUSE_OTHER} 
  * @return {int[]} The available memory uses.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/information.png&quot;/&gt; *harcoded values | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/information.png&quot;/&gt; *harcoded values | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.GetMemoryUses = function()
 {
@@ -1102,7 +1126,7 @@ System.prototype.GetCPUInfo = function()
  * &lt;br&gt; @version 2.0
  * @return {Boolean} True if application remains with the same screen orientation (even though user rotates the device).
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.IsOrientationLocked  = function() {
 	return post_to_url(Unity.System.serviceName, &quot;IsOrientationLocked&quot;, null, &quot;POST&quot;);
@@ -1114,7 +1138,7 @@ System.prototype.IsOrientationLocked  = function() {
  * @param {Boolean} Set value to true if application should remain with the same screen orientation (even though user rotates the device)..
  * @param {int} Set the orientation to lock the device to (this value is ignored if &quot;lock&quot; argument is &quot;false&quot;). Possible values of display orientation: {@link Unity.System#ORIENTATION_LANDSCAPE ORIENTATION_LANDSCAPE}, {@link Unity.System#ORIENTATION_PORTRAIT ORIENTATION_PORTRAIT} or {@link Unity.System#ORIENTATION_UNKNOWN ORIENTATION_UNKNOWN}
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.LockOrientation = function(lock, orientation) {
 	return post_to_url(Unity.System.serviceName, &quot;LockOrientation&quot;, get_params([lock,orientation]), &quot;POST&quot;);
@@ -1139,7 +1163,7 @@ System.prototype.CopyToClipboard = function(textToCopy)
  * &lt;br&gt; @version 3.2
  * @return {Boolean} True if the splash screen is successfully shown, else False.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.ShowSplashScreen = function()
 {
@@ -1151,7 +1175,7 @@ System.prototype.ShowSplashScreen = function()
  * &lt;br&gt; @version 3.2
  * @return {Boolean} True if the splash screen is successfully dismissed, else False.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 System.prototype.DismissSplashScreen = function()
 {
@@ -1583,7 +1607,6 @@ ExecuteSQLTransaction : function(db, statements, rollbackFlag, callbackFunctionN
 
 };
 
-
 /*
  * FILE INTERFACES
  */
@@ -1793,6 +1816,219 @@ FileSystem.prototype.CopyFromRemote = function(url, destFileName)
 	return post_to_url(Unity.FileSystem.serviceName, &quot;CopyFromRemote&quot;, get_params([url,destFileName]), &quot;POST&quot;);
 };
 
+<span id='Unity-FileSystem-Async'>/**
+</span> * @class Unity.FileSystem.Async 
+ * Invokes all FileSystem API methods asynchronously.
+ * &lt;br&gt;
+ * Callback function name and callback identifier are passed to the methods (last arguments) to handle the result object when it is received from unity runtime.
+ * &lt;pre&gt;Usage:
+ * &lt;br&gt; var myCallbackFn = function(result, id){ &lt;br&gt;	...//code here your custom functionality to handle the result... &lt;br&gt;}
+ * &lt;br&gt;Unity.FileSystem.&lt;b&gt;Async&lt;/b&gt;.GetDirectoryRoot('myCallbackFn', 'myId').
+ * &lt;br&gt;or
+ * &lt;br&gt;Unity.FileSystem.&lt;b&gt;Async&lt;/b&gt;.ReadFile(fileDataObj, 'myCallbackFn', 'myId').
+ * &lt;/pre&gt;
+ */
+FileSystem.prototype.Async = {
+
+<span id='Unity-FileSystem-Async-method-GetDirectoryRoot'>/**
+</span> * Get configured root directory.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+GetDirectoryRoot : function(callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;GetDirectoryRoot&quot;, null, callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-CreateDirectory'>/**
+</span> * Creates a directory under the given base directory, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {String} directoryName The directory name to be created. 
+ * @param {DirectoryData} baseDirectory The base Directory to create directory under it. Optional parameter.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+CreateDirectory : function(directoryName, baseDirectory, callbackFunctionName, callbackId)
+{
+	if(baseDirectory == null) {
+		post_to_url_async(Unity.FileSystem.serviceName, &quot;CreateDirectory&quot;, get_params([directoryName]), callbackFunctionName, callbackId);
+	} else {
+		post_to_url_async(Unity.FileSystem.serviceName, &quot;CreateDirectory&quot;, get_params([directoryName,baseDirectory]), callbackFunctionName, callbackId);
+	}
+},
+
+<span id='Unity-FileSystem-Async-method-CreateFile'>/**
+</span> * Creates a file under the given base directory, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData} and {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {String} fileName The file name to be created. 
+ * @param {DirectoryData} baseDirectory The base Directory to create file under it. Optional parameter.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+CreateFile : function(fileName, baseDirectory, callbackFunctionName, callbackId)
+{
+	if(baseDirectory == null) {
+		post_to_url_async(Unity.FileSystem.serviceName, &quot;CreateFile&quot;, get_params([fileName]), callbackFunctionName, callbackId);
+	} else {
+		post_to_url_async(Unity.FileSystem.serviceName, &quot;CreateFile&quot;, get_params([fileName,baseDirectory]), callbackFunctionName, callbackId);
+	}
+},
+
+<span id='Unity-FileSystem-Async-method-ListDirectories'>/**
+</span> * List all directories under the given base directory data, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {DirectoryData} dirData The base Directory to check for directories under it. Optional parameter.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+ListDirectories : function(dirData, callbackFunctionName, callbackId)
+{
+	if(dirData == null) {
+		post_to_url_async(Unity.FileSystem.serviceName, &quot;ListDirectories&quot;, null, callbackFunctionName, callbackId);
+	} else {
+		post_to_url_async(Unity.FileSystem.serviceName, &quot;ListDirectories&quot;, get_params([dirData]), callbackFunctionName, callbackId);
+	}
+},
+
+<span id='Unity-FileSystem-Async-method-ListFiles'>/**
+</span> * List all files under the given base directory data, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData} and {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {DirectoryData} dirData The base Directory to check for files under it. Optional parameter.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+ListFiles : function(dirData, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;ListFiles&quot;, get_params([dirData]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-ExistsDirectory'>/**
+</span> * Checks if the given directory exists.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {DirectoryData} dirData The directory to check for existence.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ */
+ExistsDirectory : function(dirData, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;ExistsDirectory&quot;, get_params([dirData]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-DeleteDirectory'>/**
+</span> * Deletes the given directory.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {DirectoryData} dirData The directory to be deleted.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+DeleteDirectory : function(dirData, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;DeleteDirectory&quot;, get_params([dirData]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-DeleteFile'>/**
+</span> * Deletes the given file.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {FileData} fileData The file to be deleted.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+DeleteFile : function(fileData, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;DeleteFile&quot;, get_params([fileData]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-ExistsFile'>/**
+</span> * Checks if the given file exists.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {FileData} fileData The file data to check for existence.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ */
+ExistsFile : function(fileData, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;ExistsFile&quot;, get_params([fileData]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-ReadFile'>/**
+</span> * Reads file on given path.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {FileData} fileData The file data to read.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+ReadFile : function(fileData, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;ReadFile&quot;, get_params([fileData]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-WriteFile'>/**
+</span> * Writes contents to file on given path.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {FileData} fileData The file to add/append contents to.
+ * @param {byte[]} contents The data to be written to file.
+ * @param {Boolean} appendFlag True if data should be appended to previous file data.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+WriteFile : function(fileData, contents, appendFlag, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;WriteFile&quot;, get_params([fileData,contents,appendFlag]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-CopyFromResources'>/**
+</span> * Copies the given file on &quot;fromPath&quot; to the &quot;toPath&quot;, in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {String} sourceFileName The file name (relative path under &quot;resources&quot; application directory) to be copied from. 
+ * @param {String} destFileName The file name (relative path under &quot;documents&quot; application directory) to be copied to.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/warning.png&quot;/&gt; *&quot;resources&quot; path pending to be defined for this platform &lt;/pre&gt;
+ */
+CopyFromResources : function(sourceFileName, destFileName, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;CopyFromResources&quot;, get_params([sourceFileName,destFileName]), callbackFunctionName, callbackId);
+},
+
+<span id='Unity-FileSystem-Async-method-CopyFromRemote'>/**
+</span> * Copies the given remote file from &quot;url&quot; to the &quot;toPath&quot; (local relative path), in ASYNC mode.
+ * &lt;br&gt; @version 3.8.5
+ * @param {String} url The remote url file to be copied from. 
+ * @param {String} destFileName The file name (relative path under &quot;documents&quot; application directory) to be copied to.
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; &lt;/pre&gt;
+ */
+CopyFromRemote : function(url, destFileName, callbackFunctionName, callbackId)
+{
+	post_to_url_async(Unity.FileSystem.serviceName, &quot;CopyFromRemote&quot;, get_params([url,destFileName]), callbackFunctionName, callbackId);
+}
+
+};
+
 /*
  * Notification INTERFACES
  */
@@ -1893,7 +2129,7 @@ Notification.prototype.StopNotifyAlert = function()
  * @param {String[]} jsCallbackFunctions The callback javascript functions as string texts for each of the given buttons. Empty string if no action is required for a button.
  * @return {Boolean} True if action sheet could be showed.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Notification.prototype.StartNotifyActionSheet = function(title, buttons, jsCallbackFunctions)
 {
@@ -1929,7 +2165,7 @@ Notification.prototype.StopNotifyBeep = function()
  * &lt;br&gt; @version 1.0
  * @return {Boolean} True if beep notification could be started.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Notification.prototype.StartNotifyBlink = function()
 {
@@ -1941,7 +2177,7 @@ Notification.prototype.StartNotifyBlink = function()
  * &lt;br&gt; @version 1.0
  * @return {Boolean} True if blink notification could be stopped.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Notification.prototype.StopNotifyBlink = function()
 {
@@ -2119,7 +2355,7 @@ StopNotifyAlert : function(callbackFunctionName, callbackId)
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 StartNotifyActionSheet : function(title, buttons, jsCallbackFunctions, callbackFunctionName, callbackId)
 {
@@ -2158,7 +2394,7 @@ StopNotifyBeep : function(callbackFunctionName, callbackId)
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 StartNotifyBlink : function(callbackFunctionName, callbackId)
 {
@@ -2171,7 +2407,7 @@ StartNotifyBlink : function(callbackFunctionName, callbackId)
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 StopNotifyBlink : function(callbackFunctionName, callbackId)
 {
@@ -3000,7 +3236,7 @@ Media.prototype.GetCurrentMedia = function()
  * Returned value is &quot;null&quot; on synchronous call.
  * &lt;br&gt; @version 2.0
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; * in progess | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; * in progess | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Media.prototype.GetSnapshot = function()
 {
@@ -3013,7 +3249,7 @@ Media.prototype.GetSnapshot = function()
  * Returned value is &quot;null&quot; on synchronous call.
  * &lt;br&gt; @version 2.0
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; * in progess | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; * in progess | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Media.prototype.TakeSnapshot = function()
 {
@@ -3150,7 +3386,7 @@ GetCurrentMedia : function(callbackFunctionName, callbackId)
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; * in progess | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; * in progess | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 GetSnapshot : function(callbackFunctionName, callbackId)
 {
@@ -3166,7 +3402,7 @@ GetSnapshot : function(callbackFunctionName, callbackId)
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @return {Unity.Media.MediaMetadata} Media file metadata taken by the camera. 
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; * in progess | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; * in progess | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 TakeSnapshot : function(callbackFunctionName, callbackId)
 {
@@ -3904,7 +4140,7 @@ Unity.Analytics = new Analytics();
  * @param {String} webPropertyID The web property ID with the format UA-99999999-9
  * @return {Boolean} true if the tracker was started successfully
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Analytics.prototype.StartTracking = function (webPropertyID){
     return post_to_url(Unity.Analytics.serviceName, &quot;StartTracking&quot;, get_params([webPropertyID]),&quot;POST&quot;);
@@ -3916,7 +4152,7 @@ Analytics.prototype.StartTracking = function (webPropertyID){
  * &lt;br&gt; @version 3.0
  * @return {Boolean} true if tracker was stopped
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Analytics.prototype.StopTracking = function (){
     return post_to_url(Unity.Analytics.serviceName, &quot;StopTracking&quot;, null,&quot;POST&quot;);
@@ -3931,7 +4167,7 @@ Analytics.prototype.StopTracking = function (){
  * @param {Integer} value The event value
  * @return {Boolean} true if the event was successfully tracked
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Analytics.prototype.TrackEvent = function (group, action, label, value){
     return post_to_url(Unity.Analytics.serviceName, &quot;TrackEvent&quot;, get_params([group,action,label, value]),&quot;POST&quot;);
@@ -3943,7 +4179,7 @@ Analytics.prototype.TrackEvent = function (group, action, label, value){
  * @param {String} relativeUrl The relativeUrl to the page i.e. &quot;/home&quot;
  * @return {Boolean} true if the pageview was successfully tracked
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Analytics.prototype.TrackPageView = function (relativeUrl){
     return post_to_url(Unity.Analytics.serviceName, &quot;TrackPageView&quot;, get_params([relativeUrl]),&quot;POST&quot;);
@@ -4154,7 +4390,7 @@ Unity.Webtrekk = new Webtrekk();
  * only every nth user is tracked.
  * @return {Boolean} true if the tracker was started successfully
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Webtrekk.prototype.StartTracking = function (webServerUrl, trackId, samplingRate){
 	if(samplingRate == null){
@@ -4169,7 +4405,7 @@ Webtrekk.prototype.StartTracking = function (webServerUrl, trackId, samplingRate
  * &lt;br&gt; @version 3.8
  * @return {Boolean} true if tracker was stopped
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Webtrekk.prototype.StopTracking = function (){
     return post_to_url(Unity.Webtrekk.serviceName, &quot;StopTracking&quot;, null,&quot;POST&quot;);
@@ -4199,7 +4435,7 @@ Webtrekk.prototype.StopTracking = function (){
  * @param {WebtrekkParametersCollection} additionalParameters [optional] Array containing additional parameters
  * @return {Boolean} true if the content/event was successfully tracked
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Webtrekk.prototype.TrackClick = function (clickId, contentId, additionalParameters){
 	if(additionalParameters == null){
@@ -4233,7 +4469,7 @@ Webtrekk.prototype.TrackClick = function (clickId, contentId, additionalParamete
  * @param {WebtrekkParametersCollection} additionalParameters [optional] Array containing additional parameters
  * @return {Boolean} true if the content/event was successfully tracked
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Webtrekk.prototype.TrackContent = function (contentId, additionalParameters){
 	if(additionalParameters == null){
@@ -4254,7 +4490,7 @@ Webtrekk.prototype.TrackContent = function (contentId, additionalParameters){
  * @param {double} intervalInSeconds The interval in seconds the request will transmit data to the server
  * @return {Boolean} true if the interval was successfully set
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
  */
 Webtrekk.prototype.SetRequestInterval = function (intervalInSeconds){
     return post_to_url(Unity.Webtrekk.serviceName, &quot;SetRequestInterval&quot;, get_params([intervalInSeconds]),&quot;POST&quot;);
