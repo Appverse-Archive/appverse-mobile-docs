@@ -1886,6 +1886,103 @@ Unity.I18N.Locale = {
  */
 Unity.I18N.ResourceLiteralDictionary = {};
 
+// *************************************************
+// *********** UNITY NOTIFICATION API **************
+// *************************************************
+
+<span id='Unity-Notification-NotificationData'>/**
+</span> * @class Unity.Notification.NotificationData
+ * @namespace Unity.Notification
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represents the data received on a remote or local notificaition (alert message, sound to be played, badged number to be displayed on the application icon, and any required custom data (JSON format)
+ * @author maps
+ * @version 3.9
+ */
+Unity.Notification.NotificationData = {
+
+<span id='Unity-Notification-NotificationData-property-AlertMessage'>    /**
+</span>     * The message text to be shown on this notification.
+     * @type {String}
+     */
+	AlertMessage : '',
+	
+<span id='Unity-Notification-NotificationData-property-Sound'>	/**
+</span>     * The name of a sound file in the application bundle, that would be played as an alert. If the sound file doesn not exist or default is specified as the value, the default alert sound is played. 
+     * @type {String}
+     */
+	Sound : 'default',
+	
+<span id='Unity-Notification-NotificationData-property-Badge'>	/**
+</span>     * The number to display as the badge of the application icon. To remove the badge, value should be set to 0.
+     * @type {int}
+     */
+	Badge : 0,
+	
+<span id='Unity-Notification-NotificationData-property-CustomDataJsonString'>	/**
+</span>     * Custom payload values received on this notification. JSON structured with primitive types: dictionary (object), array, string, number, and boolean.
+     * @type {String}
+     */
+	CustomDataJsonString : ''
+};
+
+<span id='Unity-Notification-RegistrationToken'>/**
+</span> * @class Unity.Notification.RegistrationToken
+ * @namespace Unity.Notification
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represent the &quot;device token&quot;, or &quot;registration token&quot;, that contains information that enables the Push Notifications Service (APNs for Apple, or GCM for Google) to locate the device on which the client application is installed. It is also used to authenticate the routing of a notification.
+ * @author maps
+ * @version 3.9
+ */
+Unity.Notification.RegistrationToken = {
+
+<span id='Unity-Notification-RegistrationToken-property-StringRepresentation'>	/**
+</span>     * The string representation of this registration token (could be in hexadecimal format).
+     * @type {String}
+     */
+	StringRepresentation : '',
+	
+<span id='Unity-Notification-RegistrationToken-property-Binary'>	/**
+</span>     * The binary representation of this registration token.
+     * @type {byte[]}
+     */
+	Binary : [],
+	
+<span id='Unity-Notification-RegistrationToken-property-BinaryLength'>	/**
+</span>     * The length of the binary representation of this registration token.
+     * @type {int}
+     */
+	BinaryLength : 0,
+
+};
+
+<span id='Unity-Notification-RegistrationError'>/**
+</span> * @class Unity.Notification.RegistrationError
+ * @namespace Unity.Notification
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represent error data on a failure registration for receiving remote notifications.
+ * @author maps
+ * @version 3.9
+ */
+Unity.Notification.RegistrationError = {
+<span id='Unity-Notification-RegistrationError-property-Code'>	/**
+</span>     * The error code.
+     * @type {String}
+     */
+	Code : '',
+	
+<span id='Unity-Notification-RegistrationError-property-LocalizedDescription'>	/**
+</span>     * The error description (already localized on the device current locale).
+     * @type {String}
+     */
+	LocalizedDescription : ''
+};
+
 // *****************************************
 // *********** UNITY WEBTREKK API **************
 // *****************************************
