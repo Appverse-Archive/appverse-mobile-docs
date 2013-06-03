@@ -155,18 +155,29 @@ Unity.backButtonListener = function() {};
  * &lt;br&gt; For further information see, {@link Unity.Notification.NotificationData NotificationData}.
  * &lt;br&gt; @version 3.9
  * @method
- * @param {NotificationData} notificationData The notification data received (visual data and custom provider data)
+ * @param {Unity.Notiticaton.NotificationData} notificationData The notification data received (visual data and custom provider data)
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
  * 
  */
 Unity.OnRemoteNotificationReceived = function(notificationData) {};
+
+<span id='Unity-method-OnLocalNotificationReceived'>/**
+</span> * Applications should override/implement this method to be aware of local notification reception, and should perform the desired javascript code on this case.
+ * &lt;br&gt; For further information see, {@link Unity.Notification.NotificationData NotificationData}.
+ * &lt;br&gt; @version 3.9
+ * @method
+ * @param {Unity.Notification.NotificationData} notificationData The notification data received (visual data and custom provider data)
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; N/A | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ * 
+ */
+Unity.OnLocalNotificationReceived = function(notificationData) {};
 
 <span id='Unity-method-OnRegisterForRemoteNotificationsSuccess'>/**
 </span> * Applications should override/implement this method to be aware of a successfully registration for remote notifications, and should perform the desired javascript code on this case.
  * &lt;br&gt; For further information see, {@link Unity.Notification.RegistrationToken RegistrationToken}.
  * &lt;br&gt; @version 3.9
  * @method
- * @param {ResgistrationToken} registrationToken The registration token (&quot;device token&quot; for iOS or &quot;registration ID&quot; for Android) data received from the Notifications Service (APNs for iOS or GMC for Android).
+ * @param {Unity.Notification.RegistrationToken} registrationToken The registration token (&quot;device token&quot; for iOS or &quot;registration ID&quot; for Android) data received from the Notifications Service (APNs for iOS or GMC for Android).
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
  * 
  */
@@ -177,7 +188,7 @@ Unity.OnRegisterForRemoteNotificationsSuccess = function(registrationToken) {};
  * &lt;br&gt; For further information see, {@link Unity.Notification.RegistrationError RegistrationError}.
  * &lt;br&gt; @version 3.9
  * @method
- * @param {ResgistrationError} registrationError The registration error data received from the Notifications Service (APNs for iOS or GMC for Android).
+ * @param {Unity.Notification.RegistrationError} registrationError The registration error data received from the Notifications Service (APNs for iOS or GMC for Android).
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
  * 
  */
@@ -361,7 +372,7 @@ Net.prototype.IsNetworkReachable = function(url)
 <span id='Unity-Net-method-GetNetworkData'>/**
 </span> * Gets the network information. &lt;br/&gt;For further information see, {@link Unity.Net.NetworkData NetworkData}.
  * &lt;br&gt; @version 3.8.5
- * @return {NetworkData} NetworkData object. 
+ * @return {Unity.Net.NetworkData} NetworkData object. 
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -510,7 +521,7 @@ IsNetworkReachable : function(url, callbackFunctionName, callbackId)
 <span id='Unity-Net-Async-method-GetNetworkData'>/**
 </span> * Gets ASYNC the network information. &lt;br/&gt;For further information see, {@link Unity.Net.NetworkData NetworkData}.
  * &lt;br&gt; @version 3.8.5
- * @return {NetworkData} NetworkData object. 
+ * @return {Unity.Net.NetworkData} NetworkData object. 
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -552,6 +563,7 @@ GetNetworkTypeReachableList : function(url, callbackFunctionName, callbackId)
  * @param {String} url The host url to check for reachability.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
  * @method
  */
 GetNetworkTypeReachable : function(url, callbackFunctionName, callbackId)
@@ -826,7 +838,7 @@ System.prototype.GetDisplays = function()
 </span> * Provides information about the display given its index. &lt;br/&gt;For further information see, {@link Unity.System.DisplayInfo DisplayInfo}. 
  * &lt;br&gt; @version 1.0
  * @param {int} displayNumber The display number index. If not provided, primary display information is returned.
- * @return {DisplayInfo} The given display information, if found. Null value is returned, if given diplay number does not corresponds a valid index.
+ * @return {Unity.System.DisplayInfo} The given display information, if found. Null value is returned, if given diplay number does not corresponds a valid index.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/warning.png&quot;/&gt; *data needs to be returned by callback| android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -896,7 +908,7 @@ System.prototype.GetOrientationSupported = function(displayNumber)
 <span id='Unity-System-method-GetLocaleSupported'>/**
 </span> * List of available Locales for the device. &lt;br/&gt;For further information see, {@link Unity.System.Locale Locale}. 
  * &lt;br&gt; @version 1.0
- * @return {Locale[]} The list of supported locales.
+ * @return {Unity.System.Locale[]} The list of supported locales.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;  &lt;/pre&gt;
  */
@@ -908,7 +920,7 @@ System.prototype.GetLocaleSupported = function()
 <span id='Unity-System-method-GetLocaleCurrent'>/**
 </span> * Gets the current Locale for the device.&lt;br/&gt;For further information see, {@link Unity.System.Locale Locale}. 
  * &lt;br&gt; @version 1.0
- * @return {Locale} The current Locale information.
+ * @return {Unity.System.Locale} The current Locale information.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;  &lt;/pre&gt;
  */
@@ -1037,7 +1049,7 @@ System.prototype.GetMemoryAvailableTypes = function()
  * {@link Unity.System#MEMORYTYPE_MAIN MEMORYTYPE_MAIN},
  * &amp; {@link Unity.System#MEMORYTYPE_UNKNOWN MEMORYTYPE_UNKNOWN} 
  * @param {int} memType The type of memory to check for status. Optional parameter.
- * @return {MemoryStatus} The memory status information.
+ * @return {Unity.System.MemoryStatus} The memory status information.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
  */
@@ -1085,7 +1097,7 @@ System.prototype.GetMemoryUses = function()
 <span id='Unity-System-method-GetOSHardwareInfo'>/**
 </span> * Provides information about the device hardware.&lt;br/&gt;For further information see, {@link Unity.System.HardwareInfo HardwareInfo}.
  * &lt;br&gt; @version 1.0
- * @return {HardwareInfo} The device hardware information (name, version, UUID, etc).
+ * @return {Unity.System.HardwareInfo} The device hardware information (name, version, UUID, etc).
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1097,7 +1109,7 @@ System.prototype.GetOSHardwareInfo = function()
 <span id='Unity-System-method-GetOSInfo'>/**
 </span> * Provides information about the device operating system.&lt;br/&gt;For further information see, {@link Unity.System.OSInfo OSInfo}.
  * &lt;br&gt; @version 1.0
- * @return {OSInfo} The device OS information (name, vendor, version).
+ * @return {Unity.System.OSInfo} The device OS information (name, vendor, version).
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1121,7 +1133,7 @@ System.prototype.GetOSUserAgent = function()
 <span id='Unity-System-method-GetPowerInfo'>/**
 </span> * Provides information about the device charge.&lt;br/&gt;For further information see, {@link Unity.System.PowerInfo PowerInfo}.
  * &lt;br&gt; @version 1.0
- * @return {PowerInfo} The current charge information.
+ * @return {Unity.System.PowerInfo} The current charge information.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1145,7 +1157,7 @@ System.prototype.GetPowerRemainingTime = function()
 <span id='Unity-System-method-GetCPUInfo'>/**
 </span> * Provides information about the device CPU.&lt;br/&gt;For further information see, {@link Unity.System.CPUInfo CPUInfo}.
  * &lt;br&gt; @version 1.0
- * @return {CPUInfo} The processor information (name, vendor, speed, UUID, etc).
+ * @return {Unity.System.CPUInfo} The processor information (name, vendor, speed, UUID, etc).
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; *not available on iOS SDK | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1387,7 +1399,7 @@ Database.prototype.ExistsDatabase = function(dbName)
  * @param {Unity.Database.Database} db The database object reference (as provided by {@link #GetDatabase}).
  * @param {String} query The SQL query to execute. 
  * @param {String[]} replacements The replacement arguments for a preformatted SQL query. Optional parameter.
- * @return {ResultSet} The result set (with zero rows count parameter if no rows satisfy query conditions).
+ * @return {Unity.Database.ResultSet} The result set (with zero rows count parameter if no rows satisfy query conditions).
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1668,7 +1680,7 @@ Unity.FileSystem = new FileSystem();
 <span id='Unity-FileSystem-method-GetDirectoryRoot'>/**
 </span> * Get configured root directory.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}.
  * &lt;br&gt; @version 1.0
- * @return {DirectoryData} The configured root directory information.
+ * @return {Unity.FileSystem.DirectoryData} The configured root directory information.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1681,8 +1693,8 @@ FileSystem.prototype.GetDirectoryRoot = function()
 </span> * Creates a directory under the given base directory, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}.
  * &lt;br&gt; @version 1.0
  * @param {String} directoryName The directory name to be created. 
- * @param {DirectoryData} baseDirectory The base Directory to create directory under it. Optional parameter.
- * @return {DirectoryData} The directory created, or null if folder cannot be created.
+ * @param {Unity.FileSystem.DirectoryData} baseDirectory The base Directory to create directory under it. Optional parameter.
+ * @return {Unity.FileSystem.DirectoryData} The directory created, or null if folder cannot be created.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1699,8 +1711,8 @@ FileSystem.prototype.CreateDirectory = function(directoryName, baseDirectory)
 </span> * Creates a file under the given base directory, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData} and {@link Unity.FileSystem.FileData FileData}.
  * &lt;br&gt; @version 1.0
  * @param {String} fileName The file name to be created. 
- * @param {DirectoryData} baseDirectory The base Directory to create file under it. Optional parameter.
- * @return {FileData} The file created, or null if folder cannot be created.
+ * @param {Unity.FileSystem.DirectoryData} baseDirectory The base Directory to create file under it. Optional parameter.
+ * @return {Unity.FileSystem.FileData} The file created, or null if folder cannot be created.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1716,8 +1728,8 @@ FileSystem.prototype.CreateFile = function(fileName, baseDirectory)
 <span id='Unity-FileSystem-method-ListDirectories'>/**
 </span> * List all directories under the given base directory data, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}.
  * &lt;br&gt; @version 1.0
- * @param {DirectoryData} dirData The base Directory to check for directories under it. Optional parameter.
- * @return {DirectoryData[]} The directories information array.
+ * @param {Unity.FileSystem.DirectoryData} dirData The base Directory to check for directories under it. Optional parameter.
+ * @return {Unity.FileSystem.DirectoryData[]} The directories information array.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1733,8 +1745,8 @@ FileSystem.prototype.ListDirectories = function(dirData)
 <span id='Unity-FileSystem-method-ListFiles'>/**
 </span> * List all files under the given base directory data, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData} and {@link Unity.FileSystem.FileData FileData}.
  * &lt;br&gt; @version 1.0
- * @param {DirectoryData} dirData The base Directory to check for files under it. Optional parameter.
- * @return {FileData[]} The files information array.
+ * @param {Unity.FileSystem.DirectoryData} dirData The base Directory to check for files under it. Optional parameter.
+ * @return {Unity.FileSystem.FileData[]} The files information array.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
@@ -1746,9 +1758,10 @@ FileSystem.prototype.ListFiles = function(dirData)
 <span id='Unity-FileSystem-method-ExistsDirectory'>/**
 </span> * Checks if the given directory exists.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}.
  * &lt;br&gt; @version 1.0
- * @param {DirectoryData} dirData The directory to check for existence.
+ * @param {Unity.FileSystem.DirectoryData} dirData The directory to check for existence.
  * @return {Boolean} True if directory exists.
  * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
  */
 FileSystem.prototype.ExistsDirectory = function(dirData)
 {
@@ -1758,7 +1771,7 @@ FileSystem.prototype.ExistsDirectory = function(dirData)
 <span id='Unity-FileSystem-method-DeleteDirectory'>/**
 </span> * Deletes the given directory.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}.
  * &lt;br&gt; @version 1.0
- * @param {DirectoryData} dirData The directory to be deleted.
+ * @param {Unity.FileSystem.DirectoryData} dirData The directory to be deleted.
  * @return {Boolean} True on successful directory deletion.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
@@ -1771,7 +1784,7 @@ FileSystem.prototype.DeleteDirectory = function(dirData)
 <span id='Unity-FileSystem-method-DeleteFile'>/**
 </span> * Deletes the given file.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}.
  * &lt;br&gt; @version 1.0
- * @param {FileData} fileData The file to be deleted.
+ * @param {Unity.FileSystem.FileData} fileData The file to be deleted.
  * @return {Boolean} True on successful file deletion.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
@@ -1784,9 +1797,10 @@ FileSystem.prototype.DeleteFile = function(fileData)
 <span id='Unity-FileSystem-method-ExistsFile'>/**
 </span> * Checks if the given file exists.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}.
  * &lt;br&gt; @version 1.0
- * @param {FileData} fileData The file data to check for existence.
+ * @param {Unity.FileSystem.FileData} fileData The file data to check for existence.
  * @return {Boolean} True if file exists.
  * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
  */
 FileSystem.prototype.ExistsFile = function(fileData)
 {
@@ -1796,7 +1810,7 @@ FileSystem.prototype.ExistsFile = function(fileData)
 <span id='Unity-FileSystem-method-ReadFile'>/**
 </span> * Reads file on given path.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}.
  * &lt;br&gt; @version 1.0
- * @param {FileData} fileData The file data to read.
+ * @param {Unity.FileSystem.FileData} fileData The file data to read.
  * @return {byte[]} Readed bytes.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
@@ -1809,7 +1823,7 @@ FileSystem.prototype.ReadFile = function(fileData)
 <span id='Unity-FileSystem-method-WriteFile'>/**
 </span> * Writes contents to file on given path.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}.
  * &lt;br&gt; @version 1.0
- * @param {FileData} fileData The file to add/append contents to.
+ * @param {Unity.FileSystem.FileData} fileData The file to add/append contents to.
  * @param {byte[]} contents The data to be written to file.
  * @param {Boolean} appendFlag True if data should be appended to previous file data.
  * @return {Boolean} True if file could be written.
@@ -1880,7 +1894,7 @@ GetDirectoryRoot : function(callbackFunctionName, callbackId)
 </span> * Creates a directory under the given base directory, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
  * @param {String} directoryName The directory name to be created. 
- * @param {DirectoryData} baseDirectory The base Directory to create directory under it. Optional parameter.
+ * @param {Unity.FileSystem.DirectoryData} baseDirectory The base Directory to create directory under it. Optional parameter.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
@@ -1899,7 +1913,7 @@ CreateDirectory : function(directoryName, baseDirectory, callbackFunctionName, c
 </span> * Creates a file under the given base directory, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData} and {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
  * @param {String} fileName The file name to be created. 
- * @param {DirectoryData} baseDirectory The base Directory to create file under it. Optional parameter.
+ * @param {Unity.FileSystem.DirectoryData} baseDirectory The base Directory to create file under it. Optional parameter.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
@@ -1917,7 +1931,7 @@ CreateFile : function(fileName, baseDirectory, callbackFunctionName, callbackId)
 <span id='Unity-FileSystem-Async-method-ListDirectories'>/**
 </span> * List all directories under the given base directory data, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
- * @param {DirectoryData} dirData The base Directory to check for directories under it. Optional parameter.
+ * @param {Unity.FileSystem.DirectoryData} dirData The base Directory to check for directories under it. Optional parameter.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
@@ -1935,7 +1949,7 @@ ListDirectories : function(dirData, callbackFunctionName, callbackId)
 <span id='Unity-FileSystem-Async-method-ListFiles'>/**
 </span> * List all files under the given base directory data, or under root directory if it is not provided.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData} and {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
- * @param {DirectoryData} dirData The base Directory to check for files under it. Optional parameter.
+ * @param {Unity.FileSystem.DirectoryData} dirData The base Directory to check for files under it. Optional parameter.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
@@ -1949,10 +1963,11 @@ ListFiles : function(dirData, callbackFunctionName, callbackId)
 <span id='Unity-FileSystem-Async-method-ExistsDirectory'>/**
 </span> * Checks if the given directory exists.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
- * @param {DirectoryData} dirData The directory to check for existence.
+ * @param {Unity.FileSystem.DirectoryData} dirData The directory to check for existence.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
  */
 ExistsDirectory : function(dirData, callbackFunctionName, callbackId)
 {
@@ -1962,7 +1977,7 @@ ExistsDirectory : function(dirData, callbackFunctionName, callbackId)
 <span id='Unity-FileSystem-Async-method-DeleteDirectory'>/**
 </span> * Deletes the given directory.&lt;br/&gt;For further information see, {@link Unity.FileSystem.DirectoryData DirectoryData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
- * @param {DirectoryData} dirData The directory to be deleted.
+ * @param {Unity.FileSystem.DirectoryData} dirData The directory to be deleted.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
@@ -1976,7 +1991,7 @@ DeleteDirectory : function(dirData, callbackFunctionName, callbackId)
 <span id='Unity-FileSystem-Async-method-DeleteFile'>/**
 </span> * Deletes the given file.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
- * @param {FileData} fileData The file to be deleted.
+ * @param {Unity.FileSystem.FileData} fileData The file to be deleted.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
@@ -1990,10 +2005,11 @@ DeleteFile : function(fileData, callbackFunctionName, callbackId)
 <span id='Unity-FileSystem-Async-method-ExistsFile'>/**
 </span> * Checks if the given file exists.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
- * @param {FileData} fileData The file data to check for existence.
+ * @param {Unity.FileSystem.FileData} fileData The file data to check for existence.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
  */
 ExistsFile : function(fileData, callbackFunctionName, callbackId)
 {
@@ -2003,7 +2019,7 @@ ExistsFile : function(fileData, callbackFunctionName, callbackId)
 <span id='Unity-FileSystem-Async-method-ReadFile'>/**
 </span> * Reads file on given path.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
- * @param {FileData} fileData The file data to read.
+ * @param {Unity.FileSystem.FileData} fileData The file data to read.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
  * @method
@@ -2017,7 +2033,7 @@ ReadFile : function(fileData, callbackFunctionName, callbackId)
 <span id='Unity-FileSystem-Async-method-WriteFile'>/**
 </span> * Writes contents to file on given path.&lt;br/&gt;For further information see, {@link Unity.FileSystem.FileData FileData}, in ASYNC mode.
  * &lt;br&gt; @version 3.8.5
- * @param {FileData} fileData The file to add/append contents to.
+ * @param {Unity.FileSystem.FileData} fileData The file to add/append contents to.
  * @param {byte[]} contents The data to be written to file.
  * @param {Boolean} appendFlag True if data should be appended to previous file data.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
@@ -2113,6 +2129,48 @@ Notification = function() {
 	 * @type int
 	 */
 	this.REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY = 4;
+	
+<span id='Unity-Notification-property-LOCAL_NOTIFICATION_REPEAT_INTERVAL_NO_REPEAT'>	/**
+</span>	 * No-Repeat Interval for Local Notification.
+	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.LOCAL_NOTIFICATION_REPEAT_INTERVAL_NO_REPEAT = 0;
+	
+<span id='Unity-Notification-property-LOCAL_NOTIFICATION_REPEAT_INTERVAL_HOURLY'>	/**
+</span>	 * Hourly Repeat Interval for Local Notification.
+	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.LOCAL_NOTIFICATION_REPEAT_INTERVAL_HOURLY = 1;
+	
+<span id='Unity-Notification-property-LOCAL_NOTIFICATION_REPEAT_INTERVAL_DAILY'>	/**
+</span>	 * Daily Repeat Interval for Local Notification.
+	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.LOCAL_NOTIFICATION_REPEAT_INTERVAL_DAILY = 2;
+	
+<span id='Unity-Notification-property-LOCAL_NOTIFICATION_REPEAT_INTERVAL_WEEKLY'>	/**
+</span>	 * Weekly Repeat Interval for Local Notification.
+	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.LOCAL_NOTIFICATION_REPEAT_INTERVAL_WEEKLY = 3;
+
+<span id='Unity-Notification-property-LOCAL_NOTIFICATION_REPEAT_INTERVAL_MONTHLY'>	/**
+</span>	 * Monthly Repeat Interval for Local Notification.
+	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.LOCAL_NOTIFICATION_REPEAT_INTERVAL_MONTHLY = 4;
+	
+<span id='Unity-Notification-property-LOCAL_NOTIFICATION_REPEAT_INTERVAL_YEARLY'>	/**
+</span>	 * Yearly Repeat Interval for Local Notification.
+	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.LOCAL_NOTIFICATION_REPEAT_INTERVAL_YEARLY = 5;
 }
 
 Unity.Notification = new Notification();
@@ -2329,7 +2387,7 @@ Notification.prototype.StopNotifyVibrate = function()
  * &lt;br&gt; @version 3.9
  * @method
  * @param {String} senderId The sender identifier.
- * @param {RemoteNotificationType[]} types The remote notifications types accepted by this application. For further information see, {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_NONE REMOTE_NOTIFICATION_TYPE_NONE}, {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_BADGE REMOTE_NOTIFICATION_TYPE_BADGE}, {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_SOUND REMOTE_NOTIFICATION_TYPE_SOUND}, {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_ALERT REMOTE_NOTIFICATION_TYPE_ALERT} and {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY}
+ * @param {Unity.Notification.RemoteNotificationType[]} types The remote notifications types accepted by this application. For further information see, {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_NONE REMOTE_NOTIFICATION_TYPE_NONE}, {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_BADGE REMOTE_NOTIFICATION_TYPE_BADGE}, {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_SOUND REMOTE_NOTIFICATION_TYPE_SOUND}, {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_ALERT REMOTE_NOTIFICATION_TYPE_ALERT} and {@link Unity.Notification#REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY}
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
  */
 Notification.prototype.RegisterForRemoteNotifications = function(senderId, types) 
@@ -2381,6 +2439,55 @@ Notification.prototype.IncrementApplicationIconBadgeNumber = function()
 Notification.prototype.DecrementApplicationIconBadgeNumber = function() 
 {
 	post_to_url(Unity.Notification.serviceName, &quot;DecrementApplicationIconBadgeNumber&quot;, null, &quot;POST&quot;);
+};
+
+<span id='Unity-Notification-method-PresentLocalNotificationNow'>/**
+</span> * Presents a local notification immediately for the current application.
+ * &lt;br&gt; @version 3.9
+ * @method
+ * @param {Unity.Notification.NotificationData} notification The notification data to be presented. For further information see, {@link Unity.Notification.NotificationData NotificationData}.
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Notification.prototype.PresentLocalNotificationNow = function(notification) 
+{
+	post_to_url(Unity.Notification.serviceName, &quot;PresentLocalNotificationNow&quot;, get_params([notification]), &quot;POST&quot;);
+};
+
+<span id='Unity-Notification-method-ScheduleLocalNotification'>/**
+</span> * chedules a local notification fo delivery on a scheduled date and time.
+ * &lt;br&gt; @version 3.9
+ * @method
+ * @param {Unity.Notification.NotificationData} notification The notification data to be presented. For further information see, {@link Unity.Notification.NotificationData NotificationData}.
+ * @param {SchedulingData} schedule The scheduling data with the fire date. For further information see, {@link Unity.Notification.SchedulingData SchedulingData}.
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Notification.prototype.ScheduleLocalNotification = function(notification, schedule) 
+{
+	post_to_url(Unity.Notification.serviceName, &quot;ScheduleLocalNotification&quot;, get_params([notification, schedule]), &quot;POST&quot;);
+};
+
+<span id='Unity-Notification-method-CancelLocalNotification'>/**
+</span> * Cancels a local notification given its fire date.
+ * The fire date is the notification unique identifier, only 1 notification could be scheduled for the same fire date... last scheduled wins!
+ * &lt;br&gt; @version 3.9
+ * @method
+ * @param {Unity.DateTime} fireDate The local notification fire date identifier to be cancelled.
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Notification.prototype.CancelLocalNotification = function(fireDate) 
+{
+	post_to_url(Unity.Notification.serviceName, &quot;CancelLocalNotification&quot;, get_params([fireDate]), &quot;POST&quot;);
+};
+
+<span id='Unity-Notification-method-CancelAllLocalNotifications'>/**
+</span> * Cancels all local notifications already scheduled.
+ * &lt;br&gt; @version 3.9
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Notification.prototype.CancelAllLocalNotifications = function() 
+{
+	post_to_url(Unity.Notification.serviceName, &quot;CancelAllLocalNotifications&quot;, null, &quot;POST&quot;);
 };
 
 <span id='Unity-Notification-Async'>/**
@@ -2724,7 +2831,7 @@ Unity.IO = new IO();
 <span id='Unity-IO-method-GetServices'>/**
 </span> * Gets the configured I/O services (the ones configured on the '/app/config/io-services-config.xml' file).&lt;br/&gt;For further information see, {@link Unity.IO.IOService IOService}.
  * &lt;br&gt; @version 1.0
- * @return {IOService[]} List of external services.
+ * @return {Unity.IO.IOService[]} List of external services.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;  &lt;/pre&gt;
  */
@@ -2750,7 +2857,7 @@ IO.prototype.GetServices = function()
  * &amp; {@link Unity.IO#SERVICETYPE_XMLRPC_XML SERVICETYPE_XMLRPC_XML}
  * @param {String} serviceName The service name to look for.
  * @param {int} serviceType The service type to look for. Optional parameter.
- * @return {IOService} The external service matched.
+ * @return {Unity.IO.IOService} The external service matched.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;  &lt;/pre&gt;
  */
@@ -2778,10 +2885,10 @@ IO.prototype.GetService = function(serviceName, serviceType)
  * {@link Unity.IO#SERVICETYPE_SOAP_XML SERVICETYPE_SOAP_XML},
  * {@link Unity.IO#SERVICETYPE_XMLRPC_JSON SERVICETYPE_XMLRPC_JSON},
  * &amp; {@link Unity.IO#SERVICETYPE_XMLRPC_XML SERVICETYPE_XMLRPC_XML}
- * @param {IORequestObject} requestObjt The request object with the needed invocation parameters. Example:&lt;pre&gt;{&quot;Session&quot;:null,&quot;Content&quot;:&quot;{method:authenticationService.login,id:1,params:['username','password']}&quot;}&lt;/pre&gt;
- * @param {String/IOService} service This param could be a IOService object (as provided by {@link #GetService}), or only the service name. First service match would be invoked. ATTENTION: when using the 'object', the third argument (type) shouldn't be informed.
+ * @param {Unity.IO.IORequest} requestObjt The request object with the needed invocation parameters. Example:&lt;pre&gt;{&quot;Session&quot;:null,&quot;Content&quot;:&quot;{method:authenticationService.login,id:1,params:['username','password']}&quot;}&lt;/pre&gt;
+ * @param {String/Unity.IO.IOService} service This param could be a IOService object (as provided by {@link #GetService}), or only the service name. First service match would be invoked. ATTENTION: when using the 'object', the third argument (type) shouldn't be informed.
  * @param {int} serviceType The service type to look for. Optional parameter. Just inform this when you pass the service name in the second argument.
- * @return {IOResponse} The response object returned from remote service. Access content doing: &lt;pre&gt;ioResponse.Content&lt;/pre&gt;
+ * @return {Unity.IO.IOResponse} The response object returned from remote service. Access content doing: &lt;pre&gt;ioResponse.Content&lt;/pre&gt;
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;  &lt;/pre&gt;
  */
@@ -2845,8 +2952,8 @@ GetService : function(serviceName, serviceType, callbackFunctionName, callbackId
 <span id='Unity-IO-Async-method-InvokeService'>/**
 </span> * Invokes ASYNC the I/O Service that matches the given service name (or service object reference), and type (if provided).
  * &lt;br&gt; @version 2.0
- * @param {IORequestObject} requestObjt The request object with the needed invocation parameters. Example:&lt;pre&gt;{&quot;Session&quot;:null,&quot;Content&quot;:&quot;{method:authenticationService.login,id:1,params:['username','password']}&quot;}&lt;/pre&gt;
- * @param {String/IOService} service This param could be a IOService object (as provided by {@link #GetService}), or only the service name. First service match would be invoked. ATTENTION: when using the 'object', the third argument (type) shouldn't be informed.
+ * @param {Unity.IO.IORequest} requestObjt The request object with the needed invocation parameters. Example:&lt;pre&gt;{&quot;Session&quot;:null,&quot;Content&quot;:&quot;{method:authenticationService.login,id:1,params:['username','password']}&quot;}&lt;/pre&gt;
+ * @param {String/Unity.IO.IOService} service This param could be a IOService object (as provided by {@link #GetService}), or only the service name. First service match would be invoked. ATTENTION: when using the 'object', the third argument (type) shouldn't be informed.
  * @param {int} serviceType The service type to look for. Optional parameter. Just inform this when you pass the service name in the second argument.
  * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
  * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
@@ -2904,7 +3011,7 @@ Unity.Geo = new Geo();
 <span id='Unity-Geo-method-GetAcceleration'>/**
 </span> * Gets the current device acceleration (measured in meters/second/second). &lt;br/&gt;For further information see, {@link Unity.Geo.Acceleration Acceleration}.
  * &lt;br&gt; @version 1.0
- * @return {Acceleration} Current acceleration info (coordinates and acceleration vector number).
+ * @return {Unity.Geo.Acceleration} Current acceleration info (coordinates and acceleration vector number).
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *mock data&lt;/pre&gt;
  */
@@ -2916,7 +3023,7 @@ Geo.prototype.GetAcceleration = function()
 <span id='Unity-Geo-method-GetCoordinates'>/**
 </span> * Gets the current device location coordinates. &lt;br/&gt;For further information see, {@link Unity.Geo.LocationCoordinate LocationCoordinate}.
  * &lt;br&gt; @version 1.0
- * @return {LocationCoordinate} Current location info (coordinates and precision).
+ * @return {Unity.Geo.LocationCoordinate} Current location info (coordinates and precision).
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *mock data&lt;/pre&gt;
  */
@@ -3004,11 +3111,11 @@ Geo.prototype.SetMapSettings = function(scale, boundingBox)
 </span> * List of POIs for the current location, given a radius (bounding box). Optionaly, a query text and/or a category could be added to search for specific conditions.
  * &lt;br/&gt;For further information see, {@link Unity.Geo.POI POI}.
  * &lt;br&gt; @version 1.0
- * @param {LocationCoordinate} location Map location point to search nearest POIs.
+ * @param {Unity.Geo.LocationCoordinate} location Map location point to search nearest POIs.
  * @param {float} radius The radius around location to search POIs in.
  * @param {String} queryText The query to search POIs.. Optional parameter.
- * @param {LocationCategory} category The query to search POIs.. Optional parameter.
- * @return {POI[]} Points of Interest for location, ordered by distance.
+ * @param {Unity.Geo.LocationCategory} category The query to search POIs.. Optional parameter.
+ * @return {Unity.Geo.POI[]} Points of Interest for location, ordered by distance.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
  */
@@ -3029,7 +3136,7 @@ Geo.prototype.GetPOIList = function(location, radius, queryText, category)
 </span> * Gets a POI by the given id. &lt;br/&gt;For further information see, {@link Unity.Geo.POI POI}.
  * &lt;br&gt; @version 1.0
  * @param {String} poiId POI identifier.
- * @return {POI} Point of Interest found.
+ * @return {Unity.Geo.POI} Point of Interest found.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
  */
@@ -3116,7 +3223,7 @@ Geo.prototype.StopUpdatingHeading = function()
  * are available for that location.
  * &lt;br/&gt;For further information see, {@link Unity.Geo.GeoDecoderAttributes GeoDecoderAttributes}.
  * &lt;br&gt; @version 1.0
- * @return {GeoDecoderAttributes} Reverse geocoding attributes from the present location (latitude and longitude)
+ * @return {Unity.Geo.GeoDecoderAttributes} Reverse geocoding attributes from the present location (latitude and longitude)
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *mock data&lt;/pre&gt;
  */
@@ -3237,14 +3344,112 @@ Media = function() {
 	 */
 	this.MEDIATSTATE_ERROR = 4;
     
+<span id='Unity-Media-property-QRTYPE_ADDRESSBOOK'>    /**
+</span>	 * QR Type AddressBook.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_ADDRESSBOOK = 0;
+
+<span id='Unity-Media-property-QRTYPE_EMAIL_ADDRESS'>	/**
+</span>	 * QR Type Email.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_EMAIL_ADDRESS = 1;
+
+<span id='Unity-Media-property-QRTYPE_PRODUCT'>	/**
+</span>	 * QR Type Product.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_PRODUCT = 2;
+
+<span id='Unity-Media-property-QRTYPE_URI'>	/**
+</span>	 * QR Type URI.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_URI = 3;
+
+<span id='Unity-Media-property-QRTYPE_TEXT'>	/**
+</span>	 * QR Type Text.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_TEXT = 4;
+
+<span id='Unity-Media-property-QRTYPE_GEO'>	/**
+</span>	 * QR Type Geolocation.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_GEO =5;
+
+<span id='Unity-Media-property-QRTYPE_TEL'>	/**
+</span>	 * QR Type Telephone.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_TEL = 6;
+
+<span id='Unity-Media-property-QRTYPE_SMS'>	/**
+</span>	 * QR Type SMS.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_SMS = 7;
+
+<span id='Unity-Media-property-QRTYPE_CALENDAR'>	/**
+</span>	 * QR Type Calendar.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_CALENDAR = 8;
+
+<span id='Unity-Media-property-QRTYPE_WIFI'>	/**
+</span>	 * QR Type Wifi.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_WIFI = 9;
+
+<span id='Unity-Media-property-QRTYPE_ISBN'>	/**
+</span>	 * QR Type ISBN.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.QRTYPE_ISBN = 10
+
+<span id='Unity-Media-property-'>	/**
+</span>	 * Barcode Type QR.
+ 	 * &lt;br&gt; @version 3.9
+	 * @type int
+	 */
+	this.BARCODETYPE_QR = 11
+    
 <span id='Unity-Media-event-onFinishedPickingImage'>    /**
 </span>     * @event onFinishedPickingImage Fired when an image have been picked, either from the Photos library (after calling the {@link Unity.Media.GetSnapshot GetSnapshot}), 
 	 * or from the Camera (after calling the {@link Unity.Media.TakeSnapshot TakeSnapshot})
 	 * &lt;br&gt;Method to be overrided by JS applications, to handle this event.
      * &lt;br&gt; @version 3.1
 	 * @param {Unity.Media.MediaMetadata} mediaMetadata The metadata for the image picked.
+     * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
      */
     this.onFinishedPickingImage = function(mediaMetadata){};
+	
+	
+<span id='Unity-Media-event-onQRCodeDetected'>	/**
+</span>	 * @event onQRCodeDetected Fired when a QR Code has been read, and its data is returned to the app in order to perform the desired javascript code on this case.
+	 * &lt;br&gt; For further information see, {@link Unity.Media.MediaQRContent MediaQRContent}.
+	 * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * &lt;br&gt; @version 3.9
+	 * @method
+	 * @param {Unity.Media.MediaQRContent} QRCodeContent The scanned QR Code data read
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+	 */
+	this.onQRCodeDetected = function(QRCodeContent) {};
+
 }
 
 Unity.Media = new Media();
@@ -3379,6 +3584,36 @@ Media.prototype.GetSnapshot = function()
 Media.prototype.TakeSnapshot = function()
 {
 	return post_to_url(Unity.Media.serviceName, &quot;TakeSnapshot&quot;,  null, &quot;POST&quot;);
+};
+
+<span id='Unity-Media-method-DetectQRCode'>/**
+</span> * Fires the camera to detected and process a QRCode image.
+ * &lt;br&gt; @version 3.9
+ * @param {Boolean} True value to indicates that the detected QRCode should be handled by the platform (if possible) automatically, or False to just be get data returned.
+ * QRCode data is provided via the proper event handled by the &quot;Unity.Media.onQRCodeDetected&quot; method; please, override to handle the event.
+ * Returned value is &quot;null&quot; on synchronous call.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Media.prototype.DetectQRCode = function(autoHandleQR)
+{
+	post_to_url(Unity.Media.serviceName, &quot;DetectQRCode&quot;,  get_params([autoHandleQR]), &quot;POST&quot;);
+};
+
+<span id='Unity-Media-method-HandleQRCode'>/**
+</span> * Handles the given QRCode data to be processed (if possible) by the system. &lt;br/&gt;For further information see, {@link Unity.Media.MediaQRContent MediaQRContent}.
+ * &lt;br&gt; The content types that could be processed by the platform are:
+ * &lt;br&gt; {@link Unity.Media#QRTYPE_EMAIL_ADDRESS}, {@link Unity.Media#QRTYPE_URI} and {@link Unity.Media#QRTYPE_TEL}.
+ * &lt;br&gt; Other types couldn't be processed without pre-parsing, so they are returned to be handled by the application.
+ * &lt;br&gt; @version 3.9
+ * @param {Unity.Media.MediaQRContent} The QRCode data scanned that needs to be handle.
+ * @return {int} The current QRCode content type.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Media.prototype.HandleQRCode = function(mediaQRContent)
+{
+	return post_to_url(Unity.Media.serviceName, &quot;HandleQRCode&quot;,   get_params([mediaQRContent]), &quot;POST&quot;);
 };
 
 <span id='Unity-Media-Async'>/**
@@ -3580,7 +3815,7 @@ Messaging.prototype.SendMessageSMS = function(phoneNumber, text)
  * &lt;br&gt; @version 1.0
  * @param {String} phoneNumber The phone address to send the message to.
  * @param {String} text The message body.
- * @param {AttachmentData} attachment Attachament data.
+ * @param {Unity.Messaging.AttachmentData} attachment Attachament data.
  * @return {Boolean} True if MMS could be send.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *mock data &lt;/pre&gt;
@@ -3593,7 +3828,7 @@ Messaging.prototype.SendMessageMMS = function(phoneNumber, text, attachment)
 <span id='Unity-Messaging-method-SendEmail'>/**
 </span> * Sends an email message.&lt;br/&gt;For further information see, {@link Unity.Messaging.EmailData EmailData}.
  * &lt;br&gt; @version 1.0
- * @param {EmailData} emailData The email message data, such as: subject, 'To','Cc','Bcc' addresses, etc.
+ * @param {Unity.Messaging.EmailData} emailData The email message data, such as: subject, 'To','Cc','Bcc' addresses, etc.
  * @return {Boolean} True if email could be send.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *mock data &lt;/pre&gt;
@@ -3878,7 +4113,7 @@ Unity.Pim = new Pim();
 </span> * List of stored phone contacts that match given query. &lt;br/&gt;For further information see, {@link Unity.Pim.Contact Contact}.
  * &lt;br&gt; @version 1.0
  * @param {String} queryText The search query text. Optional parameter.&lt;pre&gt;Format is: &amp;lt;queryParam1Name&amp;gt;=&amp;lt;queryParam1Value&amp;gt;&amp;&amp;lt;queryParam2Name&amp;gt;=&amp;lt;queryParam2Value&amp;gt;&amp;....&lt;/pre&gt;
- * @return {Contact[]} List of contacts.
+ * @return {Unity.Pim.Contact[]} List of contacts.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
  */
@@ -3894,8 +4129,8 @@ Pim.prototype.ListContacts = function(queryText)
 <span id='Unity-Pim-method-CreateContact'>/**
 </span> * Creates a Contact based on given contact data. &lt;br/&gt;For further information see, {@link Unity.Pim.Contact Contact}.
  * &lt;br&gt; @version 1.0
- * @param {Contact} contact Contact data to be created.
- * @return {Contact} Created contact.
+ * @param {Unity.Pim.Contact} contact Contact data to be created.
+ * @return {Unity.Pim.Contact} Created contact.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
  */
@@ -3908,7 +4143,7 @@ Pim.prototype.CreateContact = function(contact)
 </span> * Updates contact data (given its ID) with the given contact data. &lt;br/&gt;For further information see, {@link Unity.Pim.Contact Contact}.
  * &lt;br&gt; @version 1.0
  * @param {string} contactId Contact identifier to be updated with new data.
- * @param {Contact} newContact New contact data to be added to the given contact.
+ * @param {Unity.Pim.Contact} newContact New contact data to be added to the given contact.
  * @return {Boolean} True on successful updating.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
@@ -3921,7 +4156,7 @@ Pim.prototype.UpdateContact = function(contactId, newContactData)
 <span id='Unity-Pim-method-DeleteContact'>/**
 </span> * Deletes the given contact. &lt;br/&gt;For further information see, {@link Unity.Pim.Contact Contact}.
  * &lt;br&gt; @version 1.0
- * @param {Contact} contact Contact data to be deleted.
+ * @param {Unity.Pim.Contact} contact Contact data to be deleted.
  * @return {Boolean} True on successful deletion.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
@@ -3934,8 +4169,8 @@ Pim.prototype.DeleteContact = function(contact)
 <span id='Unity-Pim-method-ListCalendarEntriesByDate'>/**
 </span> * Lists calendar entries for given date. &lt;br/&gt;For further information see, {@link Unity.Pim.CalendarEntry CalendarEntry}.
  * &lt;br&gt; @version 1.0
- * @param {DateTime} date Date to match calendar entries.
- * @return {CalendarEntry[]} List of calendar entries.
+ * @param {Unity.DateTime} date Date to match calendar entries.
+ * @return {Unity.Pim.CalendarEntry[]} List of calendar entries.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/warning.png&quot;/&gt; *further testing required | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; *further testing required | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
  */
@@ -3947,9 +4182,9 @@ Pim.prototype.ListCalendarEntriesByDate = function(date)
 <span id='Unity-Pim-method-ListCalendarEntriesByDateRange'>/**
 </span> * Lists calendar entries between given start and end dates. &lt;br/&gt;For further information see, {@link Unity.Pim.CalendarEntry CalendarEntry}.
  * &lt;br&gt; @version 1.0
- * @param {DateTime} startDate Start date to match calendar entries.
- * @param {DateTime} endDate End date to match calendar entries.
- * @return {CalendarEntry[]} List of calendar entries.
+ * @param {Unity.DateTime} startDate Start date to match calendar entries.
+ * @param {Unity.DateTime} endDate End date to match calendar entries.
+ * @return {Unity.Pim.CalendarEntry[]} List of calendar entries.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/warning.png&quot;/&gt; *further testing required | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; *further testing required | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
  */
@@ -3961,8 +4196,8 @@ Pim.prototype.ListCalendarEntriesByDateRange = function(startDate, endDate)
 <span id='Unity-Pim-method-CreateCalendarEntry'>/**
 </span> * Creates a calendar entry. &lt;br/&gt;For further information see, {@link Unity.Pim.CalendarEntry CalendarEntry}.
  * &lt;br&gt; @version 1.0
- * @param {CalendarEntry} entry Calendar entry to be created.
- * @return {CalendarEntry} Created calendar entry.
+ * @param {Unity.Pim.CalendarEntry} entry Calendar entry to be created.
+ * @return {Unity.Pim.CalendarEntry} Created calendar entry.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/warning.png&quot;/&gt; *issues with recurrences and alarms | android &lt;img src=&quot;resources/images/warning.png&quot;/&gt; *issues with recurrences and alarms | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
  */
@@ -3974,7 +4209,7 @@ Pim.prototype.CreateCalendarEntry = function(entry)
 <span id='Unity-Pim-method-DeleteCalendarEntry'>/**
 </span> * Deletes the given calendar entry. &lt;br/&gt;For further information see, {@link Unity.Pim.CalendarEntry CalendarEntry}.
  * &lt;br&gt; @version 1.0
- * @param {CalendarEntry} entry Calendar entry to be deleted.
+ * @param {Unity.Pim.CalendarEntry} entry Calendar entry to be deleted.
  * @return {Boolean} True on successful deletion.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
@@ -3987,9 +4222,9 @@ Pim.prototype.DeleteCalendarEntry = function(entry)
 <span id='Unity-Pim-method-MoveCalendarEntry'>/**
 </span> * Moves the given calendar entry to the new start and end dates. &lt;br/&gt;For further information see, {@link Unity.Pim.CalendarEntry CalendarEntry}.
  * &lt;br&gt; @version 1.0
- * @param {CalendarEntry} entry Calendar entry to be moved. 
- * @param {DateTime} startDate New start date to move the calendar entry.
- * @param {DateTime} endDate New end date to move the calendar entry.
+ * @param {Unity.Pim.CalendarEntry} entry Calendar entry to be moved. 
+ * @param {Unity.DateTime} startDate New start date to move the calendar entry.
+ * @param {Unity.DateTime} endDate New end date to move the calendar entry.
  * @return {Boolean} True on successful deletion.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;   *xml data store&lt;/pre&gt;
@@ -4132,7 +4367,7 @@ Unity.I18N = new I18N();
 </span> * List of supported locales for the application (the ones configured on the '/app/config/i18n-config.xml' file).
  * &lt;br/&gt;For further information see, {@link Unity.I18N.Locale Locale}.
  * &lt;br&gt; @version 1.0
- * @return {Locale[]} List of locales.
+ * @return {Unity.I18N.Locale[]} List of locales.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;  &lt;/pre&gt;
  */
@@ -4159,7 +4394,7 @@ I18N.prototype.GetLocaleSupportedDescriptors = function()
  * &lt;br/&gt;For further information see, {@link Unity.I18N.Locale Locale}.
  * &lt;br&gt; @version 1.0
  * @param {String} key The key to match text.
- * @param {String/Locale} locale The full locale object to get localized message, or the locale desciptor (&quot;language&quot; or &quot;language-country&quot; two-letters ISO codes.
+ * @param {String/Unity.I18N.Locale} locale The full locale object to get localized message, or the locale desciptor (&quot;language&quot; or &quot;language-country&quot; two-letters ISO codes.
  * @return {String} Localized text.
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;   &lt;/pre&gt;
@@ -4177,7 +4412,7 @@ I18N.prototype.GetResourceLiteral = function(key, locale)
 </span> * Gets the full application configured literals (key/message pairs) corresponding to the given locale.
  * &lt;br/&gt;For further information see, {@link Unity.I18N.Locale Locale} and {@link Unity.I18N.ResourceLiteralDictionary ResourceLiteralDictionary}.
  * &lt;br&gt; @version 3.2
- * @param {String/Locale} locale The full locale object to get localized message, or the locale desciptor (&quot;language&quot; or &quot;language-country&quot; two-letters ISO codes.
+ * @param {String/Unity.I18N.Locale} locale The full locale object to get localized message, or the locale desciptor (&quot;language&quot; or &quot;language-country&quot; two-letters ISO codes.
  * @return {ResourceLiteralDictionary} Localized texts in the form of an object (you could get the value of a keyed literal using &lt;b&gt;resourceLiteralDictionary.MY_KEY&lt;/b&gt; or &lt;b&gt;resourceLiteralDictionary[&quot;MY_KEY&quot;]&lt;/b&gt;).
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt;  &lt;/pre&gt;
@@ -4557,7 +4792,7 @@ Webtrekk.prototype.StopTracking = function (){
  *&lt;/pre&gt;
  * @param {String} clickId The button identification
  * @param {String} contentId The content identification (page name).
- * @param {WebtrekkParametersCollection} additionalParameters [optional] Array containing additional parameters
+ * @param {Unity.Webtrekk.WebtrekkParametersCollection} additionalParameters [optional] Array containing additional parameters
  * @return {Boolean} true if the content/event was successfully tracked
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
@@ -4591,7 +4826,7 @@ Webtrekk.prototype.TrackClick = function (clickId, contentId, additionalParamete
  * such as the {@link Unity.Webtrekk#COUNTRY_CODE COUNTRY_CODE} parameter.
  *&lt;/pre&gt;
  * @param {String} contentId The content identification
- * @param {WebtrekkParametersCollection} additionalParameters [optional] Array containing additional parameters
+ * @param {Unity.Webtrekk.WebtrekkParametersCollection} additionalParameters [optional] Array containing additional parameters
  * @return {Boolean} true if the content/event was successfully tracked
  * @method
  * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt;  &lt;/pre&gt;
