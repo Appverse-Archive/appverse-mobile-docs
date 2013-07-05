@@ -2134,7 +2134,7 @@ Unity.AppLoader.ModuleContext = {
 	User: '',
 	
 <span id='Unity-AppLoader-ModuleContext-property-Credentials'>	/**
-</span>     * The current user credentials (it could be plain password data, or encrypted.. as required by the app).
+</span>     * The current user credentials. OPTIONAL.&lt;br/&gt; It should be the &lt;b&gt;'username:password'&lt;/b&gt; string concatenation encoded in &lt;a href=&quot;http://en.wikipedia.org/wiki/Base64&quot;&gt;&lt;b&gt;Base64&lt;/b&gt;&lt;/a&gt;.&lt;br/&gt; If provided, the &lt;a href=&quot;http://en.wikipedia.org/wiki/Basic_access_authentication#Client_side&quot;&gt;&lt;b&gt;HTTP Basic Authentication&lt;/b&gt;&lt;/a&gt; header (Authorization) will be send when updating modules.
      * @type {String}
      */
 	Credentials: '',
