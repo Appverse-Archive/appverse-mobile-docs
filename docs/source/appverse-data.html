@@ -1588,9 +1588,9 @@ Appverse.Pim.ContactLite = {
  * Data to be &quot;stored on&quot; or &quot;provided by&quot; the phone's agenda as contact data.
  * @author maps
  * @version 1.0 / reviewed 4.3
-     */ 
+ */
 Appverse.Pim.Contact = {
-       
+	
 <span id='Appverse-Pim-Contact-property-JobTitle'>	/**
 </span>     * The job title for the current contact.
 	 * @type {String}
@@ -1640,9 +1640,9 @@ Appverse.Pim.Contact = {
 <span id='Appverse-Pim-Contact-property-Photo'>	/**
 </span>     * The picture associated with this contact. In this case, raw data (byte array).
 	 * @type {byte[]}
-     */
+     */ 
 	Photo: [],
-       
+	
 <span id='Appverse-Pim-Contact-property-PhotoBase64Encoded'>	/**
 </span>     * The picture associated with this contact. In this case, the base64 encoding data (string).
 	 * @type {String}
@@ -1660,9 +1660,9 @@ Appverse.Pim.Contact = {
  * The query has a Condition to be applied (Equals, StartsWith, EndsWith, Contains) against a specific Column (id or name) comparing the given Value.
  * @author maps
  * @version 4.3
-     */
+ */
 Appverse.Pim.ContactQuery = {
-       
+
 <span id='Appverse-Pim-ContactQuery-property-Condition'>	/**
 </span>     * The type of condition used to query for contacts.
 	 * &lt;br/&gt;Possible values: 
@@ -1673,20 +1673,20 @@ Appverse.Pim.ContactQuery = {
 	 * @type {int}
      */
 	Condition: 0,
-
+	
 <span id='Appverse-Pim-ContactQuery-property-Column'>	/**
 </span>     * The column to evaluate the value against to query for contacts.
 	 * &lt;br/&gt;Possible values: 
 	 * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_ID}, 
 	 * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_NAME}
 	 * @type {int}
-     */ 
+     */
 	Column: 0,
 	
 <span id='Appverse-Pim-ContactQuery-property-Value'>	/**
 </span>     * The value being queried against the specified Column.
 	 * @type {String}
-     */ 
+     */
 	Value: '',
 	
 };
@@ -2157,6 +2157,7 @@ Appverse.Notification.NotificationData = {
      */
 	CustomDataJsonString : ''
 };
+
 
 <span id='Appverse-Notification-RegistrationToken'>/**
 </span> * @class Appverse.Notification.RegistrationToken
