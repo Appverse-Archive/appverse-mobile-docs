@@ -1512,6 +1512,49 @@ Appverse.Messaging.AttachmentData = {
 	IPv6: ''
 
  };
+ 
+<span id='Appverse-Net-SecondaryBrowserOptions'> /**
+</span> * @class Appverse.Net.SecondaryBrowserOptions
+ * @namespace Appverse.Net
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Data related to options for auxiliary browser used in OpenBrowserWithOptions and ShowHtmlWithOptions methods.
+ * @author ddbc
+ * @version 4.6
+ */
+ Appverse.Net.SecondaryBrowserOptions = {
+<span id='Appverse-Net-SecondaryBrowserOptions-property-Title'> 	/**
+</span>     * Title given to the auxiliary browser.
+	 * @type {String}
+     */ 
+	Title: 'My Title',
+	
+<span id='Appverse-Net-SecondaryBrowserOptions-property-Url'>	/**
+</span>     * URL to load in the auxiliary browser.
+	 * @type {String}
+     */ 
+	Url: 'http://www.google.com',
+	
+<span id='Appverse-Net-SecondaryBrowserOptions-property-CloseButtonText'>	/**
+</span>     * Caption that should display the Close Button of the auxiliary browser.
+	 * @type {String}
+     */ 
+	CloseButtonText:'Close',
+	
+<span id='Appverse-Net-SecondaryBrowserOptions-property-Html'>	/**
+</span>     * Html code to display in the auxiliary browser.
+	 * @type {String}
+     */ 
+	Html:'&lt;html&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;',
+	
+<span id='Appverse-Net-SecondaryBrowserOptions-property-BrowserFileExtensions'>	/**
+</span>     * Array of string containing the file extensions the OS will handle when such files are requested in the URL. Ex: &quot;.pdf&quot;, &quot;.xsl&quot;
+	 * @type {String []}
+     */ 
+	BrowserFileExtensions: ['.pdf','.xls']
+
+ };
 
 
 // *************************************************************************
@@ -1596,6 +1639,12 @@ Appverse.Pim.Contact = {
 	 * @type {String}
      */ 
 	JobTitle: '',
+	
+<span id='Appverse-Pim-Contact-property-Company'>	/**
+</span>     * The company for the current contact.
+	 * @type {String}
+     */ 
+	Company: '',
        
 <span id='Appverse-Pim-Contact-property-Department'>	/**
 </span>     * The department this contact belongs to.
@@ -1607,7 +1656,7 @@ Appverse.Pim.Contact = {
 </span>     * The web sites associated with the current contact.
 	 * @type {String[]}
      */
-	WebSites: '',
+	WebSites: [],
        
 <span id='Appverse-Pim-Contact-property-Notes'>	/**
 </span>     * The mime type of the current attachment.
@@ -1669,7 +1718,8 @@ Appverse.Pim.ContactQuery = {
 	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_EQUALS}, 
 	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_STARTSWITH}, 
 	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_ENDSWITH}, 
-	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_CONTAINS}
+	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_CONTAINS}, 
+	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_AVAILABLE}
 	 * @type {int}
      */
 	Condition: 0,
@@ -1679,6 +1729,7 @@ Appverse.Pim.ContactQuery = {
 	 * &lt;br/&gt;Possible values: 
 	 * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_ID}, 
 	 * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_NAME}
+	 * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_PHONE}
 	 * @type {int}
      */
 	Column: 0,
@@ -2478,7 +2529,73 @@ Appverse.Security.KeyPair = {
 };
  
  
- 
- </pre>
+<span id='Appverse-Beacon-Beacon'>/**
+</span> * @class Appverse.Beacon.Beacon
+ * @namespace Appverse.Beacon
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represents the Beacon&lt;br&gt;&lt;br&gt; See more information at &lt;b&gt;Appverse.Beacon&lt;/b&gt;.
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ * @author frmi
+ * @version 4.7
+ */
+Appverse.Beacon.Beacon = {
+	
+<span id='Appverse-Beacon-Beacon-property-address'>    /**
+</span>     * The Address asociated
+     * @type {String}
+     */
+    address: '',
+            
+<span id='Appverse-Beacon-Beacon-property-name'>    /**
+</span>     * The name of the beacon device
+     * @type {String}
+     */
+    name: '',
+            
+<span id='Appverse-Beacon-Beacon-property-UUID'>    /**
+</span>     * The UUID region
+     * @type {String}
+     */
+    UUID: '',
+            
+    
+<span id='Appverse-Beacon-Beacon-property-distance'>     /** 
+</span>     * Tne Distance name to the beacon 
+	 * &lt;br/&gt;Possible values: 
+	 * {@link Appverse.Beacon#IMMEDIATE},
+	 * {@link Appverse.Beacon#NEAR}, 
+	 * {@link Appverse.Beacon#FAR}, 
+	 * {@link Appverse.Beacon#UNKNOWN}, 
+     * @type {int}
+     */
+    distance: 0,
+            
+<span id='Appverse-Beacon-Beacon-property-meters'>    /**
+</span>     * The distance to the beacon
+     * @type {double}
+     */
+    meters: 0,
+            
+<span id='Appverse-Beacon-Beacon-property-major'>    /**
+</span>     * The major version of the device
+     * @type {int}
+     */
+    major: 0,
+<span id='Appverse-Beacon-Beacon-property-minor'>    /**
+</span>     * The minor version of the device
+     * @type {int}
+     */
+    minor: 0,
+            
+<span id='Appverse-Beacon-Beacon-property-timestamp'>    /**
+</span>     * Time when scan was done
+     * @type {long}
+     */
+    timestamp: ''
+};
+
+</pre>
 </body>
 </html>
