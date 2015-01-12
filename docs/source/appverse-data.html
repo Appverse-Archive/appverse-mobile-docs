@@ -2528,6 +2528,90 @@ Appverse.Security.KeyPair = {
 	Value: ''
 };
  
+<span id='Appverse-NFC-NFCPaymentSecurityException'> /**
+</span> * @class Appverse.NFC.NFCPaymentSecurityException
+ * @namespace Appverse.NFC
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represents the data returned when a Security exception is thrown when starting NFC payment engine while checking security&lt;br&gt;&lt;br&gt; See more information at &lt;b&gt;Appverse.NFC&lt;/b&gt;.
+ * @author maps
+ * @version 4.5
+ */
+Appverse.NFC.NFCPaymentSecurityException = {
+<span id='Appverse-NFC-NFCPaymentSecurityException-property-Message'>	/**
+</span>     * The exception description (not localized)
+     * @type {String}
+     */
+	Message: '',
+	
+<span id='Appverse-NFC-NFCPaymentSecurityException-property-Type'>	/**
+</span>     * The type of exception. 
+	 * &lt;br/&gt;Possible values: {@link Appverse.NFC#SECURITY_ERROR_UNKNOWN SECURITY_ERROR_UNKNOWN}, {@link Appverse.NFC#SECURITY_ERROR_DEVICE_ROOTED SECURITY_ERROR_DEVICE_ROOTED}, {@link Appverse.NFC#SECURITY_ERROR_LOCK_DISABLED SECURITY_ERROR_LOCK_DISABLED} &amp; {@link Appverse.NFC#SECURITY_ERROR_USB_DEBUG_ENABLED SECURITY_ERROR_USB_DEBUG_ENABLED}
+     * @type {int}
+     */
+	Type: 0
+};
+
+
+
+<span id='Appverse-NFC-NFCPaymentProperty'> /**
+</span> * @class Appverse.NFC.NFCPaymentProperty
+ * @namespace Appverse.NFC
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represents an NFC property to be settled for the NFC payment feature (before starting the payment engine)&lt;br&gt;&lt;br&gt; See more information at &lt;b&gt;Appverse.NFC&lt;/b&gt;.
+ * @author maps
+ * @version 4.5
+ */
+Appverse.NFC.NFCPaymentProperty = {
+<span id='Appverse-NFC-NFCPaymentProperty-property-Key'>	/**
+</span>     * The name of the property key. Available keys could be found at:&lt;br/&gt; {@link Appverse.NFC#PROPERTY_APPLICATION_ID}, {@link Appverse.NFC#PROPERTY_APPLICATION_LABEL}, {@link Appverse.NFC#PROPERTY_AID_NAME_LENGTH}, {@link Appverse.NFC#PROPERTY_DEBUG_MODE}, {@link Appverse.NFC#PROPERTY_VIBRATION_DURATION} and {@link Appverse.NFC#PROPERTY_TIMER_PERIOD}
+     * @type {String}
+     */
+	Key: '',
+	
+<span id='Appverse-NFC-NFCPaymentProperty-property-Value'>	/**
+</span>     * The value to be settled for this NFC property
+     * @type {String}
+     */
+	Value: ''
+};
+
+<span id='Appverse-NFC-NFCPaymentSuccess'>/**
+</span> * @class Appverse.NFC.NFCPaymentSuccess
+ * @namespace Appverse.NFC
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represents the payment summary data returned for a successful NFC payment against a POS device&lt;br&gt;&lt;br&gt; See more information at &lt;b&gt;Appverse.NFC&lt;/b&gt;.
+ * @author maps
+ * @version 4.5
+ */
+Appverse.NFC.NFCPaymentSuccess = {
+	
+<span id='Appverse-NFC-NFCPaymentSuccess-property-Amount'>	/**
+</span>     * The amount formatted as follows &quot;XX.YY&quot;, where XX is the integer part and YY is the decimal part of the amount.
+     * @type {String}
+     */
+	Amount: '',
+	
+<span id='Appverse-NFC-NFCPaymentSuccess-property-Date'>	/**
+</span>     * The date formatted as follows &quot;dd / MM / yyyy&quot;, where dd is the day, MM is the month and yyyy is the year.
+     * @type {String}
+     */
+	Date: '',
+	
+<span id='Appverse-NFC-NFCPaymentSuccess-property-Time'>	/**
+</span>     * The time formatted as follows &quot;HH: mm&quot;, where HH is the hour and mm is the minute.
+     * @type {String}
+     */
+	Time: ''
+};
+ 
+ 
+//Appverse.Beacon.DistanceType
  
 <span id='Appverse-Beacon-Beacon'>/**
 </span> * @class Appverse.Beacon.Beacon
@@ -2542,17 +2626,17 @@ Appverse.Security.KeyPair = {
  */
 Appverse.Beacon.Beacon = {
 	
-<span id='Appverse-Beacon-Beacon-property-address'>    /**
+<span id='Appverse-Beacon-Beacon-property-Address'>    /**
 </span>     * The Address asociated
      * @type {String}
      */
-    address: '',
+    Address: '',
             
-<span id='Appverse-Beacon-Beacon-property-name'>    /**
+<span id='Appverse-Beacon-Beacon-property-Name'>    /**
 </span>     * The name of the beacon device
      * @type {String}
      */
-    name: '',
+    Name: '',
             
 <span id='Appverse-Beacon-Beacon-property-UUID'>    /**
 </span>     * The UUID region
@@ -2561,7 +2645,7 @@ Appverse.Beacon.Beacon = {
     UUID: '',
             
     
-<span id='Appverse-Beacon-Beacon-property-distance'>     /** 
+<span id='Appverse-Beacon-Beacon-property-Distance'>     /** 
 </span>     * Tne Distance name to the beacon 
 	 * &lt;br/&gt;Possible values: 
 	 * {@link Appverse.Beacon#IMMEDIATE},
@@ -2570,30 +2654,30 @@ Appverse.Beacon.Beacon = {
 	 * {@link Appverse.Beacon#UNKNOWN}, 
      * @type {int}
      */
-    distance: 0,
+    Distance: 0,
             
-<span id='Appverse-Beacon-Beacon-property-meters'>    /**
+<span id='Appverse-Beacon-Beacon-property-Meters'>    /**
 </span>     * The distance to the beacon
      * @type {double}
      */
-    meters: 0,
+    Meters: 0,
             
-<span id='Appverse-Beacon-Beacon-property-major'>    /**
+<span id='Appverse-Beacon-Beacon-property-Major'>    /**
 </span>     * The major version of the device
      * @type {int}
      */
-    major: 0,
-<span id='Appverse-Beacon-Beacon-property-minor'>    /**
+    Major: 0,
+<span id='Appverse-Beacon-Beacon-property-Minor'>    /**
 </span>     * The minor version of the device
      * @type {int}
      */
-    minor: 0,
+    Minor: 0,
             
-<span id='Appverse-Beacon-Beacon-property-timestamp'>    /**
+<span id='Appverse-Beacon-Beacon-property-Timestamp'>    /**
 </span>     * Time when scan was done
      * @type {long}
      */
-    timestamp: ''
+    Timestamp: ''
 };
 
 </pre>
