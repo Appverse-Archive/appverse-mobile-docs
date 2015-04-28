@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">/*
+ * ANALYTICS INTERFACES
+ */
+
+<span id='Appverse-Analytics-method-constructor'><span id='Appverse-Analytics'>/**
+</span></span> * @class Appverse.Analytics 
+ * Module class to access Appverse Analytics module interface. 
+ * &lt;br&gt;This interface provides features to track application usage and send to Google Analytics.&lt;br&gt;
+ * &lt;br&gt; @version 5.0.3
+ * &lt;pre&gt;Usage: Appverse.Analytics.&amp;lt;metodName&amp;gt;([params]).&lt;br&gt;Example: Appverse.Analytics.TrackPageView('/mypage').&lt;/pre&gt;
+ * @component
+ * @aside guide appverse_modules
+ * @constructor Constructs a new Analytics interface.
+ * @return {Appverse.Analytics} A new Analytics interface.
+ */
+Analytics = function() {
+<span id='Appverse-Analytics-cfg-serviceName'>    /**
+</span>     * @cfg {String}
+     * Analytics service name (as configured on Platform Service Locator).
+     * &lt;br&gt; @version 5.0.3
+     */
+    this.serviceName = &quot;analytics&quot;;
+};
+
+Appverse.Analytics = new Analytics();
+
+<span id='Appverse-Analytics-method-StartTracking'>/**
+</span> * Starts the tracker - for the given web property id - from receiving and dispatching data to the server.
+ * &lt;br&gt; @version 5.0.3
+ * &lt;br&gt; It returns a {Boolean} with a value of true if the tracker was started successfully
+ * @param {String} webPropertyID The web property ID with the format UA-99999999-9
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Analytics.prototype.StartTracking = function(webPropertyID, callbackFunctionName, callbackId) {
+    post_to_url_async(Appverse.Analytics.serviceName, &quot;StartTracking&quot;, get_params([webPropertyID]), callbackFunctionName, callbackId);
+};
+
+<span id='Appverse-Analytics-method-StopTracking'>/**
+</span> * 
+ * Stops the tracker from receiving and dispatching data to the server
+ * &lt;br&gt; @version 5.0.3
+ * &lt;br&gt; It returns a {Boolean} with a value of true if tracker was stopped
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Analytics.prototype.StopTracking = function(callbackFunctionName, callbackId) {
+    post_to_url_async(Appverse.Analytics.serviceName, &quot;StopTracking&quot;, null, callbackFunctionName, callbackId);
+};
+
+<span id='Appverse-Analytics-method-TrackEvent'>/**
+</span> * Sends an event to be tracked by the analytics tracker
+ * &lt;br&gt; @version 5.0.3
+ * &lt;br&gt; It returns a {Boolean} with a value of true if the event was successfully tracked
+ * @param {String} group the event group
+ * @param {String} action the event action
+ * @param {String} label The event label
+ * @param {Integer} value The event value
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Analytics.prototype.TrackEvent = function(group, action, label, value, callbackFunctionName, callbackId) {
+    post_to_url_async(Appverse.Analytics.serviceName, &quot;TrackEvent&quot;, get_params([group, action, label, value]), callbackFunctionName, callbackId);
+};
+
+<span id='Appverse-Analytics-method-TrackPageView'>/**
+</span> * Sends a pageview to be tracked by the analytics tracker
+ * &lt;br&gt; @version 5.0.3
+ * &lt;br&gt; It returns a {Boolean} with a value of true if the pageview was successfully tracked
+ * @param {String} relativeUrl The relativeUrl to the page i.e. &quot;/home&quot;
+ * @param {String} callbackFunctionName The name of the callback function to be called when the method response is handled. Arguments of this function are the invocation result object and the invocation callbackId. Defaults to &quot;callback&quot;.
+ * @param {String} callbackId The id to uniquely identify different callbacks with the same callback function. Defaults to &quot;callbackid&quot;.
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ */
+Analytics.prototype.TrackPageView = function(relativeUrl, callbackFunctionName, callbackId) {
+    post_to_url_async(Appverse.Analytics.serviceName, &quot;TrackPageView&quot;, get_params([relativeUrl]), callbackFunctionName, callbackId);
+};</pre>
+</body>
+</html>

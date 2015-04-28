@@ -25,7 +25,7 @@ On Android devices
 
 ### Sender ID
 
-When registering for receiving remote notifications (using the **Appverse.OnRegisterForRemoteNotificationsSuccess** method), the **senderId** argumemnt value is required for Android devices. In other platforms (such as the iOS platform, this value will be just ignored).
+When registering for receiving remote notifications (using the **Appverse.PushNotifications.OnRegisterForRemoteNotificationsSuccess** method), the **senderId** argumemnt value is required for Android devices. In other platforms (such as the iOS platform, this value will be just ignored).
 
 ### Notification Configuration
 
@@ -94,35 +94,35 @@ See the <b>Showcase</b> application for an example of the usage.
 On All platforms
 ---------------------
 
-To **REGISTER** your application for receiving Push Notification, please use the **Appverse.Notification.RegisterForRemoteNotifications** method.
+To **REGISTER** your application for receiving Push Notification, please use the **Appverse.PushNotifications.RegisterForRemoteNotifications** method.
 
 (*) Note: remote notifications are not granted to be delivered to the device. In addition, the registration token supplied by the Push Notificaion Service after registration could change. So it is a common approach to execute the registration each time the application launches.
 
-To **UNREGISTER** your application from receiving Push Notification, please use the **Appverse.Notification.UnRegisterForRemoteNotifications** method.
+To **UNREGISTER** your application from receiving Push Notification, please use the **Appverse.PushNotifications.UnRegisterForRemoteNotifications** method.
 
 Your app should override some **platform event listeners** in order to:
 
-* Be notified about a **SUCESSFUL REGISTRATION**, by overriding the **Appverse.OnRegisterForRemoteNotificationsSuccess** method.
+* Be notified about a **SUCESSFUL REGISTRATION**, by overriding the **Appverse.PushNotifications.OnRegisterForRemoteNotificationsSuccess** method.
 	* When called, this method will receive as an argument the **registration token** ("device token" for iOS or "registration ID" for Android) received from the Notifications Service (APNs for iOS or GMC for Android).
 	* This token must be sended to your application **Push Notification Provider**, using a secure SSL channel (the **Appverse.IO** services could be used for that purpose).
-	* For further details check the **Appverse.Notification.RegistrationToken** class.
+	* For further details check the **Appverse.PushNotifications.RegistrationToken** class.
 
-* Be notified about a **FAILURE REGISTRATION**, by overriding the **Appverse.OnRegisterForRemoteNotificationsFailure** method.
+* Be notified about a **FAILURE REGISTRATION**, by overriding the **Appverse.PushNotifications.OnRegisterForRemoteNotificationsFailure** method.
 	* When called, this method will receive as an argument the **registration error** information.
 	* Available error codes on **Android Platform**:
 		* **{@link Appverse.Notification#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT Appverse.Notification#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT}** : this is the default error code value received when an error ocurrs during the registration process.
 		* **{@link Appverse.Notification#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID Appverse.Notification#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID}** : this is the error code value received when your application is trying to register with a sender id but your device/application is already registered with another sender id (a previous one, maybe a test one).
 			* When receiving this error, your application should perform an unregistration (via the **Appverse.Notification.UnRegisterForRemoteNotifications** method) and repeat the registration call when the platform calls your **Appverse.OnUnRegisterForRemoteNotificationsSuccess** method implementation.
 		* **{@link Appverse.Notification#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER Appverse.Notification#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER}** : this is error code value received when an error is sendby the GCM Server either on the registration or unregistration process.
-	* For further details check the **Appverse.Notification.RegistrationError** class.
+	* For further details check the **Appverse.PushNotifications.RegistrationError** class.
 	
-* Be notified about an **INCOMING REMOTE NOTIFICATION**,  by overriding the **Appverse.OnRemoteNotificationReceived** method.
+* Be notified about an **INCOMING REMOTE NOTIFICATION**,  by overriding the **Appverse.PushNotifications.OnRemoteNotificationReceived** method.
 	* When called, this method will receive as an argument the **notification data** information.
 	* This method is not called when the notification is received and the application is not running.
 	* For further details check the **Appverse.Notification.NotificationData** class.
 	
-* Be notified about a **SUCESSFUL UNREGISTRATION**, by overriding the **Appverse.OnUnRegisterForRemoteNotificationsSuccess** method. <br/><img src="resources/images/warning.png"/> This method is just called on **Android** Platform.
-	* This method will just aware the application that the last unregistration call (via the **Appverse.Notification.UnRegisterForRemoteNotifications** method) was successful.
+* Be notified about a **SUCESSFUL UNREGISTRATION**, by overriding the **Appverse.PushNotifications.OnUnRegisterForRemoteNotificationsSuccess** method. <br/><img src="resources/images/warning.png"/> This method is just called on **Android** Platform.
+	* This method will just aware the application that the last unregistration call (via the **Appverse.PushNotifications.UnRegisterForRemoteNotifications** method) was successful.
 	
 Only on iOS Platform
 ---------------------

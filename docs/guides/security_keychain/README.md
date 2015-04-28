@@ -1,4 +1,4 @@
-Secure Credentials Storage (shared)
+Secure Credentials Storage
 ====================
 
 ## Overview

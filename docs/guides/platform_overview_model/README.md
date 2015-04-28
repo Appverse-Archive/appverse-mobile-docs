@@ -14,7 +14,7 @@ We have many challenges when developing mobile applications
 * There is no convergence in the mobile market
 * We have to decide our target market; we can't support them all in a sustainable manner... or can we?
 
-<div style="float:right;top: -150px;position: relative;">
+<div style="float:right;top: -120px;position: relative;">
 <img src="guides/platform_overview_model/appverse-model.png" alt="Alt A Model Driven Approach " style="max-height:80%;max-width:80%">
 </div>
 

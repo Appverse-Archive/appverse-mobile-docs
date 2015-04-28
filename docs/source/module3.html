@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">/*
+ * PUSH NOTIFICATIONS INTERFACES
+ */
+
+<span id='Appverse-PushNotifications-method-constructor'><span id='Appverse-PushNotifications'>/**
+</span></span> * @class Appverse.PushNotifications 
+ * Module class to access Appverse PushNotifications module interface. 
+ * &lt;br&gt;This interface provides features to register and unregister the device and app to receive remote notifications.&lt;br&gt;
+ * &lt;br&gt; @version 5.0.3
+ * &lt;pre&gt;Usage: Appverse.PushNotifications.&amp;lt;metodName&amp;gt;([params]).&lt;br&gt;Example: Appverse.PushNotifications.DetectQRCode().&lt;/pre&gt;
+ * @component
+ * @aside guide appverse_modules
+ * @constructor Constructs a new PushNotifications interface.
+ * @return {Appverse.PushNotifications} A new PushNotifications interface.
+ */
+PushNotifications = function() {
+<span id='Appverse-PushNotifications-cfg-serviceName'>    /**
+</span>     * @cfg {String}
+     * PushNotifications service name (as configured on Platform Service Locator).
+     * &lt;br&gt; @version 5.0.3
+     */
+    this.serviceName = &quot;push&quot;;
+
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_NONE'>    /**
+</span>     * None Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
+     * @type int
+     */
+    this.REMOTE_NOTIFICATION_TYPE_NONE = 0;
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_BADGE'>    /**
+</span>     * Badge Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
+     * @type int
+     */
+    this.REMOTE_NOTIFICATION_TYPE_BADGE = 1;
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_SOUND'>    /**
+</span>     * Sound Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
+     * @type int
+     */
+    this.REMOTE_NOTIFICATION_TYPE_SOUND = 2;
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_ALERT'>    /**
+</span>     * Alert Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
+     * @type int
+     */
+    this.REMOTE_NOTIFICATION_TYPE_ALERT = 3;
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY'>    /**
+</span>     * Content Availability Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
+     * @type int
+     */
+    this.REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY = 4;
+	
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT'>    /**
+</span>     * Default registration exception code for remote notifications.
+     * &lt;br&gt; @version 5.0.3
+     * @type String
+     */
+    this.REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT = &quot;99&quot;;
+	
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID'>    /**
+</span>     * Registration exception code for remote notifications indicating unsuccessful registration due to a different sender id previous registration.
+     * &lt;br&gt; @version 5.0.3
+     * @type String
+     */
+    this.REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID = &quot;10&quot;;
+
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER'>    /**
+</span>     * Registration exception code send by the GCM Server for remote notifications (both registration and unregistration processes)
+     * &lt;br&gt; @version 5.0.3
+     * @type String
+     */
+    this.REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER = &quot;11&quot;;
+
+<span id='Appverse-PushNotifications-method-OnRemoteNotificationReceived'>	/**
+</span>	 * @event OnRemoteNotificationReceived Fired on remote notification arrival.
+	 * &lt;br&gt; For further information see, {@link Appverse.Notification.NotificationData NotificationData}.
+     * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * @aside guide application_listeners
+	 * &lt;br&gt; @version 5.0.3
+	 * @method
+	 * @param {Appverse.Notification.NotificationData} notificationData The notification data received (visual data and custom provider data)
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+	 * 
+	 */
+	this.OnRemoteNotificationReceived = function(notificationData) {
+	};
+	
+<span id='Appverse-PushNotifications-method-OnRegisterForRemoteNotificationsSuccess'>	/**
+</span>	 * @event OnRegisterForRemoteNotificationsSuccess Fired on successfully registration for remote notifications.
+	 * &lt;br&gt; For further information see, {@link Appverse.PushNotifications.RegistrationToken RegistrationToken}.
+     * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * @aside guide application_listeners
+	 * &lt;br&gt; @version 5.0.3
+	 * @method
+	 * @param {Appverse.PushNotifications.RegistrationToken} registrationToken The registration token (&quot;device token&quot; for iOS or &quot;registration ID&quot; for Android) data received from the Notifications Service (APNs for iOS or GMC for Android).
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+	 * 
+	 */
+	this.OnRegisterForRemoteNotificationsSuccess = function(registrationToken) {
+	};
+
+<span id='Appverse-PushNotifications-method-OnRegisterForRemoteNotificationsFailure'>	/**
+</span>	 * @event OnRegisterForRemoteNotificationsFailure Fired on failed registration for remote notifications.
+	 * &lt;br&gt; For further information see, {@link Appverse.PushNotifications.RegistrationError RegistrationError}.
+     * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * @aside guide application_listeners
+	 * &lt;br&gt; @version 5.0.3
+	 * @method
+	 * @param {Appverse.PushNotifications.RegistrationError} registrationError The registration error data received from the Notifications Service (APNs for iOS or GMC for Android).
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+	 * 
+	 */
+	this.OnRegisterForRemoteNotificationsFailure = function(registrationError) {
+	};
+
+<span id='Appverse-PushNotifications-method-OnUnRegisterForRemoteNotificationsSuccess'>	/**
+</span>	 * @event OnUnRegisterForRemoteNotificationsSuccess Fired on successfully unregistration for remote notifications.
+     * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * @aside guide application_listeners
+	 * &lt;br&gt; @version 5.0.3
+	 * @method
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+	 * 
+	 */
+	this.OnUnRegisterForRemoteNotificationsSuccess = function() {
+	};
+    
+};
+
+Appverse.PushNotifications = new PushNotifications();
+
+<span id='Appverse-PushNotifications-method-RegisterForRemoteNotifications'>/**
+</span> * Registers this application and device for receiving remote notifications.
+ * &lt;br&gt; Returned data should be handled by overriding the corresponding Platform Listeners Appverse.OnRegisterForRemoteNotificationsSuccess and Appverse.OnRegisterForRemoteNotificationsFailure
+ * &lt;br&gt; @version 5.0.3
+ * @method
+ * @param {String} senderId The sender identifier. This parameter is required for some platforms (such as the Android platform), in iOS will be just ignored.
+ * @param {int[]} types The remote notifications types accepted by this application. For further information see, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_NONE REMOTE_NOTIFICATION_TYPE_NONE}, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_BADGE REMOTE_NOTIFICATION_TYPE_BADGE}, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_SOUND REMOTE_NOTIFICATION_TYPE_SOUND}, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_ALERT REMOTE_NOTIFICATION_TYPE_ALERT} and {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY}
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+ */
+PushNotifications.prototype.RegisterForRemoteNotifications = function(senderId, types)
+{
+    post_to_url_async(Appverse.PushNotifications.serviceName, &quot;RegisterForRemoteNotifications&quot;, get_params([senderId, types]), null, null);
+};
+
+<span id='Appverse-PushNotifications-method-UnRegisterForRemoteNotifications'>/**
+</span> * Un-registers this application and device from receiving remote notifications.
+ * &lt;br&gt; Returned data should be handled by overriding the corresponding Platform Listeners Appverse.OnUnRegisterForRemoteNotificationsSuccess
+ * &lt;br&gt; @version 5.0.3 (listener callback only available on 4.0)
+ * @method
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+ */
+PushNotifications.prototype.UnRegisterForRemoteNotifications = function()
+{
+    post_to_url_async(Appverse.PushNotifications.serviceName, &quot;UnRegisterForRemoteNotifications&quot;, null, null, null);
+};
+</pre>
+</body>
+</html>

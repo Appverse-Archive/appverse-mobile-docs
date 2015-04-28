@@ -16,11 +16,11 @@ The following are the current Appverse app listeners available on the platform:
 * **Appverse.backButtonListener** (only available in Android): Lets your app know that the user has pressed the "physical" android back button.
 * **Appverse.OnExternallyLaunched**: Lets your app know that it has been started from another app or scheme URI (not launched by the OS spring board); with some specific parameters.
 
-### Remote Notification Events
-* **Appverse.OnRegisterForRemoteNotificationsSuccess**: Lets your app get notified when the remote notifications registration process has been completed with success.
-* **Appverse.OnRegisterForRemoteNotificationsFailure**: Lets your app get notified when the remote notifications registration process has been failed.
-* **Appverse.OnRemoteNotificationReceived**: Lets your app get notified when the a remote notification has arrived (while application is running).
-* **Appverse.OnUnRegisterForRemoteNotificationsSuccess**: only available in Android): Lets your app get notified when the unregistration process (for receiving remote notifications) has been completed with success. When application is not running, the remote notification is handled by the system, and when the user clicks on the notification alert, the system wakes up the application and executes this event listener.
+### Remote Notification Events [MODULE]
+* **Appverse.PushNotifications.OnRegisterForRemoteNotificationsSuccess**: Lets your app get notified when the remote notifications registration process has been completed with success.
+* **Appverse.PushNotifications.OnRegisterForRemoteNotificationsFailure**: Lets your app get notified when the remote notifications registration process has been failed.
+* **Appverse.PushNotifications.OnRemoteNotificationReceived**: Lets your app get notified when the a remote notification has arrived (while application is running).
+* **Appverse.PushNotifications.OnUnRegisterForRemoteNotificationsSuccess**: only available in Android): Lets your app get notified when the unregistration process (for receiving remote notifications) has been completed with success. When application is not running, the remote notification is handled by the system, and when the user clicks on the notification alert, the system wakes up the application and executes this event listener.
 
 ### Local Notification Events
 * **Appverse.OnLocalNotificationReceived**: Lets your app get notified when the a local notification has arrived (while application is running). When application is not running, the local notification is handled by the system, and when the user clicks on the notification alert, the system wakes up the application and exceutes this event listener.
@@ -32,11 +32,25 @@ The following are the current Appverse app listeners available on the platform:
 
 ### Media Events
 * **Appverse.Media.onFinishedPickingImage**: Lets your app be aware that the process of picking an image (from the album or using the camera) has finished. This listeners provides information about the just picked picture.
-* **Appverse.Media.onQRCodeDetected**: Lets your app to be aware that a QR Code has been detected and analysed; the code data is returned to the listener to be handled.
+* **Appverse.Scanner.onQRCodeDetected** [MODULE]: Lets your app to be aware that a QR Code has been detected and analysed; the code data is returned to the listener to be handled.
 
 ### Application Modules Loader Events
 * **Appverse.AppLoader.onUpdateModulesFinished**: Lets your app to know that the requested modules update has been completed. The listener provides information about the successful and failed updated modules.
 * **Appverse.AppLoader.onDeleteModulesFinished**: Lets your app to know that the requested modules deletion has been completed. The listener provides information about the successful and failed deleted modules.
+
+### Beacons Events
+* **Appverse.Beacon.OnEntered**: Lets your app be aware that a previously detected beacon is found again.
+* **Appverse.Beacon.OnExited**: Lets your app to be aware that a previously detected beacon is not found.
+* **Appverse.Beacon.OnDiscover**: Lets your app to be aware that a new beacon is discovered.
+* **Appverse.Beacon.OnUpdateProximity**: Lets your app to be aware that the distance of a known beacon has changed.
+
+### PIM Events
+* **Appverse.Pim.onContactFound**: Lets your app be aware of a contact detail search result
+* **Appverse.Pim.onListCalendarEntriesEnd**: Lets your app to be aware of calendar search result
+* **Appverse.Pim.onListContactsEnd**: Lets your app to be aware of a contact list search
+
+### Network Events
+* **Appverse.Net.onConnectivityChange**: Lets your app be aware of a connectivity changes in the network
 
 How to subscribe to a listener
 ---------------------
