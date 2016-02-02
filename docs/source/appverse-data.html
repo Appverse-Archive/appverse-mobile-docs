@@ -15,8 +15,7 @@
   </script>
 </head>
 <body onload="prettyPrint(); highlight();">
-  <pre class="prettyprint lang-js">
-// *****************************************
+  <pre class="prettyprint lang-js">// *****************************************
 // *********** APPVERSE CONTEXT ************
 // *****************************************
 
@@ -29,81 +28,81 @@
  * @version 5.0
  */
 Appverse.is = {
-<span id='Appverse-is-static-property-iPod'>	/**
-</span>	 * @property iPod Returns true if current device is an iPod device. Default to false.
-	 * @static
-	 * @type Boolean
-	 */
-	iPod: false,
-<span id='Appverse-is-static-property-Mac'>	/**
-</span>	 * @property Mac Returns true if current device is a Mac. Default to false.
-	 * @static
-	 * @type Boolean
-	 */
-	Mac: false,
-<span id='Appverse-is-static-property-Windows'>	/**
-</span>	 * @property Windows Returns true if current device is a Windows. Default to false.
-	 * @static
-	 * @type Boolean
-	 */
-	Windows: false,
-<span id='Appverse-is-static-property-Linux'>	/**
-</span>	 * @property Linux Returns true if current device is a Linux. Default to false.
-	 * @static
-	 * @type Boolean
-	 */
-	Linux: false,
+<span id='Appverse-is-static-property-iPod'>    /**
+</span>     * @property iPod Returns true if current device is an iPod device. Default to false.
+     * @static
+     * @type Boolean
+     */
+    iPod: false,
+<span id='Appverse-is-static-property-Mac'>    /**
+</span>     * @property Mac Returns true if current device is a Mac. Default to false.
+     * @static
+     * @type Boolean
+     */
+    Mac: false,
+<span id='Appverse-is-static-property-Windows'>    /**
+</span>     * @property Windows Returns true if current device is a Windows. Default to false.
+     * @static
+     * @type Boolean
+     */
+    Windows: false,
+<span id='Appverse-is-static-property-Linux'>    /**
+</span>     * @property Linux Returns true if current device is a Linux. Default to false.
+     * @static
+     * @type Boolean
+     */
+    Linux: false,
 
-<span id='Appverse-is-static-property-iPad'>	/**
-</span>	 * @property iPad Returns true if current device is an iPad device. Default to false.
-	 * @static
-	 * @type Boolean
-	 */
-	iPad: false,
-<span id='Appverse-is-static-property-iPhone'>	/**
-</span>	 * @property iPhone Returns true if current device is an iPhone device. Default to false.
-	 * @static
-	 * @type Boolean
-	 */
-	iPhone: false,
-<span id='Appverse-is-static-property-Android'>	/**
-</span>	 * @property Android Returns true if current device is an Android device. Default to false.
-	 * @static
-	 * @type Boolean
-	 */
-	Android: false,
-<span id='Appverse-is-static-property-Blackberry'>	/**
-</span>	 * @property Blackberry Returns true if current device is a Blackberry device. Default to false.
-	 * @static
-	 * @type Boolean
-	 */
-	Blackberry: false,
-				
+<span id='Appverse-is-static-property-iPad'>    /**
+</span>     * @property iPad Returns true if current device is an iPad device. Default to false.
+     * @static
+     * @type Boolean
+     */
+    iPad: false,
+<span id='Appverse-is-static-property-iPhone'>    /**
+</span>     * @property iPhone Returns true if current device is an iPhone device. Default to false.
+     * @static
+     * @type Boolean
+     */
+    iPhone: false,
+<span id='Appverse-is-static-property-Android'>    /**
+</span>     * @property Android Returns true if current device is an Android device. Default to false.
+     * @static
+     * @type Boolean
+     */
+    Android: false,
+<span id='Appverse-is-static-property-Blackberry'>    /**
+</span>     * @property Blackberry Returns true if current device is a Blackberry device. Default to false.
+     * @static
+     * @type Boolean
+     */
+    Blackberry: false,
 
-<span id='Appverse-is-static-property-Desktop'>	/**
-</span>	 * @property Desktop Returns true if current device is a desktop device (could be a Mac, a Windows, or a non-Android Linux).
-	 * @static
-	 * @type Boolean
-	 */
-	Desktop: false,
-<span id='Appverse-is-static-property-Tablet'>	/**
-</span>	 * @property Tablet Returns true if current device is a tablet device (only iPad is currently supported).
-	 * @static
-	 * @type Boolean
-	 */
-	Tablet: false,
-<span id='Appverse-is-static-property-Phone'>	/**
-</span>	 * @property Phone Returns true if current device is an smartphone device (non destkop, neither tablet device).
-	 * @static
-	 * @type Boolean
-	 */
-	Phone: false,
-<span id='Appverse-is-static-property-iOS'>	/**
-</span>	 * @property iOS Returns true if current device has an iOS operating systemn (iPhone, iPad, or iPod devices).
-	 * @static
-	 * @type Boolean
-	 */
-	iOS: false
+
+<span id='Appverse-is-static-property-Desktop'>    /**
+</span>     * @property Desktop Returns true if current device is a desktop device (could be a Mac, a Windows, or a non-Android Linux).
+     * @static
+     * @type Boolean
+     */
+    Desktop: false,
+<span id='Appverse-is-static-property-Tablet'>    /**
+</span>     * @property Tablet Returns true if current device is a tablet device.
+     * @static
+     * @type Boolean
+     */
+    Tablet: false,
+<span id='Appverse-is-static-property-Phone'>    /**
+</span>     * @property Phone Returns true if current device is an smartphone device (non destkop, neither tablet device).
+     * @static
+     * @type Boolean
+     */
+    Phone: false,
+<span id='Appverse-is-static-property-iOS'>    /**
+</span>     * @property iOS Returns true if current device has an iOS operating systemn (iPhone, iPad, or iPod devices).
+     * @static
+     * @type Boolean
+     */
+    iOS: false
 };
 
 <span id='Appverse-OSInfo'>/**
@@ -166,11 +165,11 @@ Appverse.HwInfo = {};
  * @version 5.0
  */
 Appverse.LocalizedLiterals = {
-<span id='Appverse-LocalizedLiterals-property-default'>	/**
+<span id='Appverse-LocalizedLiterals-property-default'>    /**
 </span>     * The default application locale (language-country) as configured in the &quot;i18-config.xml&quot; file.
      * @type {String}
      */
-	default : ''
+    default: ''
 };
 
 <span id='Appverse-CurrentDeviceLocale'>/**
@@ -227,42 +226,42 @@ Appverse.IOServices = {};
  * @version 1.0
  */
 Appverse.DateTime = {
-<span id='Appverse-DateTime-property-Day'>	/**
+<span id='Appverse-DateTime-property-Day'>    /**
 </span>     * The Day of the month represented by this date instance. Expressed as a value between 1 and 31.
-	 * @type {int}
+     * @type {int}
      */
-	Day: 1,
-	
-<span id='Appverse-DateTime-property-Month'>	/**
+    Day: 1,
+
+<span id='Appverse-DateTime-property-Month'>    /**
 </span>     * The Month component of the date represented by this date instance. Expressed as a value between 1 (January) and 12 (December).
-	 * @type {int}
+     * @type {int}
      */
-	Month: 1,
-	
-<span id='Appverse-DateTime-property-Year'>	/**
+    Month: 1,
+
+<span id='Appverse-DateTime-property-Year'>    /**
 </span>     * The Year component of the date represented by this date instance. Expressed as a value between 1 and 9999.
-	 * @type {int}
+     * @type {int}
      */
-	Year: 9999,
-	
-<span id='Appverse-DateTime-property-Hour'>	/**
+    Year: 9999,
+
+<span id='Appverse-DateTime-property-Hour'>    /**
 </span>     * The Hour component represented by the time of this date instance. Expressed as a value between 0 and 23.
-	 * @type {int}
+     * @type {int}
      */
-	Hour: 0,
-	
-<span id='Appverse-DateTime-property-Minute'>	/**
+    Hour: 0,
+
+<span id='Appverse-DateTime-property-Minute'>    /**
 </span>     * The Minutes component represented by the time of this date instance. Expressed as a value between 0 and 59.
-	 * @type {int}
+     * @type {int}
      */
-	Minute: 0,
-	
-<span id='Appverse-DateTime-property-Second'>	/**
+    Minute: 0,
+
+<span id='Appverse-DateTime-property-Second'>    /**
 </span>     * The Seconds component represented by the time of this date instance. Expressed as a value between 0 and 59.
-	 * @type {int}
+     * @type {int}
      */
-	Second: 0
-	
+    Second: 0
+
 };
 
 
@@ -286,25 +285,25 @@ Appverse.System.HardwareInfo = {
 </span>     * Device Name (as configured on the device settings).
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-System-HardwareInfo-property-Vendor'>	/**
+    Name: '',
+
+<span id='Appverse-System-HardwareInfo-property-Vendor'>    /**
 </span>     * Hardware Vendor.
      * @type {String}
      */
-	Vendor : '',
-	
-<span id='Appverse-System-HardwareInfo-property-Version'>	/**
+    Vendor: '',
+
+<span id='Appverse-System-HardwareInfo-property-Version'>    /**
 </span>     * Hardware Version (device model).
      * @type {String}
      */
-	 Version : '',
-	
-<span id='Appverse-System-HardwareInfo-property-DeviceUuid'>	/**
+    Version: '',
+
+<span id='Appverse-System-HardwareInfo-property-DeviceUuid'>    /**
 </span>     * Hardware Device UUID (unique device identifier).
      * @type {String}
      */
-	DeviceUuid : ''
+    DeviceUuid: ''
 
 };
 
@@ -324,19 +323,19 @@ Appverse.System.OSInfo = {
 </span>     * Device Operating System Name.
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-System-OSInfo-property-Vendor'>	/**
+    Name: '',
+
+<span id='Appverse-System-OSInfo-property-Vendor'>    /**
 </span>     * Device Operating System Vendor.
      * @type {String}
      */
-	Vendor : '',
-	
-<span id='Appverse-System-OSInfo-property-Version'>	/**
+    Vendor: '',
+
+<span id='Appverse-System-OSInfo-property-Version'>    /**
 </span>     * Device Operating System Version.
      * @type {String}
      */
-	 Version : ''
+    Version: ''
 
 };
 
@@ -356,25 +355,25 @@ Appverse.System.CPUInfo = {
 </span>     * Processor Name.
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-System-CPUInfo-property-Vendor'>	/**
+    Name: '',
+
+<span id='Appverse-System-CPUInfo-property-Vendor'>    /**
 </span>     * Processor Vendor.
      * @type {String}
      */
-	Vendor : '',
-	
-<span id='Appverse-System-CPUInfo-property-Speed'>	/**
+    Vendor: '',
+
+<span id='Appverse-System-CPUInfo-property-Speed'>    /**
 </span>     * CPU Speed.
      * @type {double}
      */
-	 Speed : 0,
-	
-<span id='Appverse-System-CPUInfo-property-UUID'>	/**
+    Speed: 0,
+
+<span id='Appverse-System-CPUInfo-property-UUID'>    /**
 </span>     * CPU UUID (unique processor identifier).
      * @type {String}
      */
-	UUID : ''
+    UUID: ''
 
 };
 
@@ -393,17 +392,17 @@ Appverse.System.Locale = {
 
 <span id='Appverse-System-Locale-property-Language'>    /**
 </span>     * A valid ISO Language Code.&lt;br/&gt;These codes are the lower-case, two-letter codes as defined by ISO-639. 
-	 * &lt;a href=&quot;http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt&quot;&gt;http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt&lt;/a&gt;
+     * &lt;a href=&quot;http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt&quot;&gt;http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt&lt;/a&gt;
      * @type {String}
      */
-	Language : '',
-	
-<span id='Appverse-System-Locale-property-Country'>	/**
+    Language: '',
+
+<span id='Appverse-System-Locale-property-Country'>    /**
 </span>     * A valid ISO Country Code.&lt;br/&gt;These codes are the upper-case, two-letter codes as defined by ISO-3166. 
-	 * &lt;a href=&quot;http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html&quot;&gt;http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html&lt;/a&gt;
+     * &lt;a href=&quot;http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html&quot;&gt;http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html&lt;/a&gt;
      * @type {String}
      */
-	Country : ''
+    Country: ''
 
 };
 
@@ -423,19 +422,19 @@ Appverse.System.MemoryStatus = {
 </span>     * Total Memory available.
      * @type {long}
      */
-	MemoryTotal : 0,
-	
-<span id='Appverse-System-MemoryStatus-property-MemoryFree'>	/**
+    MemoryTotal: 0,
+
+<span id='Appverse-System-MemoryStatus-property-MemoryFree'>    /**
 </span>     * Current Free Memory.
      * @type {long}
      */
-	MemoryFree : 0,
-	
-<span id='Appverse-System-MemoryStatus-property-MemoryUsed'>	/**
+    MemoryFree: 0,
+
+<span id='Appverse-System-MemoryStatus-property-MemoryUsed'>    /**
 </span>     * Current Used Memory.
      * @type {long}
      */
-	 MemoryUsed : 0
+    MemoryUsed: 0
 
 };
 
@@ -456,19 +455,19 @@ Appverse.System.PowerInfo = {
      * &lt;br/&gt;Possible values: {@link Appverse.System#POWER_CHARGING POWER_CHARGING}, {@link Appverse.System#POWER_DISCHARGING POWER_DISCHARGING}, {@link Appverse.System#POWER_FULLY_CHARGED POWER_FULLY_CHARGED} &amp; {@link Appverse.System#POWER_UNKNOWN POWER_UNKNOWN}
      * @type {int}
      */
-	Status : 0,
-	
-<span id='Appverse-System-PowerInfo-property-Level'>	/**
+    Status: 0,
+
+<span id='Appverse-System-PowerInfo-property-Level'>    /**
 </span>     * Device Battery Percentage.
      * @type {float}
      */
-	Level : 0,
-	
-<span id='Appverse-System-PowerInfo-property-Time'>	/**
+    Level: 0,
+
+<span id='Appverse-System-PowerInfo-property-Time'>    /**
 </span>     * Device autonomy time (in milliseconds).
      * @type {long}
      */
-	 Time : 0
+    Time: 0
 
 };
 
@@ -483,51 +482,51 @@ Appverse.System.PowerInfo = {
  * @version 1.0
  */
 Appverse.System.DisplayInfo = {
-	
-<span id='Appverse-System-DisplayInfo-property-DisplayNumber'>	/**
+
+<span id='Appverse-System-DisplayInfo-property-DisplayNumber'>    /**
 </span>     * The number of this display (index) .
      * @type {int}
      */
-	DisplayNumber: 0,
-	
-<span id='Appverse-System-DisplayInfo-property-DisplayX'>	/**
+    DisplayNumber: 0,
+
+<span id='Appverse-System-DisplayInfo-property-DisplayX'>    /**
 </span>     * The number of horizontal pixels of this display.
      * @type {int}
      */
-	DisplayX: 0,
-	
-<span id='Appverse-System-DisplayInfo-property-DisplayY'>	/**
+    DisplayX: 0,
+
+<span id='Appverse-System-DisplayInfo-property-DisplayY'>    /**
 </span>     * The number of vertical pixels of this display.
      * @type {int}
      */
-	DisplayY: 0,
-	
-<span id='Appverse-System-DisplayInfo-property-DisplayType'>	/**
+    DisplayY: 0,
+
+<span id='Appverse-System-DisplayInfo-property-DisplayType'>    /**
 </span>     * The type of this display.
      * &lt;br/&gt;Possible values: {@link Appverse.System#DISPLAYTYPE_EXTERNAL DISPLAYTYPE_EXTERNAL}, 
      * {@link Appverse.System#DISPLAYTYPE_PRIMARY DISPLAYTYPE_PRIMARY}, &amp; {@link Appverse.System#DISPLAYTYPE_UNKNOWN DISPLAYTYPE_UNKNOWN}
-	 * @type {int}
+     * @type {int}
      */
-	DisplayType: 0,
-	
-<span id='Appverse-System-DisplayInfo-property-DisplayOrientation'>	/**
+    DisplayType: 0,
+
+<span id='Appverse-System-DisplayInfo-property-DisplayOrientation'>    /**
 </span>     * The current orientation of this display.
      * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.System#ORIENTATION_LANDSCAPE ORIENTATION_LANDSCAPE}, 
-	 * {@link Appverse.System#ORIENTATION_PORTRAIT ORIENTATION_PORTRAIT},
-	 * &amp; {@link Appverse.System#ORIENTATION_UNKNOWN ORIENTATION_UNKNOWN}
-	* @type {int}
+     * {@link Appverse.System#ORIENTATION_LANDSCAPE ORIENTATION_LANDSCAPE}, 
+     * {@link Appverse.System#ORIENTATION_PORTRAIT ORIENTATION_PORTRAIT},
+     * &amp; {@link Appverse.System#ORIENTATION_UNKNOWN ORIENTATION_UNKNOWN}
+     * @type {int}
      */
-	DisplayOrientation: 0,
-	
-<span id='Appverse-System-DisplayInfo-property-DisplayBitDepth'>	/**
+    DisplayOrientation: 0,
+
+<span id='Appverse-System-DisplayInfo-property-DisplayBitDepth'>    /**
 </span>     * The depth in bits of the this display.
      * &lt;br/&gt;Possible values: {@link Appverse.System#BITDEPTH_BPP16 BITDEPTH_BPP16}, {@link Appverse.System#BITDEPTH_BPP24 BITDEPTH_BPP24}, {@link Appverse.System#BITDEPTH_BPP32 BITDEPTH_BPP32},  
      * {@link Appverse.System#BITDEPTH_BPP8 BITDEPTH_BPP8}, &amp; {@link Appverse.System#BITDEPTH_UNKNOWN BITDEPTH_UNKNOWN}
-	 * @type {int}
+     * @type {int}
      */
-	DisplayBitDepth: 0
-	
+    DisplayBitDepth: 0
+
 };
 
 <span id='Appverse-System-App'>/**
@@ -546,19 +545,19 @@ Appverse.System.App = {
 </span>     * The name of the application to be launched (it should be unique; otherwise the first application matching a name will be used to refer the application) .
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-System-App-property-IOSApp'>	/**
+    Name: '',
+
+<span id='Appverse-System-App-property-IOSApp'>    /**
 </span>     * Specific application data for the iOS platform. ONLY AVAILABLE ON THE iOS PLATFORM.
      * @type {Appverse.System.iOSApp}
      */
-	IOSApp : {},
-	
-<span id='Appverse-System-App-property-AndroidApp'>	/**
+    IOSApp: {},
+
+<span id='Appverse-System-App-property-AndroidApp'>    /**
 </span>     * Specific application data for the Android platform. ONLY AVAILABLE ON THE Android PLATFORM.
      * @type {Appverse.System.AndroidApp}
      */
-	AndroidApp : {}
+    AndroidApp: {}
 
 };
 
@@ -578,13 +577,13 @@ Appverse.System.iOSApp = {
 </span>     * The URI to be used to launch this application.
      * @type {String}
      */
-	UriScheme : '',
-	
-<span id='Appverse-System-iOSApp-property-RemoveUriDoubleSlash'>	/**
+    UriScheme: '',
+
+<span id='Appverse-System-iOSApp-property-RemoveUriDoubleSlash'>    /**
 </span>     * True to remove the double slash after the URI schemes (some applications do not include the &quot;//&quot; prefix after the uri scheme, example: tel or mailto schemes)
      * @type {Boolean}
      */
-	RemoveUriDoubleSlash : false
+    RemoveUriDoubleSlash: false
 
 };
 
@@ -604,43 +603,43 @@ Appverse.System.AndroidApp = {
 </span>     * The Intent Action to be used to launch this application.
      * @type {String}
      */
-	Action : '',
-	
-<span id='Appverse-System-AndroidApp-property-MimeType'>	/**
+    Action: '',
+
+<span id='Appverse-System-AndroidApp-property-MimeType'>    /**
 </span>     * The Intent mime type to be used to launch this application.
      * @type {String}
      */
-	MimeType : '',
-	
-<span id='Appverse-System-AndroidApp-property-Category'>	/**
+    MimeType: '',
+
+<span id='Appverse-System-AndroidApp-property-Category'>    /**
 </span>     * The Intent category to be used to launch this application.
      * @type {String}
      */
-	Category : '',
-	
-<span id='Appverse-System-AndroidApp-property-UriScheme'>	/**
+    Category: '',
+
+<span id='Appverse-System-AndroidApp-property-UriScheme'>    /**
 </span>     * The URI to be used to launch this application.
      * @type {String}
      */
-	UriScheme : '',
-	
-<span id='Appverse-System-AndroidApp-property-RemoveUriDoubleSlash'>	/**
+    UriScheme: '',
+
+<span id='Appverse-System-AndroidApp-property-RemoveUriDoubleSlash'>    /**
 </span>     * True to remove the double slash after the URI schemes (some applications do not include the &quot;//&quot; prefix after the uri scheme, example: tel or mailto schemes)
      * @type {Boolean}
      */
-	RemoveUriDoubleSlash : false,
-	
-<span id='Appverse-System-AndroidApp-property-ComponentName'>	/**
+    RemoveUriDoubleSlash: false,
+
+<span id='Appverse-System-AndroidApp-property-ComponentName'>    /**
 </span>     * The Intent Component Name (explicit intent) to be used to launch this application.
      * @type {String}
      */
-	ComponentName : '',
-	
-<span id='Appverse-System-AndroidApp-property-ParseQueryStrinAsIntentExtras'>	/**
+    ComponentName: '',
+
+<span id='Appverse-System-AndroidApp-property-ParseQueryStrinAsIntentExtras'>    /**
 </span>     * True to add extras to the Intent to launch this application. The extras will be obtained by parsing the &quot;query string&quot; received on the Appverse.System.LaunchApplication method.
      * @type {Boolean}
      */
-	ParseQueryStrinAsIntentExtras : false
+    ParseQueryStrinAsIntentExtras: false
 
 };
 
@@ -660,13 +659,13 @@ Appverse.System.LaunchData = {
 </span>     * The name of this launch data.
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-System-LaunchData-property-Value'>	/**
+    Name: '',
+
+<span id='Appverse-System-LaunchData-property-Value'>    /**
 </span>     * The value of this launch data.
      * @type {String}
      */
-	Value : ''
+    Value: ''
 
 };
 
@@ -690,19 +689,19 @@ Appverse.Database.Database = {
 </span>     * Database Name (name of the .db local file).
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-Database-Database-property-NewOption'>	/**
+    Name: '',
+
+<span id='Appverse-Database-Database-property-NewOption'>    /**
 </span>     * Indicates if database was created or needs to be created as New.
      * @type {Boolean}
      */
-	NewOption : false,
-	
-<span id='Appverse-Database-Database-property-CompressOption'>	/**
+    NewOption: false,
+
+<span id='Appverse-Database-Database-property-CompressOption'>    /**
 </span>     * Indicates if database was created or needs to be created as Compressed.
      * @type {Boolean}
      */
-	 CompressOption : false
+    CompressOption: false
 
 };
 
@@ -722,25 +721,25 @@ Appverse.Database.ResultSet = {
 </span>     * Number of query result rows.
      * @type {int}
      */
-	RowCount : 0,
-	
-<span id='Appverse-Database-ResultSet-property-ColumnCount'>	/**
+    RowCount: 0,
+
+<span id='Appverse-Database-ResultSet-property-ColumnCount'>    /**
 </span>     * Number of query result column (returned table fields values).
      * @type {int}
      */
-	ColumnCount : 0,
-	
-<span id='Appverse-Database-ResultSet-property-ColumnNames'>	/**
+    ColumnCount: 0,
+
+<span id='Appverse-Database-ResultSet-property-ColumnNames'>    /**
 </span>     * The names of the returned table fields.
      * @type {string[]}
      */
-	 ColumnNames : [],
-	
-<span id='Appverse-Database-ResultSet-property-RowsList'>	/**
+    ColumnNames: [],
+
+<span id='Appverse-Database-ResultSet-property-RowsList'>    /**
 </span>     * A list of returned rows. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Database.ResultSetRow ResultSetRow}.
      * @type {Appverse.Database.ResultSetRow[]}
      */
-	 RowsList : []
+    RowsList: []
 };
 
 <span id='Appverse-Database-ResultSetRow'>/**
@@ -759,7 +758,7 @@ Appverse.Database.ResultSetRow = {
 </span>     * The objects returned for the current result set row.
      * @type {Object[]}
      */
-	 ColumnsList : []
+    ColumnsList: []
 };
 
 // *****************************************
@@ -782,7 +781,7 @@ Appverse.FileSystem.DirectoryData = {
 </span>     * The relative path of the current Directory (folder) in the filesystem.
      * @type {String}
      */
-	FullName : ''
+    FullName: ''
 
 };
 
@@ -802,13 +801,13 @@ Appverse.FileSystem.FileData = {
 </span>     * The relative path of the current File in the filesystem.
      * @type {String}
      */
-	FullName : '',
-	
-<span id='Appverse-FileSystem-FileData-property-Length'>	/**
+    FullName: '',
+
+<span id='Appverse-FileSystem-FileData-property-Length'>    /**
 </span>     * The length of the File.
      * @type {int}
      */
-	Length: 0
+    Length: 0
 
 };
 
@@ -827,18 +826,18 @@ Appverse.FileSystem.FileData = {
  * @version 2.1
  */
 Appverse.IO.IOHeader = {
-<span id='Appverse-IO-IOHeader-property-Name'>	/**
+<span id='Appverse-IO-IOHeader-property-Name'>    /**
 </span>     * The name (key name) for the current header.
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-IO-IOHeader-property-Value'>	/**
+    Name: '',
+
+<span id='Appverse-IO-IOHeader-property-Value'>    /**
 </span>     * The value (key value) for the current header.
      * @type {String}
      */
-	Value : ''
-	
+    Value: ''
+
 };
 
 <span id='Appverse-IO-IOCookie'>/**
@@ -852,18 +851,18 @@ Appverse.IO.IOHeader = {
  * @version 2.1
  */
 Appverse.IO.IOCookie = {
-<span id='Appverse-IO-IOCookie-property-Name'>	/**
+<span id='Appverse-IO-IOCookie-property-Name'>    /**
 </span>     * The name (key name) for the current cookie.
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-IO-IOCookie-property-Value'>	/**
+    Name: '',
+
+<span id='Appverse-IO-IOCookie-property-Value'>    /**
 </span>     * The value (key value) for the current cookie.
      * @type {String}
      */
-	Value : ''
-	
+    Value: ''
+
 };
 
 <span id='Appverse-IO-IOHeaders'>/**
@@ -877,43 +876,43 @@ Appverse.IO.IOCookie = {
  * @version 1.0
  */
 Appverse.IO.IOHeaders = {
-<span id='Appverse-IO-IOHeaders-property-ContentType'>	/**
+<span id='Appverse-IO-IOHeaders-property-ContentType'>    /**
 </span>     * The request/response content type. MIME TYPE.
      * In case this content type attribute is specified on the IORequest object, 
-	 * its value would override the mime type mapped for the service (service type configuration) for that request.
+     * its value would override the mime type mapped for the service (service type configuration) for that request e.g.: 'application/xml'
      * @type {String}
      */
-	ContentType : '',
-	
-<span id='Appverse-IO-IOHeaders-property-Headers'>	/**
+    ContentType: '',
+
+<span id='Appverse-IO-IOHeaders-property-Headers'>    /**
 </span>     * The headers array (name,value pairs) to be included on the I/O service request. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.IO.IOHeader IOHeader}.
      * @type {Appverse.IO.IOHeader[]}
      */
-	Headers : [],
-	
-<span id='Appverse-IO-IOHeaders-property-Content'>	/**
+    Headers: [],
+
+<span id='Appverse-IO-IOHeaders-property-Content'>    /**
 </span>     * Request/Response data content (plain text).
      * @type {String}
      */
-	Content : '',
-	
-<span id='Appverse-IO-IOHeaders-property-GetRawContent'>	/**
+    Content: '',
+
+<span id='Appverse-IO-IOHeaders-property-GetRawContent'>    /**
 </span>     * The byte[] representing the {@link #Content Content} field.
      * @type {byte[]}
      */
-	GetRawContent : [],
-	
-<span id='Appverse-IO-IOHeaders-property-GetContentLength'>	/**
+    GetRawContent: [],
+
+<span id='Appverse-IO-IOHeaders-property-GetContentLength'>    /**
 </span>     * The length in bytes for the {@link #Content Content} field.
      * @type {int}
      */
-	GetContentLength : 0,
-	
-<span id='Appverse-IO-IOHeaders-property-Session'>	/**
+    GetContentLength: 0,
+
+<span id='Appverse-IO-IOHeaders-property-Session'>    /**
 </span>     * The session context for the Request/Response. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.IO.IOSessionContext IOSessionContext}.
      * @type {Appverse.IO.IOSessionContext}
      */
-	Session: null
+    Session: null
 };
 
 <span id='Appverse-IO-IORequest'>/**
@@ -927,24 +926,40 @@ Appverse.IO.IOHeaders = {
  * @version 1.0
  */
 Appverse.IO.IORequest = {
-<span id='Appverse-IO-IORequest-property-Method'>	/**
+<span id='Appverse-IO-IORequest-property-Method'>    /**
 </span>     * The request method (please use uppercase).
      * In case this method attribute is specified on the IORequest object, 
-	 * its value would override the req-method mapped for the service (service type configuration) for that particular request call.&lt;br/&gt;&lt;br/&gt;
-	 * @version 3.8
+     * its value would override the req-method mapped for the service (service type configuration) for that particular request call e.g.: 'PUT','DELETE'&lt;br/&gt;&lt;br/&gt;
+     * @version 3.8
      * @type {String}
      */
-	Method : '',
-	
-<span id='Appverse-IO-IORequest-property-ProtocolVersion'>	/**
+    Method: '',
+
+<span id='Appverse-IO-IORequest-property-ProtocolVersion'>    /**
 </span>     * The HTTP procotol version to be used for this request.
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.IO#HTTP_PROTOCOL_VERSION_1_0 HTTP_PROTOCOL_VERSION_1_0},
-	 * {@link Appverse.IO#HTTP_PROTOCOL_VERSION_1_1 HTTP_PROTOCOL_VERSION_1_1} &lt;br/&gt;&lt;br/&gt;
-	 * @version 3.8
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.IO#HTTP_PROTOCOL_VERSION_1_0 HTTP_PROTOCOL_VERSION_1_0},
+     * {@link Appverse.IO#HTTP_PROTOCOL_VERSION_1_1 HTTP_PROTOCOL_VERSION_1_1} &lt;br/&gt;&lt;br/&gt;
+     * @version 3.8
+     * @type {int}
      */
-	ProtocolVersion : 0,
+    ProtocolVersion: 0,
+
+<span id='Appverse-IO-IORequest-property-StopAutoRedirect'>    /**
+</span>     * Each request could decide to stop automatic 302 redirection. 
+     * Default value is false, which means that the IO Services API will follow redirections and do not send back the 302 status code. 
+     * Set this value to true if you want to that particular request do not redirect and send you back the 302 status response (with the HTTP Location header)&lt;br/&gt;&lt;br/&gt;
+     * @version 5.0.9
+     * @type {boolean}
+     */
+    StopAutoRedirect: false,
+
+<span id='Appverse-IO-IORequest-property-Attachment'>    /**
+</span>     * The request attached files, if service type is Appverse.IO.SERVICETYPE_MULTIPART_FORM_DATA. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.IO.AttachmentData AttachmentData}.
+     * @version 5.0.12
+     * @type {Appverse.IO.AttachmentData[]}
+     */
+    Attachment: []
 };
 
 <span id='Appverse-IO-IOResponse'>/**
@@ -958,17 +973,17 @@ Appverse.IO.IORequest = {
  * @version 1.0
  */
 Appverse.IO.IOResponse = {
-<span id='Appverse-IO-IOResponse-property-ContentBinary'>	/**
+<span id='Appverse-IO-IOResponse-property-ContentBinary'>    /**
 </span>     * The byte[] representing the binary {@link #Content Content}.
      * @type {byte[]}
      */
-	ContentBinary : [],
-	
-<span id='Appverse-IO-IOResponse-property-GetContentLengthBinary'>	/**
+    ContentBinary: [],
+
+<span id='Appverse-IO-IOResponse-property-GetContentLengthBinary'>    /**
 </span>     * The length in bytes for the  binary {@link #Content Content}.
      * @type {int}
      */
-	GetContentLengthBinary : 0,
+    GetContentLengthBinary: 0,
 };
 
 <span id='Appverse-IO-IOSessionContext'>/**
@@ -982,11 +997,11 @@ Appverse.IO.IOResponse = {
  * @version 1.0
  */
 Appverse.IO.IOSessionContext = {
-<span id='Appverse-IO-IOSessionContext-property-Cookies'>	/**
+<span id='Appverse-IO-IOSessionContext-property-Cookies'>    /**
 </span>     * The cookies array (name,value pairs) to be included on the I/O service session (request and response). &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.IO.IOCookie IOCookie}.
      * @type {Appverse.IO.IOCookie[]}
      */
-	Cookies : []
+    Cookies: []
 };
 
 <span id='Appverse-IO-IOService'>/**
@@ -1000,41 +1015,41 @@ Appverse.IO.IOSessionContext = {
  * @version 1.0
  */
 Appverse.IO.IOService = {
-<span id='Appverse-IO-IOService-property-Name'>	/**
+<span id='Appverse-IO-IOService-property-Name'>    /**
 </span>     * The name of the service (not unique, to uniquely define a service, use Name and Type).
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-IO-IOService-property-Type'>	/**
+    Name: '',
+
+<span id='Appverse-IO-IOService-property-Type'>    /**
 </span>     * The type of the service.
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.IO#SERVICETYPE_AMF_SERIALIZATION SERVICETYPE_AMF_SERIALIZATION},
-	 * {@link Appverse.IO#SERVICETYPE_GWT_RPC SERVICETYPE_GWT_RPC}, 
-	 * {@link Appverse.IO#SERVICETYPE_OCTET_BINARY SERVICETYPE_OCTET_BINARY}, 
-	 * {@link Appverse.IO#SERVICETYPE_REMOTING_SERIALIZATION SERVICETYPE_REMOTING_SERIALIZATION}, 
-	 * {@link Appverse.IO#SERVICETYPE_REST_JSON SERVICETYPE_REST_JSON} 
-	 * {@link Appverse.IO#SERVICETYPE_REST_XML SERVICETYPE_REST_XML}
-	 * {@link Appverse.IO#SERVICETYPE_SOAP_JSON SERVICETYPE_SOAP_JSON} 
-	 * {@link Appverse.IO#SERVICETYPE_SOAP_XML SERVICETYPE_SOAP_XML}
-	 * {@link Appverse.IO#SERVICETYPE_XMLRPC_JSON SERVICETYPE_XMLRPC_JSON}
-	 * &amp; {@link Appverse.IO#SERVICETYPE_XMLRPC_XML SERVICETYPE_XMLRPC_XML}
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.IO#SERVICETYPE_AMF_SERIALIZATION SERVICETYPE_AMF_SERIALIZATION},
+     * {@link Appverse.IO#SERVICETYPE_GWT_RPC SERVICETYPE_GWT_RPC}, 
+     * {@link Appverse.IO#SERVICETYPE_OCTET_BINARY SERVICETYPE_OCTET_BINARY}, 
+     * {@link Appverse.IO#SERVICETYPE_REMOTING_SERIALIZATION SERVICETYPE_REMOTING_SERIALIZATION}, 
+     * {@link Appverse.IO#SERVICETYPE_REST_JSON SERVICETYPE_REST_JSON} 
+     * {@link Appverse.IO#SERVICETYPE_REST_XML SERVICETYPE_REST_XML}
+     * {@link Appverse.IO#SERVICETYPE_SOAP_JSON SERVICETYPE_SOAP_JSON} 
+     * {@link Appverse.IO#SERVICETYPE_SOAP_XML SERVICETYPE_SOAP_XML}
+     * {@link Appverse.IO#SERVICETYPE_XMLRPC_JSON SERVICETYPE_XMLRPC_JSON}
+     * &amp; {@link Appverse.IO#SERVICETYPE_XMLRPC_XML SERVICETYPE_XMLRPC_XML}
+     * @type {int}
      */
-	Type : 0,
-	
-<span id='Appverse-IO-IOService-property-Endpoint'>	/**
+    Type: 0,
+
+<span id='Appverse-IO-IOService-property-Endpoint'>    /**
 </span>     * The data for the service end-point. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.IO.IOServiceEndpoint IOServiceEndpoint}.
      * @type {Appverse.IO.IOServiceEndpoint}
      */
-	Endpoint: null,
-	
-<span id='Appverse-IO-IOService-property-RequestMethod'>	/**
+    Endpoint: null,
+
+<span id='Appverse-IO-IOService-property-RequestMethod'>    /**
 </span>     * The method used to request the service.
-	 * &lt;br/&gt;Possible values: 0 (POST), 1 (GET)
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 0 (POST), 1 (GET)
+     * @type {int}
      */
-	RequestMethod: 0
+    RequestMethod: 0
 };
 
 <span id='Appverse-IO-IOServiceEndpoint'>/**
@@ -1048,36 +1063,54 @@ Appverse.IO.IOService = {
  * @version 1.0
  */
 Appverse.IO.IOServiceEndpoint = {
-	
-<span id='Appverse-IO-IOServiceEndpoint-property-Scheme'>	/**
+
+<span id='Appverse-IO-IOServiceEndpoint-property-Scheme'>    /**
 </span>     * The remote service scheme.
      * @type {String}
      */
-	Scheme: '',
-	
-<span id='Appverse-IO-IOServiceEndpoint-property-Host'>	/**
+    Scheme: '',
+
+<span id='Appverse-IO-IOServiceEndpoint-property-Host'>    /**
 </span>     * The remote serice host (alias or IP).
      * @type {String}
      */
-	Host: '',
-	
-<span id='Appverse-IO-IOServiceEndpoint-property-Port'>	/**
+    Host: '',
+
+<span id='Appverse-IO-IOServiceEndpoint-property-Port'>    /**
 </span>     * The remote service accesible port.
      * @type {int}
      */
-	Port: 0,
-	
-<span id='Appverse-IO-IOServiceEndpoint-property-Path'>	/**
+    Port: 0,
+
+<span id='Appverse-IO-IOServiceEndpoint-property-Path'>    /**
 </span>     * The remote service path (to be added to the host and port url).
      * @type {String}
      */
-	Path: '',
-	
-<span id='Appverse-IO-IOServiceEndpoint-property-ProxyUrl'>	/**
+    Path: '',
+
+<span id='Appverse-IO-IOServiceEndpoint-property-ProxyUrl'>    /**
 </span>     * The proxy url - if needed - to access the remote service. If IP and port are used, use the following syntax: &quot;http://&amp;lt;IP&amp;gt;:&amp;lt;Port&amp;gt;&quot;.
      * @type {String}
      */
-	ProxyUrl: ''
+    ProxyUrl: ''
+};
+
+<span id='Appverse-IO-AttachmentData'>/**
+</span> * @class Appverse.IO.AttachmentData
+ * @namespace Appverse.IO
+ * @extends Appverse.AttachmentData
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Attachment data for a Appverse.IO.SERVICETYPE_MULTIPART_FORM_DATA service type.
+ * @author maps
+ * @version 5.0.12
+ */
+Appverse.IO.AttachmentData = {
+
+<span id='Appverse-IO-AttachmentData-property-FormFieldKey'>    /**The name of the form field that will be used to map the attachment data file in the multipart/form-data request
+</span>     * @type {String}
+     */
+    FormFieldKey: ''
 };
 
 // *****************************************
@@ -1095,29 +1128,29 @@ Appverse.IO.IOServiceEndpoint = {
  * @version 1.0
  */
 Appverse.Geo.Acceleration = {
-<span id='Appverse-Geo-Acceleration-property-X'>	/**
+<span id='Appverse-Geo-Acceleration-property-X'>    /**
 </span>     * The acceleration value for the x axis of the device (in meters/second^2).
      * @type {float}
      */
-	X: 0,
-	
-<span id='Appverse-Geo-Acceleration-property-Y'>	/**
+    X: 0,
+
+<span id='Appverse-Geo-Acceleration-property-Y'>    /**
 </span>     * The acceleration value for the y axis of the device (in meters/second^2).
      * @type {float}
      */
-	Y: 0,
-	
-<span id='Appverse-Geo-Acceleration-property-Z'>	/**
+    Y: 0,
+
+<span id='Appverse-Geo-Acceleration-property-Z'>    /**
 </span>     * The acceleration value for the z axis of the device (in meters/second^2).
      * @type {float}
      */
-	Z: 0,
-	
-<span id='Appverse-Geo-Acceleration-property-Accel'>	/**
+    Z: 0,
+
+<span id='Appverse-Geo-Acceleration-property-Accel'>    /**
 </span>     * The result acceleration for the calculated coordinates vector (in meters/second^2).
      * @type {float}
      */
-	Accel: 0
+    Accel: 0
 };
 
 <span id='Appverse-Geo-LocationCoordinate'>/**
@@ -1131,36 +1164,36 @@ Appverse.Geo.Acceleration = {
  * @version 1.0
  */
 Appverse.Geo.LocationCoordinate = {
-	
-<span id='Appverse-Geo-LocationCoordinate-property-XCoordinate'>	/**
+
+<span id='Appverse-Geo-LocationCoordinate-property-XCoordinate'>    /**
 </span>     * The X coordinate (or longitude). Measured in degrees.
      * @type {double}
      */
-	XCoordinate: 0,
-	
-<span id='Appverse-Geo-LocationCoordinate-property-YCoordinate'>	/**
+    XCoordinate: 0,
+
+<span id='Appverse-Geo-LocationCoordinate-property-YCoordinate'>    /**
 </span>     * The Y coordinate (or latitude). Measured in degrees.
      * @type {double}
      */
-	YCoordinate: 0,
-	
-<span id='Appverse-Geo-LocationCoordinate-property-ZCoordinate'>	/**
+    YCoordinate: 0,
+
+<span id='Appverse-Geo-LocationCoordinate-property-ZCoordinate'>    /**
 </span>     * The current device altitude (or Z coordinate). Measured in meters.
      * @type {double}
      */
-	ZCoordinate: 0,
-	
-<span id='Appverse-Geo-LocationCoordinate-property-XDoP'>	/**
+    ZCoordinate: 0,
+
+<span id='Appverse-Geo-LocationCoordinate-property-XDoP'>    /**
 </span>     * Dilution of precision on the X measurement. Measured in meters.
      * @type {float}
      */
-	XDoP: 0,
-	
-<span id='Appverse-Geo-LocationCoordinate-property-YDoP'>	/**
+    XDoP: 0,
+
+<span id='Appverse-Geo-LocationCoordinate-property-YDoP'>    /**
 </span>     * Dilution of precision on the Y measurement. Measured in meters.
      * @type {float}
      */
-	YDoP: 0
+    YDoP: 0
 };
 
 <span id='Appverse-Geo-LocationDescription'>/**
@@ -1174,29 +1207,29 @@ Appverse.Geo.LocationCoordinate = {
  * @version 1.0
  */
 Appverse.Geo.LocationDescription = {
-<span id='Appverse-Geo-LocationDescription-property-Description'>	/**
+<span id='Appverse-Geo-LocationDescription-property-Description'>    /**
 </span>     * General description for this Location.
      * @type {String}
      */
-	Description: '',
-	
-<span id='Appverse-Geo-LocationDescription-property-Name'>	/**
+    Description: '',
+
+<span id='Appverse-Geo-LocationDescription-property-Name'>    /**
 </span>     * Name for this Location.
      * @type {String}
      */
-	Name: '',
-	
-<span id='Appverse-Geo-LocationDescription-property-CategoryMain'>	/**
+    Name: '',
+
+<span id='Appverse-Geo-LocationDescription-property-CategoryMain'>    /**
 </span>     * Main category this Location (POI) belongs to. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Geo.LocationCategory LocationCategory}.
      * @type {Appverse.Geo.LocationCategory}
      */
-	CategoryMain: '',
-	
-<span id='Appverse-Geo-LocationDescription-property-Categories'>	/**
+    CategoryMain: '',
+
+<span id='Appverse-Geo-LocationDescription-property-Categories'>    /**
 </span>     * List of categories this Location (POI) belongs to. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Geo.LocationCategory LocationCategory}.
      * @type {Appverse.Geo.LocationCategory[]}
      */
-	Categories: ''
+    Categories: ''
 };
 
 <span id='Appverse-Geo-LocationCategory'>/**
@@ -1210,11 +1243,11 @@ Appverse.Geo.LocationDescription = {
  * @version 1.0
  */
 Appverse.Geo.LocationCategory = {
-<span id='Appverse-Geo-LocationCategory-property-Name'>	/**
+<span id='Appverse-Geo-LocationCategory-property-Name'>    /**
 </span>     * Name for this Category.
      * @type {String}
      */
-	Name: ''
+    Name: ''
 };
 
 <span id='Appverse-Geo-POI'>/**
@@ -1230,29 +1263,29 @@ Appverse.Geo.LocationCategory = {
  * @version 1.0
  */
 Appverse.Geo.POI = {
-<span id='Appverse-Geo-POI-property-ID'>	/**
+<span id='Appverse-Geo-POI-property-ID'>    /**
 </span>     * Unique identifier for this Point of Interest.
      * @type {String}
      */
-	ID: '',
-	
-<span id='Appverse-Geo-POI-property-Location'>	/**
+    ID: '',
+
+<span id='Appverse-Geo-POI-property-Location'>    /**
 </span>     * Location coordinates for this Point of Interest. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Geo.LocationCoordinate LocationCoordinate}.
      * @type {Appverse.Geo.LocationCoordinate}
      */
-	Location: null,
-	
-<span id='Appverse-Geo-POI-property-Description'>	/**
+    Location: null,
+
+<span id='Appverse-Geo-POI-property-Description'>    /**
 </span>     * Location description for this Point of Interest. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Geo.LocationDescription LocationDescription}.
      * @type {Appverse.Geo.LocationDescription}
      */
-	Description: null,
-	
-<span id='Appverse-Geo-POI-property-Category'>	/**
+    Description: null,
+
+<span id='Appverse-Geo-POI-property-Category'>    /**
 </span>     * The category this Point of Interest belongs to. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Geo.LocationCategory LocationCategory}.
      * @type {Appverse.Geo.LocationCategory}
      */
-	Category: null
+    Category: null
 };
 
 
@@ -1267,59 +1300,59 @@ Appverse.Geo.POI = {
  * @version 1.0
  */
 Appverse.Geo.GeoDecoderAttributes = {
-<span id='Appverse-Geo-GeoDecoderAttributes-property-AdditionalStreetLevelInfo'>	/**
+<span id='Appverse-Geo-GeoDecoderAttributes-property-AdditionalStreetLevelInfo'>    /**
 </span>     * The additional street-level information for the location point, such as the street number, or floor number.
      * @type {String}
      */
-	AdditionalStreetLevelInfo: '',
-	
-<span id='Appverse-Geo-GeoDecoderAttributes-property-StreetAddress'>	/**
+    AdditionalStreetLevelInfo: '',
+
+<span id='Appverse-Geo-GeoDecoderAttributes-property-StreetAddress'>    /**
 </span>     * The street address associated with a location point.
      * @type {String}
      */
-	StreetAddress: '',
-	
-<span id='Appverse-Geo-GeoDecoderAttributes-property-Locality'>	/**
+    StreetAddress: '',
+
+<span id='Appverse-Geo-GeoDecoderAttributes-property-Locality'>    /**
 </span>     * The city associated with the location point.
      * @type {String}
      */
-	Locality: '',
-	
-<span id='Appverse-Geo-GeoDecoderAttributes-property-AdditionalCityLevelInfo'>	/**
+    Locality: '',
+
+<span id='Appverse-Geo-GeoDecoderAttributes-property-AdditionalCityLevelInfo'>    /**
 </span>     * The additional city-level information for the location point.
      * @type {String}
      */
-	AdditionalCityLevelInfo: '',
-	
-<span id='Appverse-Geo-GeoDecoderAttributes-property-PostalCode'>	/**
+    AdditionalCityLevelInfo: '',
+
+<span id='Appverse-Geo-GeoDecoderAttributes-property-PostalCode'>    /**
 </span>     * The postal code associated with the location point.
      * @type {String}
      */
-	PostalCode: '',
-	
-<span id='Appverse-Geo-GeoDecoderAttributes-property-Country'>	/**
+    PostalCode: '',
+
+<span id='Appverse-Geo-GeoDecoderAttributes-property-Country'>    /**
 </span>     * The name of the country associated with the location point.
      * @type {String}
      */
-	Country: '',
-	
-<span id='Appverse-Geo-GeoDecoderAttributes-property-CountryCode'>	/**
+    Country: '',
+
+<span id='Appverse-Geo-GeoDecoderAttributes-property-CountryCode'>    /**
 </span>     * The abbreviated country name, for example &quot;US&quot;.
      * @type {String}
      */
-	CountryCode: '',
-	
-<span id='Appverse-Geo-GeoDecoderAttributes-property-AdministrativeArea'>	/**
+    CountryCode: '',
+
+<span id='Appverse-Geo-GeoDecoderAttributes-property-AdministrativeArea'>    /**
 </span>     * The state associated with the location point, for example &quot;CA&quot; or &quot;California&quot;.
      * @type {String}
      */
-	AdministrativeArea: '',
-	
-<span id='Appverse-Geo-GeoDecoderAttributes-property-SubAdministrativeArea'>	/**
+    AdministrativeArea: '',
+
+<span id='Appverse-Geo-GeoDecoderAttributes-property-SubAdministrativeArea'>    /**
 </span>     * The additional administrative area information for the location point.
      * @type {String}
      */
-	SubAdministrativeArea: ''
+    SubAdministrativeArea: ''
 };
 
 // *****************************************
@@ -1337,69 +1370,269 @@ Appverse.Geo.GeoDecoderAttributes = {
  * @version 1.0
  */
 Appverse.Media.MediaMetadata = {
-<span id='Appverse-Media-MediaMetadata-property-Type'>	/**
+<span id='Appverse-Media-MediaMetadata-property-Type'>    /**
 </span>     * The media file type.
-	 * &lt;br/&gt;Possible values: {@link Appverse.Media#MEDIATYPE_NOT_SUPPORTED MEDIATYPE_NOT_SUPPORTED}, 
-	 * {@link Appverse.Media#MEDIATYPE_AUDIO MEDIATYPE_AUDIO}, 
-	 * {@link Appverse.Media#MEDIATYPE_VIDEO MEDIATYPE_VIDEO} &amp; {@link Appverse.Media#MEDIATYPE_PHOTO MEDIATYPE_PHOTO}
-	 * @type {int}
+     * &lt;br/&gt;Possible values: {@link Appverse.Media#MEDIATYPE_NOT_SUPPORTED MEDIATYPE_NOT_SUPPORTED}, 
+     * {@link Appverse.Media#MEDIATYPE_AUDIO MEDIATYPE_AUDIO}, 
+     * {@link Appverse.Media#MEDIATYPE_VIDEO MEDIATYPE_VIDEO} &amp; {@link Appverse.Media#MEDIATYPE_PHOTO MEDIATYPE_PHOTO}
+     * @type {int}
      */
-	 Type: 0,
-	
-<span id='Appverse-Media-MediaMetadata-property-MimeType'>	 /**
+    Type: 0,
+
+<span id='Appverse-Media-MediaMetadata-property-Size'>    /**
+</span>     * The media file size in bytes.
+     * @type {long}
+     *  @version 5.0.12
+     */
+    Size: '',
+
+<span id='Appverse-Media-MediaMetadata-property-MimeType'>    /**
 </span>     * The media file MIME type.
-	 * @type {String}
-     */	
-	 MimeType: '',
-	
-<span id='Appverse-Media-MediaMetadata-property-Handle'>	 /**
+     * @type {String}
+     */
+    MimeType: '',
+
+<span id='Appverse-Media-MediaMetadata-property-Handle'>    /**
 </span>     * The media file memmory pointer type (where media file is).
-	 * @type {long}
+     * @type {long}
      */
-	 Handle: 0,
-	
-<span id='Appverse-Media-MediaMetadata-property-Artist'>	 /**
+    Handle: 0,
+
+<span id='Appverse-Media-MediaMetadata-property-Artist'>    /**
 </span>     * The media file artist.
-	 * @type {String}
+     * @type {String}
      */
-	 Artist: '',
-	
-<span id='Appverse-Media-MediaMetadata-property-Title'>	 /**
+    Artist: '',
+
+<span id='Appverse-Media-MediaMetadata-property-Title'>    /**
 </span>     * The media file title.
-	 * @type {String}
+     * @type {String}
      */
-	 Title: '',
-	 
-<span id='Appverse-Media-MediaMetadata-property-Album'>	 /**
+    Title: '',
+
+<span id='Appverse-Media-MediaMetadata-property-Album'>    /**
 </span>     * The media file album.
-	 * @type {String}
+     * @type {String}
      */
-        Album: '',
+    Album: '',
 
-<span id='Appverse-Media-MediaMetadata-property-Category'>	/**
+<span id='Appverse-Media-MediaMetadata-property-Category'>    /**
 </span>     * The media file category.
-	 * @type {String}
+     * @type {String}
      */
-	 Category: '',
+    Category: '',
 
-<span id='Appverse-Media-MediaMetadata-property-DurationOffset'>	/**
+<span id='Appverse-Media-MediaMetadata-property-DurationOffset'>    /**
 </span>     * The media file position (current reproduction position).
-	 * @type {long}
+     * @type {long}
      */
-     DurationOffset: 0,
-	
-<span id='Appverse-Media-MediaMetadata-property-Duration'>	 /**
-</span>     * The media file duration.
-	 * @type {long}
-     */
-     Duration: 0,
+    DurationOffset: 0,
 
-<span id='Appverse-Media-MediaMetadata-property-ReferenceUrl'>	/**
-</span>     * The relative path - under the application &quot;Documents&quot; folder - where the media file is located.
-	 * @type {String}
+<span id='Appverse-Media-MediaMetadata-property-Duration'>    /**
+</span>     * The media file duration.
+     * @type {long}
      */
-	 ReferenceUrl: ''
-     
+    Duration: 0,
+
+<span id='Appverse-Media-MediaMetadata-property-ReferenceUrl'>    /**
+</span>     * The relative path - under the application &quot;Documents&quot; folder - where the media file is located.
+     * @type {String}
+     */
+    ReferenceUrl: ''
+
+};
+
+<span id='Appverse-Media-CameraOptions'>/**
+</span> * @class Appverse.Media.CameraOptions
+ * @namespace Appverse.Media
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Provides special camera options.&lt;br/&gt;&lt;br/&gt;
+ * Not suported Android properties: {@link Appverse.Media.CameraOptions#ScanButtonMarginBottom}, {@link Appverse.Media.CameraOptions#ScanButtonWidth}, {@link Appverse.Media.CameraOptions#ScanButtonHeight}, {@link Appverse.Media.CameraOptions#ScanButtonIconWidth}, {@link Appverse.Media.CameraOptions#ScanButtonIconHeight}, {@link Appverse.Media.CameraOptions#DescriptionLabelMarginBottom}&lt;br/&gt;&lt;br/&gt;
+ * For more info: &lt;a href=&quot;https://appverse.gftlabs.com/wiki/display/AM/Appverse+Mobile+Camera+Overlay&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;
+ * {@img camera_overlay_scheme_graphics.png camera_overlay_scheme_graphics}
+ * @author maps
+ * @version 5.0.12
+ */
+Appverse.Media.CameraOptions = {
+    
+<span id='Appverse-Media-CameraOptions-property-ImageScaleFactor'>	/**
+</span>	* The image scale factor (default is 1). Possible values are: 2 (to reduce the image 50%), 2.5 (to reduce image 40%), 3 (to reduce image 33%), 0.5 (to double image size), etc... 
+	* @type {float}
+	*/
+	ImageScaleFactor: 1,
+
+<span id='Appverse-Media-CameraOptions-property-UseFrontCamera'>	/**
+</span>	* Set it to true to launch the front camera (if available) instead of the default rear one.
+	* @type {Boolean}
+	*/
+	UseFrontCamera: false,
+
+<span id='Appverse-Media-CameraOptions-property-UseCustomCameraOverlay'>	/**
+</span>	* Set it to true to launch the custom camera overlay.
+	* @type {Boolean}
+	*/
+	UseCustomCameraOverlay: false, 
+	
+<span id='Appverse-Media-CameraOptions-property-Overlay'>	/**
+</span>	* Set the overlay file name, without the file extension, that must be a png placed in the '[PLATFORM RESOURCES FOLDER]/camera/'). 
+	* &lt;br&gt; Only aplicable if the #UseCustomCameraOverlay flag is set to true.
+	* &lt;br&gt; &quot;PLATFORM RESOURCES FOLDER&quot; stands for: iOSResources, AndroidResources and WPResources
+	* &lt;br&gt;Each project can place any number of differnt overlay images, and specify which one should be used by the current execution of the Appverse.Media.TakeSnapshotWithOptions method.
+	* &lt;br&gt;The dimensions and format will be: &lt;br&gt;
+	* - iOSResources/camera/whatevername.png 		(1242 x 2208 pixels)&lt;br&gt;
+	* - AndroidResources/camera/whatevername.png 	( 640 x  960 pixels)&lt;br&gt;
+	* - WPResources/camera/whatevername.png 		(1152 x 1920 pixels)
+	* @type {String}
+	*/
+	Overlay: &quot;&quot;, 
+	
+<span id='Appverse-Media-CameraOptions-property-GuidelinesMargins'>	/**
+</span>	* Margin (in pixels) for the edges guidelines
+	* @type {int}
+	*/
+	GuidelinesMargins: 10, 
+
+<span id='Appverse-Media-CameraOptions-property-GuidelinesColorHexadecimal'>	/**
+</span>	* Color of the edges guidelines, in hexadecimal string (# at the beginning required)
+	* @type {String}
+	*/
+	GuidelinesColorHexadecimal: &quot;#999999&quot;,
+	
+<span id='Appverse-Media-CameraOptions-property-ScanButtonColorHexadecimal'>	/**
+</span>	* Scan button background color, in hexadecimal string (# at the beginning required)
+	* @type {String}
+	*/
+	ScanButtonColorHexadecimal: &quot;#999999&quot;,
+	
+<span id='Appverse-Media-CameraOptions-property-ScanButtonPressedColorHexadecimal'>	/**
+</span>	* Scan button background color when pressed, in hexadecimal string (# at the beginning required)
+	* @type {String}
+	*/
+	ScanButtonPressedColorHexadecimal: &quot;#666666&quot;,
+
+<span id='Appverse-Media-CameraOptions-property-ScanButtonMarginBottom'>	/**
+</span>	* Bottom margin (in pixels) for the scan button (space between the button bottom line and the device screen bottom edge)
+	* &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+	* @type {int}
+	*/
+	ScanButtonMarginBottom: 30,
+
+<span id='Appverse-Media-CameraOptions-property-ScanButtonWidth'>	/**
+</span>	* Scan button width (in pixels)
+	* &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+	* @type {int}
+	*/
+	ScanButtonWidth: 75,
+	
+<span id='Appverse-Media-CameraOptions-property-ScanButtonHeight'>	/**
+</span>	* Scan button height (in pixels)
+	* &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+	* @type {int}
+	*/
+	ScanButtonHeight: 35,
+
+<span id='Appverse-Media-CameraOptions-property-ScanButtonIconWidth'>	/**
+</span>	* The width (in pixels) of the icon inside the scan button
+	* @type {int}
+	* &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+	*/
+	ScanButtonIconWidth: 28, 
+	
+<span id='Appverse-Media-CameraOptions-property-ScanButtonIconHeight'>	/**
+</span>	* The height (in pixels) of the icon inside the scan button
+	* @type {int}
+	* &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+	*/
+	ScanButtonIconHeight: 24,
+	
+<span id='Appverse-Media-CameraOptions-property-ScanButtonIconColorHexadecimal'>	/**
+</span>	* The color of the icon inside the scan button, in hexadecimal string (# at the beginning required)
+	* @type {String}
+	*/
+	ScanButtonIconColorHexadecimal: &quot;#ffffff&quot;,
+
+<span id='Appverse-Media-CameraOptions-property-DescriptionLabelText'>	/**
+</span>	* The description text to be shown to help the user to make the picture.
+Set it to null to avoid showing this text.
+	* @type {String}
+	*/
+	DescriptionLabelText: &quot;Place here your description&quot;,
+	
+<span id='Appverse-Media-CameraOptions-property-DescriptionLabelColorHexadecimal'>	/**
+</span>	* The font color for the description text, in hexadecimal string (# at the beginning required)
+	* @type {String}
+	*/
+	DescriptionLabelColorHexadecimal: &quot;#ffffff&quot;, 
+	
+<span id='Appverse-Media-CameraOptions-property-DescriptionLabelMarginBottom'>	/**
+</span>	* Bottom margin (in pixels) for the description text (space between the description text bottom line and the device screen bottom edge)
+	* @type {int}
+	* &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/error.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+	*/
+	DescriptionLabelMarginBottom: 60,
+	
+<span id='Appverse-Media-CameraOptions-property-DescriptionLabelMarginLeftRight'>	/**
+</span>	* Left and Right margins (in pixels) for the description text (lateral spaces between the description text and the left and right device screen edges)
+	* @type {int}
+	*/
+	DescriptionLabelMarginLeftRight: 25,
+	
+<span id='Appverse-Media-CameraOptions-property-DescriptionLabelHeight'>	/**
+</span>	* Height for the description text (background is transparent)
+	* @type {int}
+	*/
+	DescriptionLabelHeight: 60,
+	
+<span id='Appverse-Media-CameraOptions-property-DescriptionLabelFontFamilyName'>	/**
+</span>	* Font Family name for the description text. It could be one of the available fonts in the native platform, or a custom font imported in the project)
+	* @type {String}
+	*/
+	DescriptionLabelFontFamilyName: &quot;Helvetica&quot;, 
+	
+<span id='Appverse-Media-CameraOptions-property-DescriptionLabelFontSize'>	/**
+</span>	* Font size for the description text
+	* @type {int}
+	*/
+	DescriptionLabelFontSize: 20,
+	
+<span id='Appverse-Media-CameraOptions-property-CancelButtonText'>	/**
+</span>	* The text for the cancel button (the cancel button will come back to the app without taking the picture)
+	* @type {String}
+	*/
+	CancelButtonText: &quot;Cancel&quot;,
+		
+<span id='Appverse-Media-CameraOptions-property-CancelButtonColorHexadecimal'>	/**
+</span>	* The font color of the cancel button
+	* @type {String}
+	*/
+	CancelButtonColorHexadecimal: &quot;#ffffff&quot;, 
+	
+<span id='Appverse-Media-CameraOptions-property-CancelButtonWidth'>	/**
+</span>	* Cancel button width (in pixels)
+	* @type {int}
+	*/
+	CancelButtonWidth: 80,
+	
+<span id='Appverse-Media-CameraOptions-property-CancelButtonHeight'>	/**
+</span>	* Cancel button height (in pixels)
+	* @type {int}
+	*/
+	CancelButtonHeight: 35,
+	
+<span id='Appverse-Media-CameraOptions-property-CancelButtonFontFamilyName'>	/**
+</span>	* Font Family name for the cancel button text. It could be one of the available fonts in the native platform, or a custom font imported in the project)
+	* @type {String}
+	*/
+	CancelButtonFontFamilyName: &quot;Helvetica&quot;,
+	
+<span id='Appverse-Media-CameraOptions-property-CancelButtonFontSize'>	/**
+</span>	* Font size for the cancel button text.
+	* @type {int}
+	*/
+	CancelButtonFontSize: 20
+    
 };
 
 // *****************************************
@@ -1417,56 +1650,56 @@ Appverse.Media.MediaMetadata = {
  * @version 1.0
  */
 Appverse.Messaging.EmailData = {
-	
-	
-<span id='Appverse-Messaging-EmailData-property-Subject'>	 /**
+
+
+<span id='Appverse-Messaging-EmailData-property-Subject'>    /**
 </span>     * The email subject.
-	 * @type {String}
-     */	
-	 Subject: '',
-	
-<span id='Appverse-Messaging-EmailData-property-FromAddress'>	 /**
+     * @type {String}
+     */
+    Subject: '',
+
+<span id='Appverse-Messaging-EmailData-property-FromAddress'>    /**
 </span>     * The email from address (the address we are sending from the email). &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Messaging.EmailAddress EmailAddress}.
-	 * @type {Appverse.Messaging.EmailAddress}
+     * @type {Appverse.Messaging.EmailAddress}
      */
-	 FromAddress: null,
-	
-<span id='Appverse-Messaging-EmailData-property-ToRecipients'>	 /**
+    FromAddress: null,
+
+<span id='Appverse-Messaging-EmailData-property-ToRecipients'>    /**
 </span>     * The email TO recipients list. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Messaging.EmailAddress EmailAddress}.
-	 * @type {Appverse.Messaging.EmailAddress[]}
+     * @type {Appverse.Messaging.EmailAddress[]}
      */
-	 ToRecipients: [],
-	 
-<span id='Appverse-Messaging-EmailData-property-CcRecipients'>	 /**
+    ToRecipients: [],
+
+<span id='Appverse-Messaging-EmailData-property-CcRecipients'>    /**
 </span>     * The email CC recipients list. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Messaging.EmailAddress EmailAddress}.
-	 * @type {Appverse.Messaging.EmailAddress[]}
+     * @type {Appverse.Messaging.EmailAddress[]}
      */
-	 CcRecipients: [],
-	 
-<span id='Appverse-Messaging-EmailData-property-BccRecipients'>	 /**
+    CcRecipients: [],
+
+<span id='Appverse-Messaging-EmailData-property-BccRecipients'>    /**
 </span>     * The email BCC recipients list. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Messaging.EmailAddress EmailAddress}.
-	 * @type {Appverse.Messaging.EmailAddress[]}
+     * @type {Appverse.Messaging.EmailAddress[]}
      */
-	 BccRecipients: [],
-	
-<span id='Appverse-Messaging-EmailData-property-MessageBodyMimeType'>	 /**
+    BccRecipients: [],
+
+<span id='Appverse-Messaging-EmailData-property-MessageBodyMimeType'>    /**
 </span>     * The mime type for the message body.
-	 * @type {String}
+     * @type {String}
      */
-	MessageBodyMimeType: '',
-	
-<span id='Appverse-Messaging-EmailData-property-MessageBody'>	/**
+    MessageBodyMimeType: '',
+
+<span id='Appverse-Messaging-EmailData-property-MessageBody'>    /**
 </span>     * The email message body.
-	 * @type {String}
+     * @type {String}
      */
-	MessageBody: '',
-	
-<span id='Appverse-Messaging-EmailData-property-Attachment'>	/**
+    MessageBody: '',
+
+<span id='Appverse-Messaging-EmailData-property-Attachment'>    /**
 </span>     * The email attached files. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Messaging.AttachmentData AttachmentData}.
-	 * @type {Appverse.Messaging.AttachmentData[]}
+     * @type {Appverse.Messaging.AttachmentData[]}
      */
-	Attachment: []
-	
+    Attachment: []
+
 };
 
 <span id='Appverse-Messaging-EmailAddress'>/**
@@ -1480,77 +1713,88 @@ Appverse.Messaging.EmailData = {
  * @version 1.0
  */
 Appverse.Messaging.EmailAddress = {
-	
-<span id='Appverse-Messaging-EmailAddress-property-Firstname'>	/**
-</span>     * The first name of the display name for the address.
-	 * @type {String}
-     */
- 	Firstname: '',
 
-<span id='Appverse-Messaging-EmailAddress-property-Surname'>	/**
+<span id='Appverse-Messaging-EmailAddress-property-Firstname'>    /**
+</span>     * The first name of the display name for the address.
+     * @type {String}
+     */
+    Firstname: '',
+
+<span id='Appverse-Messaging-EmailAddress-property-Surname'>    /**
 </span>     * The surname of the display name for the address.
-	 * @type {String}
+     * @type {String}
      */
-	 Surname: '',
-	
-<span id='Appverse-Messaging-EmailAddress-property-CommonName'>	/**
+    Surname: '',
+
+<span id='Appverse-Messaging-EmailAddress-property-CommonName'>    /**
 </span>     * The common name (alias) for the address.
-	 * @type {String}
+     * @type {String}
      */
-	CommonName: '',
-	
-<span id='Appverse-Messaging-EmailAddress-property-Address'>	/**
+    CommonName: '',
+
+<span id='Appverse-Messaging-EmailAddress-property-Address'>    /**
 </span>     * The email address string. In the form: address@xyz.com
-	 * @type {String}
+     * @type {String}
      */
-     Address: ''
+    Address: ''
 };
 
 <span id='Appverse-Messaging-AttachmentData'>/**
 </span> * @class Appverse.Messaging.AttachmentData
  * @namespace Appverse.Messaging
- * @extends Object
+ * @extends Appverse.AttachmentData
  * This is a sample class.&lt;br/&gt;&lt;br/&gt;
  * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
  * Attachment data for an email (email attributes Attachment shoould contain AttachmentData objects).
  * @author maps
  * @version 1.0
  */
-Appverse.Messaging.AttachmentData = {
-	
-<span id='Appverse-Messaging-AttachmentData-property-MimeType'>	/**
-</span>     * The mime type of the current attachment.
-	 * @type {String}
-	 * &lt;br/&gt;&lt;br/&gt; &lt;img src=&quot;resources/images/warning.png&quot;/&gt; &amp;nbsp; When attaching &lt;b&gt;PDF&lt;/b&gt; files to an email in &lt;b&gt;iOS&lt;/b&gt;, you should take into account that a file with the &lt;b&gt;&quot;application/pdf&quot;&lt;/b&gt; mime type (the default type for those files) could be attached in some cases as an &lt;b&gt;inline&lt;/b&gt; image, rather than an attached file. To avoid those situations and always attach PDF files as attachments you should use the &lt;b&gt;&quot;text/x-pdf&quot;&lt;/b&gt; mime type.
-	 * 
-     */
-	MimeType: '',
-	
-<span id='Appverse-Messaging-AttachmentData-property-FileName'>	/**
-</span>     * The name of the current file attachment.
-	 * @type {String}
-     */
-	FileName:'',
-	
-<span id='Appverse-Messaging-AttachmentData-property-Data'>	/**
-</span>     * The raw data for the current file attachment (byte array).
-	 * @type {byte[]}
-     */
-	Data: [],
-	
-<span id='Appverse-Messaging-AttachmentData-property-DataSize'>	/**
-</span>     * The data size (in bytes) of the current file attachment.
-	 * @type {long}
-     */
-	DataSize: 0,
+Appverse.Messaging.AttachmentData = {};
 
-<span id='Appverse-Messaging-AttachmentData-property-ReferenceUrl'>	/**
-</span>     * The relative path - under the application &quot;Documents&quot; folder - where the contents for the attachment file could be located.&lt;br/&gt;&lt;br/&gt;
-     * The Messaging API will use this reference url if no contents are provided on the {@link Appverse.Messaging.AttachmentData#Data Data[]}
-	 * @type {String}
+<span id='Appverse-AttachmentData'>/**
+</span> * @class Appverse.AttachmentData
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Attachment data object to be used as base of other APIs: such as the Appverse.Messaging.AttachmentData or Appverse.IO.AttachmentData.&lt;br/&gt;&lt;br/&gt;
+ * @author maps
+ * @version 5.0.12
+ */
+Appverse.AttachmentData = {
+
+<span id='Appverse-AttachmentData-property-MimeType'>    /**
+</span>     * The mime type of the current attachment.
+     * @type {String}
+     * &lt;br/&gt;&lt;br/&gt; &lt;img src=&quot;resources/images/warning.png&quot;/&gt; &amp;nbsp; When attaching &lt;b&gt;PDF&lt;/b&gt; files to an email in &lt;b&gt;iOS&lt;/b&gt;, you should take into account that a file with the &lt;b&gt;&quot;application/pdf&quot;&lt;/b&gt; mime type (the default type for those files) could be attached in some cases as an &lt;b&gt;inline&lt;/b&gt; image, rather than an attached file. To avoid those situations and always attach PDF files as attachments you should use the &lt;b&gt;&quot;text/x-pdf&quot;&lt;/b&gt; mime type.
+     * 
      */
-	 ReferenceUrl: ''
-	
+    MimeType: '',
+
+<span id='Appverse-AttachmentData-property-FileName'>    /**
+</span>     * The name of the current file attachment.
+     * @type {String}
+     */
+    FileName: '',
+
+<span id='Appverse-AttachmentData-property-Data'>    /**
+</span>     * The raw data for the current file attachment (byte array).
+     * @type {byte[]}
+     */
+    Data: [],
+
+<span id='Appverse-AttachmentData-property-DataSize'>    /**
+</span>     * The data size (in bytes) of the current file attachment.
+     * @type {long}
+     */
+    DataSize: 0,
+
+<span id='Appverse-AttachmentData-property-ReferenceUrl'>    /**
+</span>     * The relative path - under the application &quot;Documents&quot; folder - where the contents for the attachment file could be located.&lt;br/&gt;&lt;br/&gt;
+     * The Messaging API will use this reference url if no contents are provided on the {@link Appverse.Messaging.AttachmentData#Data Data[]}&lt;br/&gt;&lt;br/&gt;
+     * The IOServices API will use this reference url if no contents are provided on the {@link Appverse.IO.AttachmentData#Data Data[]}
+     * @type {String}
+     */
+    ReferenceUrl: ''
+
 };
 
 
@@ -1568,22 +1812,22 @@ Appverse.Messaging.AttachmentData = {
  * @author ddbc
  * @version 3.8.5
  */
- Appverse.Net.NetworkData = {
-<span id='Appverse-Net-NetworkData-property-IPv4'> 	/**
+Appverse.Net.NetworkData = {
+<span id='Appverse-Net-NetworkData-property-IPv4'>    /**
 </span>     * Current active IP Address v4.
-	 * @type {String}
-     */ 
-	IPv4: '',
-	
-<span id='Appverse-Net-NetworkData-property-IPv6'>	/**
-</span>     * Current active IP Address v6.
-	 * @type {String}
-     */ 
-	IPv6: ''
+     * @type {String}
+     */
+    IPv4: '',
 
- };
- 
-<span id='Appverse-Net-SecondaryBrowserOptions'> /**
+<span id='Appverse-Net-NetworkData-property-IPv6'>    /**
+</span>     * Current active IP Address v6.
+     * @type {String}
+     */
+    IPv6: ''
+
+};
+
+<span id='Appverse-Net-SecondaryBrowserOptions'>/**
 </span> * @class Appverse.Net.SecondaryBrowserOptions
  * @namespace Appverse.Net
  * @extends Object
@@ -1593,38 +1837,38 @@ Appverse.Messaging.AttachmentData = {
  * @author ddbc
  * @version 4.6
  */
- Appverse.Net.SecondaryBrowserOptions = {
-<span id='Appverse-Net-SecondaryBrowserOptions-property-Title'> 	/**
+Appverse.Net.SecondaryBrowserOptions = {
+<span id='Appverse-Net-SecondaryBrowserOptions-property-Title'>    /**
 </span>     * Title given to the auxiliary browser.
-	 * @type {String}
-     */ 
-	Title: 'My Title',
-	
-<span id='Appverse-Net-SecondaryBrowserOptions-property-Url'>	/**
-</span>     * URL to load in the auxiliary browser.
-	 * @type {String}
-     */ 
-	Url: 'http://www.google.com',
-	
-<span id='Appverse-Net-SecondaryBrowserOptions-property-CloseButtonText'>	/**
-</span>     * Caption that should display the Close Button of the auxiliary browser.
-	 * @type {String}
-     */ 
-	CloseButtonText:'Close',
-	
-<span id='Appverse-Net-SecondaryBrowserOptions-property-Html'>	/**
-</span>     * Html code to display in the auxiliary browser.
-	 * @type {String}
-     */ 
-	Html:'&lt;html&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;',
-	
-<span id='Appverse-Net-SecondaryBrowserOptions-property-BrowserFileExtensions'>	/**
-</span>     * Array of string containing the file extensions the OS will handle when such files are requested in the URL. Ex: &quot;.pdf&quot;, &quot;.xsl&quot;
-	 * @type {String []}
-     */ 
-	BrowserFileExtensions: ['.pdf','.xls']
+     * @type {String}
+     */
+    Title: 'My Title',
 
- };
+<span id='Appverse-Net-SecondaryBrowserOptions-property-Url'>    /**
+</span>     * URL to load in the auxiliary browser.
+     * @type {String}
+     */
+    Url: 'http://www.google.com',
+
+<span id='Appverse-Net-SecondaryBrowserOptions-property-CloseButtonText'>    /**
+</span>     * Caption that should display the Close Button of the auxiliary browser.
+     * @type {String}
+     */
+    CloseButtonText: 'Close',
+
+<span id='Appverse-Net-SecondaryBrowserOptions-property-Html'>    /**
+</span>     * Html code to display in the auxiliary browser.
+     * @type {String}
+     */
+    Html: '&lt;html&gt;&lt;body&gt;Hello World&lt;/body&gt;&lt;/html&gt;',
+
+<span id='Appverse-Net-SecondaryBrowserOptions-property-BrowserFileExtensions'>    /**
+</span>     * Array of string containing the file extensions the OS will handle when such files are requested in the URL. Ex: &quot;.pdf&quot;, &quot;.xsl&quot;
+     * @type {String []}
+     */
+    BrowserFileExtensions: ['.pdf', '.xls']
+
+};
 
 
 // *************************************************************************
@@ -1642,54 +1886,54 @@ Appverse.Messaging.AttachmentData = {
  * @version 4.3
  */
 Appverse.Pim.ContactLite = {
-	
-<span id='Appverse-Pim-ContactLite-property-ID'>	/**
+
+<span id='Appverse-Pim-ContactLite-property-ID'>    /**
 </span>     * The contact unique identifier.
-	 * @type {String}
-     */ 
-	ID: '',
-	
-<span id='Appverse-Pim-ContactLite-property-Name'>	/**
+     * @type {String}
+     */
+    ID: '',
+
+<span id='Appverse-Pim-ContactLite-property-Name'>    /**
 </span>     * The name for the current contact.
-	 * @type {String}
-     */ 
-	Name: '',
-	
+     * @type {String}
+     */
+    Name: '',
+
 <span id='Appverse-Pim-ContactLite-property-Firstname'>    /**
 </span>     * The firstname for the current contact.
-	 * @type {String}
-     */ 
-	Firstname: '',
-    
-<span id='Appverse-Pim-ContactLite-property-Lastname'>	/**
+     * @type {String}
+     */
+    Firstname: '',
+
+<span id='Appverse-Pim-ContactLite-property-Lastname'>    /**
 </span>     * The lastname for the current contact.
-	 * @type {String}
-     */ 
-	Lastname: '',
-      
-<span id='Appverse-Pim-ContactLite-property-DisplayName'>	/**
+     * @type {String}
+     */
+    Lastname: '',
+
+<span id='Appverse-Pim-ContactLite-property-DisplayName'>    /**
 </span>     * The display name for the current contact.
-	 * @type {String}
-     */ 
-	DisplayName: '',
-       
-<span id='Appverse-Pim-ContactLite-property-Group'>	/**
+     * @type {String}
+     */
+    DisplayName: '',
+
+<span id='Appverse-Pim-ContactLite-property-Group'>    /**
 </span>     * The group this contact belongs to.
-	 * @type {String}
-     */ 
-	Group: '',
+     * @type {String}
+     */
+    Group: '',
 
 <span id='Appverse-Pim-ContactLite-property-Phones'>    /**
 </span>     * The list of phone numbers for this contact. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Pim.ContactPhone ContactPhone}.
-	 * @type {ContactPhone[]}
+     * @type {ContactPhone[]}
      */
-	Phones: [],
-       
-<span id='Appverse-Pim-ContactLite-property-Emails'>	/**
+    Phones: [],
+
+<span id='Appverse-Pim-ContactLite-property-Emails'>    /**
 </span>     * The mime type of the current attachment. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Pim.ContactEmail ContactEmail}.
-	 * @type {ContactEmail[]}
+     * @type {ContactEmail[]}
      */
-	Emails: []
+    Emails: []
 };
 
 <span id='Appverse-Pim-Contact'>/**
@@ -1703,70 +1947,70 @@ Appverse.Pim.ContactLite = {
  * @version 1.0 / reviewed 4.3
  */
 Appverse.Pim.Contact = {
-	
-<span id='Appverse-Pim-Contact-property-JobTitle'>	/**
+
+<span id='Appverse-Pim-Contact-property-JobTitle'>    /**
 </span>     * The job title for the current contact.
-	 * @type {String}
-     */ 
-	JobTitle: '',
-	
-<span id='Appverse-Pim-Contact-property-Company'>	/**
-</span>     * The company for the current contact.
-	 * @type {String}
-     */ 
-	Company: '',
-       
-<span id='Appverse-Pim-Contact-property-Department'>	/**
-</span>     * The department this contact belongs to.
-	 * @type {String}
+     * @type {String}
      */
-	Department: '',
+    JobTitle: '',
+
+<span id='Appverse-Pim-Contact-property-Company'>    /**
+</span>     * The company for the current contact.
+     * @type {String}
+     */
+    Company: '',
+
+<span id='Appverse-Pim-Contact-property-Department'>    /**
+</span>     * The department this contact belongs to.
+     * @type {String}
+     */
+    Department: '',
 
 <span id='Appverse-Pim-Contact-property-WebSites'>    /**
 </span>     * The web sites associated with the current contact.
-	 * @type {String[]}
+     * @type {String[]}
      */
-	WebSites: [],
-       
-<span id='Appverse-Pim-Contact-property-Notes'>	/**
-</span>     * The mime type of the current attachment.
-	 * @type {String}
-     */ 
-	Notes: '',
-       
-<span id='Appverse-Pim-Contact-property-Relationship'>	/**
-</span>     * The type of the relationship associated with the current contact.
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#RELATIONSHIP_BROTHER RELATIONSHIP_BROTHER}, 
-	 * {@link Appverse.Pim#RELATIONSHIP_CHILD RELATIONSHIP_CHILD}, 
-	 * {@link Appverse.Pim#RELATIONSHIP_FRIEND RELATIONSHIP_FRIEND}, 
-	 * {@link Appverse.Pim#RELATIONSHIP_NONE RELATIONSHIP_NONE} 
-	 * {@link Appverse.Pim#RELATIONSHIP_PARENT RELATIONSHIP_PARENT}
-	 * {@link Appverse.Pim#RELATIONSHIP_PARTNER RELATIONSHIP_PARTNER} 
-	 * {@link Appverse.Pim#RELATIONSHIP_RELATIVE RELATIONSHIP_RELATIVE}
-	 * {@link Appverse.Pim#RELATIONSHIP_SISTER RELATIONSHIP_SISTER}
-	 * &amp; {@link Appverse.Pim#RELATIONSHIP_SPOUSE RELATIONSHIP_SPOUSE}
-	 * @type {int}
-     */
-	 Relationship: 0,
-	
-<span id='Appverse-Pim-Contact-property-Addresses'>	/**
-</span>     * The mime type of the current attachment. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Pim.ContactAddress ContactAddress}.
-	 * @type {Appverse.Pim.ContactAddress[]}
-     */
-	Addresses: [],
+    WebSites: [],
 
-<span id='Appverse-Pim-Contact-property-Photo'>	/**
+<span id='Appverse-Pim-Contact-property-Notes'>    /**
+</span>     * The mime type of the current attachment.
+     * @type {String}
+     */
+    Notes: '',
+
+<span id='Appverse-Pim-Contact-property-Relationship'>    /**
+</span>     * The type of the relationship associated with the current contact.
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#RELATIONSHIP_BROTHER RELATIONSHIP_BROTHER}, 
+     * {@link Appverse.Pim#RELATIONSHIP_CHILD RELATIONSHIP_CHILD}, 
+     * {@link Appverse.Pim#RELATIONSHIP_FRIEND RELATIONSHIP_FRIEND}, 
+     * {@link Appverse.Pim#RELATIONSHIP_NONE RELATIONSHIP_NONE} 
+     * {@link Appverse.Pim#RELATIONSHIP_PARENT RELATIONSHIP_PARENT}
+     * {@link Appverse.Pim#RELATIONSHIP_PARTNER RELATIONSHIP_PARTNER} 
+     * {@link Appverse.Pim#RELATIONSHIP_RELATIVE RELATIONSHIP_RELATIVE}
+     * {@link Appverse.Pim#RELATIONSHIP_SISTER RELATIONSHIP_SISTER}
+     * &amp; {@link Appverse.Pim#RELATIONSHIP_SPOUSE RELATIONSHIP_SPOUSE}
+     * @type {int}
+     */
+    Relationship: 0,
+
+<span id='Appverse-Pim-Contact-property-Addresses'>    /**
+</span>     * The mime type of the current attachment. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Pim.ContactAddress ContactAddress}.
+     * @type {Appverse.Pim.ContactAddress[]}
+     */
+    Addresses: [],
+
+<span id='Appverse-Pim-Contact-property-Photo'>    /**
 </span>     * The picture associated with this contact. In this case, raw data (byte array).
-	 * @type {byte[]}
-     */ 
-	Photo: [],
-	
-<span id='Appverse-Pim-Contact-property-PhotoBase64Encoded'>	/**
+     * @type {byte[]}
+     */
+    Photo: [],
+
+<span id='Appverse-Pim-Contact-property-PhotoBase64Encoded'>    /**
 </span>     * The picture associated with this contact. In this case, the base64 encoding data (string).
-	 * @type {String}
-     */ 
-	PhotoBase64Encoded: '',
+     * @type {String}
+     */
+    PhotoBase64Encoded: '',
 };
 
 
@@ -1783,34 +2027,34 @@ Appverse.Pim.Contact = {
  */
 Appverse.Pim.ContactQuery = {
 
-<span id='Appverse-Pim-ContactQuery-property-Condition'>	/**
+<span id='Appverse-Pim-ContactQuery-property-Condition'>    /**
 </span>     * The type of condition used to query for contacts.
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_EQUALS}, 
-	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_STARTSWITH}, 
-	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_ENDSWITH}, 
-	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_CONTAINS}, 
-	 * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_AVAILABLE}
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_EQUALS}, 
+     * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_STARTSWITH}, 
+     * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_ENDSWITH}, 
+     * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_CONTAINS}, 
+     * {@link Appverse.Pim#CONTACTS_QUERY_CONDITION_AVAILABLE}
+     * @type {int}
      */
-	Condition: 0,
-	
-<span id='Appverse-Pim-ContactQuery-property-Column'>	/**
+    Condition: 0,
+
+<span id='Appverse-Pim-ContactQuery-property-Column'>    /**
 </span>     * The column to evaluate the value against to query for contacts.
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_ID}, 
-	 * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_NAME}
-	 * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_PHONE}
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_ID}, 
+     * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_NAME}
+     * {@link Appverse.Pim#CONTACTS_QUERY_COLUMN_PHONE}
+     * @type {int}
      */
-	Column: 0,
-	
-<span id='Appverse-Pim-ContactQuery-property-Value'>	/**
+    Column: 0,
+
+<span id='Appverse-Pim-ContactQuery-property-Value'>    /**
 </span>     * The value being queried against the specified Column.
-	 * @type {String}
+     * @type {String}
      */
-	Value: '',
-	
+    Value: '',
+
 };
 
 <span id='Appverse-Pim-ContactPhone'>/**
@@ -1824,32 +2068,32 @@ Appverse.Pim.ContactQuery = {
  * @version 1.0
  */
 Appverse.Pim.ContactPhone = {
-	
-<span id='Appverse-Pim-ContactPhone-property-Type'>	/**
-</span>     * The type of phone number.
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#NUMBERTYPE_FIXED_LINE NUMBERTYPE_FIXED_LINE}, 
-	 * {@link Appverse.Pim#NUMBERTYPE_HOME_FAX NUMBERTYPE_HOME_FAX}, 
-	 * {@link Appverse.Pim#NUMBERTYPE_MOBILE NUMBERTYPE_MOBILE}, 
-	 * {@link Appverse.Pim#NUMBERTYPE_OTHER NUMBERTYPE_OTHER} 
-	 * {@link Appverse.Pim#NUMBERTYPE_PAGER NUMBERTYPE_PAGER}
-	 * {@link Appverse.Pim#NUMBERTYPE_WORK NUMBERTYPE_WORK} 
-	 * &amp; {@link Appverse.Pim#NUMBERTYPE_WORK_FAX NUMBERTYPE_WORK_FAX}
-	 * @type {int}
-     */
-	Type: 0,
 
-<span id='Appverse-Pim-ContactPhone-property-Number'>	/**
+<span id='Appverse-Pim-ContactPhone-property-Type'>    /**
+</span>     * The type of phone number.
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#NUMBERTYPE_FIXED_LINE NUMBERTYPE_FIXED_LINE}, 
+     * {@link Appverse.Pim#NUMBERTYPE_HOME_FAX NUMBERTYPE_HOME_FAX}, 
+     * {@link Appverse.Pim#NUMBERTYPE_MOBILE NUMBERTYPE_MOBILE}, 
+     * {@link Appverse.Pim#NUMBERTYPE_OTHER NUMBERTYPE_OTHER} 
+     * {@link Appverse.Pim#NUMBERTYPE_PAGER NUMBERTYPE_PAGER}
+     * {@link Appverse.Pim#NUMBERTYPE_WORK NUMBERTYPE_WORK} 
+     * &amp; {@link Appverse.Pim#NUMBERTYPE_WORK_FAX NUMBERTYPE_WORK_FAX}
+     * @type {int}
+     */
+    Type: 0,
+
+<span id='Appverse-Pim-ContactPhone-property-Number'>    /**
 </span>     * The number for the current phone data. It could be either a 'local-number' or a 'global-number', i.e., start with a '+'.
-	 * @type {String}
+     * @type {String}
      */
-	 Number: '',
-	
-<span id='Appverse-Pim-ContactPhone-property-IsPrimary'>	/**
+    Number: '',
+
+<span id='Appverse-Pim-ContactPhone-property-IsPrimary'>    /**
 </span>     * Whether this phone is the primary one or not.
-	 * @type {Boolean}
+     * @type {Boolean}
      */
-	IsPrimary: false
+    IsPrimary: false
 };
 
 <span id='Appverse-Pim-ContactEmail'>/**
@@ -1863,48 +2107,48 @@ Appverse.Pim.ContactPhone = {
  * @version 1.0
  */
 Appverse.Pim.ContactEmail = {
-	
-<span id='Appverse-Pim-ContactEmail-property-Firstname'>	/**
-</span>     * The first name of the display name for the contact email address.
-	 * @type {String}
-     */
- 	Firstname: '',
 
-<span id='Appverse-Pim-ContactEmail-property-Surname'>	/**
+<span id='Appverse-Pim-ContactEmail-property-Firstname'>    /**
+</span>     * The first name of the display name for the contact email address.
+     * @type {String}
+     */
+    Firstname: '',
+
+<span id='Appverse-Pim-ContactEmail-property-Surname'>    /**
 </span>     * The surname of the display name for the contact email address.
-	 * @type {String}
+     * @type {String}
      */
-	Surname: '',
-	
-<span id='Appverse-Pim-ContactEmail-property-CommonName'>	/**
+    Surname: '',
+
+<span id='Appverse-Pim-ContactEmail-property-CommonName'>    /**
 </span>     * The common name (alias) for the contact email address.
-	 * @type {String}
+     * @type {String}
      */
-	CommonName: '',
-	
-<span id='Appverse-Pim-ContactEmail-property-Address'>	/**
+    CommonName: '',
+
+<span id='Appverse-Pim-ContactEmail-property-Address'>    /**
 </span>     * The contact email address string. In the form: address@xyz.com
-	 * @type {String}
+     * @type {String}
      */
-     Address: '',
-	
-<span id='Appverse-Pim-ContactEmail-property-Type'>	/**
+    Address: '',
+
+<span id='Appverse-Pim-ContactEmail-property-Type'>    /**
 </span>     * The type of email address (home, work, etc.)
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#DISPOSITIONTYPE_HOME_OFFICE DISPOSITIONTYPE_HOME_OFFICE}, 
-	 * {@link Appverse.Pim#DISPOSITIONTYPE_OTHER DISPOSITIONTYPE_OTHER}, 
-	 * {@link Appverse.Pim#DISPOSITIONTYPE_PERSONAL DISPOSITIONTYPE_PERSONAL}, 
-	 * &amp; {@link Appverse.Pim#DISPOSITIONTYPE_WORK DISPOSITIONTYPE_WORK} 
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#DISPOSITIONTYPE_HOME_OFFICE DISPOSITIONTYPE_HOME_OFFICE}, 
+     * {@link Appverse.Pim#DISPOSITIONTYPE_OTHER DISPOSITIONTYPE_OTHER}, 
+     * {@link Appverse.Pim#DISPOSITIONTYPE_PERSONAL DISPOSITIONTYPE_PERSONAL}, 
+     * &amp; {@link Appverse.Pim#DISPOSITIONTYPE_WORK DISPOSITIONTYPE_WORK} 
+     * @type {int}
      */
-	Type: 0,
-	
-<span id='Appverse-Pim-ContactEmail-property-IsPrimary'>	/**
-</span>    * Whether this email is the primary one or not.
- 	* @type {Boolean}
-    */
-	IsPrimary: false
-	
+    Type: 0,
+
+<span id='Appverse-Pim-ContactEmail-property-IsPrimary'>    /**
+</span>     * Whether this email is the primary one or not.
+     * @type {Boolean}
+     */
+    IsPrimary: false
+
 };
 
 <span id='Appverse-Pim-ContactAddress'>/**
@@ -1918,48 +2162,48 @@ Appverse.Pim.ContactEmail = {
  * @version 1.0
  */
 Appverse.Pim.ContactAddress = {
-	
-<span id='Appverse-Pim-ContactAddress-property-Type'>	/**
+
+<span id='Appverse-Pim-ContactAddress-property-Type'>    /**
 </span>     * The type of contact address (home, work, etc.)
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#DISPOSITIONTYPE_HOME_OFFICE DISPOSITIONTYPE_HOME_OFFICE}, 
-	 * {@link Appverse.Pim#DISPOSITIONTYPE_OTHER DISPOSITIONTYPE_OTHER}, 
-	 * {@link Appverse.Pim#DISPOSITIONTYPE_PERSONAL DISPOSITIONTYPE_PERSONAL}, 
-	 * &amp; {@link Appverse.Pim#DISPOSITIONTYPE_WORK DISPOSITIONTYPE_WORK} 
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#DISPOSITIONTYPE_HOME_OFFICE DISPOSITIONTYPE_HOME_OFFICE}, 
+     * {@link Appverse.Pim#DISPOSITIONTYPE_OTHER DISPOSITIONTYPE_OTHER}, 
+     * {@link Appverse.Pim#DISPOSITIONTYPE_PERSONAL DISPOSITIONTYPE_PERSONAL}, 
+     * &amp; {@link Appverse.Pim#DISPOSITIONTYPE_WORK DISPOSITIONTYPE_WORK} 
+     * @type {int}
      */
-	Type: 0,
-	
-<span id='Appverse-Pim-ContactAddress-property-Address'>	/**
+    Type: 0,
+
+<span id='Appverse-Pim-ContactAddress-property-Address'>    /**
 </span>     * The contact address (street)
-	 * @type {String}
+     * @type {String}
      */
-	Address: '',
-	
-<span id='Appverse-Pim-ContactAddress-property-AddressNumber'>	/**
+    Address: '',
+
+<span id='Appverse-Pim-ContactAddress-property-AddressNumber'>    /**
 </span>     * The contact address (flat number, floor, door, etc)
-	 * @type {String}
+     * @type {String}
      */
-	AddressNumber: '',
-	
-<span id='Appverse-Pim-ContactAddress-property-PostCode'>	/**
+    AddressNumber: '',
+
+<span id='Appverse-Pim-ContactAddress-property-PostCode'>    /**
 </span>     * The contact address ZIP postal code.
-	 * @type {String}
+     * @type {String}
      */
-	PostCode: '',
-	
-<span id='Appverse-Pim-ContactAddress-property-City'>	/**
+    PostCode: '',
+
+<span id='Appverse-Pim-ContactAddress-property-City'>    /**
 </span>     * The city for the current contact address.
-	 * @type {String}
+     * @type {String}
      */
-	City: '',
-	
-<span id='Appverse-Pim-ContactAddress-property-Country'>	/**
+    City: '',
+
+<span id='Appverse-Pim-ContactAddress-property-Country'>    /**
 </span>     * The country for the current contact address.
-	 * @type {String}
+     * @type {String}
      */
-	Country: ''
-	
+    Country: ''
+
 };
 
 <span id='Appverse-Pim-CalendarEntry'>/**
@@ -1973,100 +2217,100 @@ Appverse.Pim.ContactAddress = {
  * @version 1.0
  */
 Appverse.Pim.CalendarEntry = {
-	
-<span id='Appverse-Pim-CalendarEntry-property-Uid'>	/**
+
+<span id='Appverse-Pim-CalendarEntry-property-Uid'>    /**
 </span>     * The unique identifier for this calendar entry.
-	 * @type {String}
+     * @type {String}
      */
-	Uid: '',
-	
-<span id='Appverse-Pim-CalendarEntry-property-Title'>	/**
+    Uid: '',
+
+<span id='Appverse-Pim-CalendarEntry-property-Title'>    /**
 </span>     * The title for this calendar entry.
-	 * @type {String}
+     * @type {String}
      */
-	Title: '',
-	
-<span id='Appverse-Pim-CalendarEntry-property-Notes'>	/**
+    Title: '',
+
+<span id='Appverse-Pim-CalendarEntry-property-Notes'>    /**
 </span>     * The notes text for this calendar entry.
-	 * @type {String}
+     * @type {String}
      */
-	Notes: '',
-	
-<span id='Appverse-Pim-CalendarEntry-property-Location'>	/**
+    Notes: '',
+
+<span id='Appverse-Pim-CalendarEntry-property-Location'>    /**
 </span>     * The location for this calendar entry.
-	 * @type {String}
+     * @type {String}
      */
-	Location: '',
-	
-<span id='Appverse-Pim-CalendarEntry-property-Type'>	/**
+    Location: '',
+
+<span id='Appverse-Pim-CalendarEntry-property-Type'>    /**
 </span>     * The type of this calendar entry (birthday, local, subscription, etc.)
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#CALENDARTYPE_BIRTHDAY CALENDARTYPE_BIRTHDAY}, 
-	 * {@link Appverse.Pim#CALENDARTYPE_CALDAV CALENDARTYPE_CALDAV}, 
-	 * {@link Appverse.Pim#CALENDARTYPE_EXCHANGE CALENDARTYPE_EXCHANGE}, 
-	 * {@link Appverse.Pim#CALENDARTYPE_IMAP CALENDARTYPE_IMAP} 
-	 * {@link Appverse.Pim#CALENDARTYPE_LOCAL CALENDARTYPE_LOCAL} 
-	 * {@link Appverse.Pim#CALENDARTYPE_OTHER CALENDARTYPE_OTHER}
-	 * &amp; {@link Appverse.Pim#CALENDARTYPE_SUBSCRIPTION CALENDARTYPE_SUBSCRIPTION} 
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#CALENDARTYPE_BIRTHDAY CALENDARTYPE_BIRTHDAY}, 
+     * {@link Appverse.Pim#CALENDARTYPE_CALDAV CALENDARTYPE_CALDAV}, 
+     * {@link Appverse.Pim#CALENDARTYPE_EXCHANGE CALENDARTYPE_EXCHANGE}, 
+     * {@link Appverse.Pim#CALENDARTYPE_IMAP CALENDARTYPE_IMAP} 
+     * {@link Appverse.Pim#CALENDARTYPE_LOCAL CALENDARTYPE_LOCAL} 
+     * {@link Appverse.Pim#CALENDARTYPE_OTHER CALENDARTYPE_OTHER}
+     * &amp; {@link Appverse.Pim#CALENDARTYPE_SUBSCRIPTION CALENDARTYPE_SUBSCRIPTION} 
+     * @type {int}
      */
-	Type: 0,
-	
-<span id='Appverse-Pim-CalendarEntry-property-IsEditable'>	/**
+    Type: 0,
+
+<span id='Appverse-Pim-CalendarEntry-property-IsEditable'>    /**
 </span>     * Whether this calendar entry is editable or not.
-	 * @type {Boolean}
+     * @type {Boolean}
      */
-	IsEditable: false,
-	
-<span id='Appverse-Pim-CalendarEntry-property-IsAllDayEvent'>	/**
+    IsEditable: false,
+
+<span id='Appverse-Pim-CalendarEntry-property-IsAllDayEvent'>    /**
 </span>     * Whether this calendar entry is for an all-day-event or not.
-	 * @type {Boolean}
+     * @type {Boolean}
      */
-	IsAllDayEvent: false,
-	
-<span id='Appverse-Pim-CalendarEntry-property-StartDate'>	/**
+    IsAllDayEvent: false,
+
+<span id='Appverse-Pim-CalendarEntry-property-StartDate'>    /**
 </span>     * The start date for this calendar entry. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.DateTime DateTime}.
-	 * @type {Appverse.DateTime}
+     * @type {Appverse.DateTime}
      */
-	StartDate: null,
-	
-<span id='Appverse-Pim-CalendarEntry-property-EndDate'>	/**
+    StartDate: null,
+
+<span id='Appverse-Pim-CalendarEntry-property-EndDate'>    /**
 </span>     * The end date for this calendar entry. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.DateTime DateTime}.
-	 * @type {Appverse.DateTime}
+     * @type {Appverse.DateTime}
      */
-	EndDate: null,
-	
-<span id='Appverse-Pim-CalendarEntry-property-Attendees'>	/**
+    EndDate: null,
+
+<span id='Appverse-Pim-CalendarEntry-property-Attendees'>    /**
 </span>     * The attendees list for this calendar entry. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Pim.CalendarAttendee CalendarAttendee}.
-	 * @type {Appverse.Pim.CalendarAttendee[]}
+     * @type {Appverse.Pim.CalendarAttendee[]}
      */
-	Attendees: [],
-	
-<span id='Appverse-Pim-CalendarEntry-property-Alarms'>	/**
+    Attendees: [],
+
+<span id='Appverse-Pim-CalendarEntry-property-Alarms'>    /**
 </span>     * The alarms list (type and frequency) for this calendar entry. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Pim.CalendarAlarm CalendarAlarm}.
-	 * @type {Appverse.Pim.CalendarAlarm[]}
+     * @type {Appverse.Pim.CalendarAlarm[]}
      */
-	Alarms: [],
-	
-<span id='Appverse-Pim-CalendarEntry-property-IsRecurrentEvent'>	/**
+    Alarms: [],
+
+<span id='Appverse-Pim-CalendarEntry-property-IsRecurrentEvent'>    /**
 </span>     * Whether this calendar entry is a recurrent event or not.
-	 * @type {Boolean}
+     * @type {Boolean}
      */
-	IsRecurrentEvent: false,
-	
-<span id='Appverse-Pim-CalendarEntry-property-Recurrence'>	/**
+    IsRecurrentEvent: false,
+
+<span id='Appverse-Pim-CalendarEntry-property-Recurrence'>    /**
 </span>     * The recurrence - if any - of this calendar entry. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Pim.CalendarRecurrence CalendarRecurrence}.
-	 * @type {Appverse.Pim.CalendarRecurrence}
+     * @type {Appverse.Pim.CalendarRecurrence}
      */
-	Recurrence: null,
-	
-<span id='Appverse-Pim-CalendarEntry-property-RecurrenceNumber'>	/**
+    Recurrence: null,
+
+<span id='Appverse-Pim-CalendarEntry-property-RecurrenceNumber'>    /**
 </span>     * How many times - accordingly to the recurrence type - calendar will repeat this entry.
-	 * For example, if this recurrence number indicates 4, and the recurrence type indicates monthly... this calendar entry will be repease each month during just the next 4 months.
-	 * @type {long}
+     * For example, if this recurrence number indicates 4, and the recurrence type indicates monthly... this calendar entry will be repease each month during just the next 4 months.
+     * @type {long}
      */
-	RecurrenceNumber: 0
-	
+    RecurrenceNumber: 0
+
 };
 
 
@@ -2081,35 +2325,35 @@ Appverse.Pim.CalendarEntry = {
  * @version 1.0
  */
 Appverse.Pim.CalendarRecurrence = {
-<span id='Appverse-Pim-CalendarRecurrence-property-Type'>	/**
+<span id='Appverse-Pim-CalendarRecurrence-property-Type'>    /**
 </span>     * The recurrence type - if any - of this calendar entry (daily, monthly, etc.)
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#RECURRENCE_FORTNIGHTLY RECURRENCE_FORTNIGHTLY}, 
-	 * {@link Appverse.Pim#RECURRENCE_FOURWEEKLY RECURRENCE_FOURWEEKLY}, 
-	 * {@link Appverse.Pim#RECURRENCE_MONTLY RECURRENCE_MONTLY}, 
-	 * {@link Appverse.Pim#RECURRENCE_WEEKLY RECURRENCE_WEEKLY} 
-	 * &amp; {@link Appverse.Pim#RECURRENCE_YEARLY RECURRENCE_YEARLY} 
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#RECURRENCE_FORTNIGHTLY RECURRENCE_FORTNIGHTLY}, 
+     * {@link Appverse.Pim#RECURRENCE_FOURWEEKLY RECURRENCE_FOURWEEKLY}, 
+     * {@link Appverse.Pim#RECURRENCE_MONTLY RECURRENCE_MONTLY}, 
+     * {@link Appverse.Pim#RECURRENCE_WEEKLY RECURRENCE_WEEKLY} 
+     * &amp; {@link Appverse.Pim#RECURRENCE_YEARLY RECURRENCE_YEARLY} 
+     * @type {int}
      */
-	Type: 0,
-	
-<span id='Appverse-Pim-CalendarRecurrence-property-Interval'>	/**
+    Type: 0,
+
+<span id='Appverse-Pim-CalendarRecurrence-property-Interval'>    /**
 </span>     * The number of intervals between the specified pattern of a recurring event.
-	 * @type {int}
+     * @type {int}
      */
-	Interval: 0,
-	
-<span id='Appverse-Pim-CalendarRecurrence-property-DayOfTheWeek'>	/**
+    Interval: 0,
+
+<span id='Appverse-Pim-CalendarRecurrence-property-DayOfTheWeek'>    /**
 </span>     * The day of the week, a number from 1 to 7 with Sunday equal to 1.
-	 * @type {int}
+     * @type {int}
      */
-	DayOfTheWeek: 0,
-	
-<span id='Appverse-Pim-CalendarRecurrence-property-EndDate'>	/**
+    DayOfTheWeek: 0,
+
+<span id='Appverse-Pim-CalendarRecurrence-property-EndDate'>    /**
 </span>     * The date the recurrence ends. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.DateTime DateTime}.
-	 * @type {Appverse.DateTime}
+     * @type {Appverse.DateTime}
      */
-	EndDate: null
+    EndDate: null
 
 };
 
@@ -2124,30 +2368,30 @@ Appverse.Pim.CalendarRecurrence = {
  * @version 1.0
  */
 Appverse.Pim.CalendarAttendee = {
-	
-<span id='Appverse-Pim-CalendarAttendee-property-Name'>	/**
+
+<span id='Appverse-Pim-CalendarAttendee-property-Name'>    /**
 </span>     * The name of the attendee.
-	 * @type {String}
+     * @type {String}
      */
-	Name: '',
-	
-<span id='Appverse-Pim-CalendarAttendee-property-Address'>	/**
+    Name: '',
+
+<span id='Appverse-Pim-CalendarAttendee-property-Address'>    /**
 </span>     * The address of the attendee.
-	 * @type {String}
+     * @type {String}
      */
-	Address: '',
-	
-<span id='Appverse-Pim-CalendarAttendee-property-Status'>	/**
+    Address: '',
+
+<span id='Appverse-Pim-CalendarAttendee-property-Status'>    /**
 </span>     * The status of the request send to the attendee (accepted, declined, etc)
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#ATTENDEESTATUS_ACCEPTED ATTENDEESTATUS_ACCEPTED}, 
-	 * {@link Appverse.Pim#ATTENDEESTATUS_DECLINED ATTENDEESTATUS_DECLINED}, 
-	 * {@link Appverse.Pim#ATTENDEESTATUS_NeedsAction ATTENDEESTATUS_NeedsAction},
-	 * &amp; {@link Appverse.Pim#ATTENDEESTATUS_TENTATIVE ATTENDEESTATUS_TENTATIVE} 
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#ATTENDEESTATUS_ACCEPTED ATTENDEESTATUS_ACCEPTED}, 
+     * {@link Appverse.Pim#ATTENDEESTATUS_DECLINED ATTENDEESTATUS_DECLINED}, 
+     * {@link Appverse.Pim#ATTENDEESTATUS_NeedsAction ATTENDEESTATUS_NeedsAction},
+     * &amp; {@link Appverse.Pim#ATTENDEESTATUS_TENTATIVE ATTENDEESTATUS_TENTATIVE} 
+     * @type {int}
      */
-	 Status: 0
-	
+    Status: 0
+
 };
 
 <span id='Appverse-Pim-CalendarAlarm'>/**
@@ -2161,36 +2405,36 @@ Appverse.Pim.CalendarAttendee = {
  * @version 1.0
  */
 Appverse.Pim.CalendarAlarm = {
-	
-	
-<span id='Appverse-Pim-CalendarAlarm-property-Action'>	/**
+
+
+<span id='Appverse-Pim-CalendarAlarm-property-Action'>    /**
 </span>     * The type of alarm for a calendar entry (display, sound, etc)
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Pim#ALARM_DISPAY ALARM_DISPAY}, 
-	 * {@link Appverse.Pim#ALARM_EMAIL ALARM_EMAIL}, 
-	 * {@link Appverse.Pim#ALARM_SOUND ALARM_SOUND},
-	 * &amp; {@link Appverse.Pim#ATTENDEESTATUS_TENTATIVE ATTENDEESTATUS_TENTATIVE} 
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Pim#ALARM_DISPAY ALARM_DISPAY}, 
+     * {@link Appverse.Pim#ALARM_EMAIL ALARM_EMAIL}, 
+     * {@link Appverse.Pim#ALARM_SOUND ALARM_SOUND},
+     * &amp; {@link Appverse.Pim#ATTENDEESTATUS_TENTATIVE ATTENDEESTATUS_TENTATIVE} 
+     * @type {int}
      */
-	Action: 0,
-	
-<span id='Appverse-Pim-CalendarAlarm-property-Trigger'>	/**
+    Action: 0,
+
+<span id='Appverse-Pim-CalendarAlarm-property-Trigger'>    /**
 </span>     * The datetime trigger to start the alarm. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.DateTime DateTime}.
-	 * @type {Appverse.DateTime}
+     * @type {Appverse.DateTime}
      */
-	Trigger: null,
-	
-<span id='Appverse-Pim-CalendarAlarm-property-EmailAddress'>	/**
+    Trigger: null,
+
+<span id='Appverse-Pim-CalendarAlarm-property-EmailAddress'>    /**
 </span>     * The email address for an alarm of type {@link Appverse.Pim#ALARM_EMAIL ALARM_EMAIL}.
-	 * @type {String}
+     * @type {String}
      */
-	EmailAddress: '',
-	
-<span id='Appverse-Pim-CalendarAlarm-property-Sound'>	/**
+    EmailAddress: '',
+
+<span id='Appverse-Pim-CalendarAlarm-property-Sound'>    /**
 </span>     * The sound to be executed for an alarm of type {@link Appverse.Pim#ALARM_SOUND ALARM_SOUND}.
-	 * @type {String}
+     * @type {String}
      */
-	Sound: ''
+    Sound: ''
 };
 
 // *****************************************
@@ -2211,17 +2455,17 @@ Appverse.I18N.Locale = {
 
 <span id='Appverse-I18N-Locale-property-Language'>    /**
 </span>     * A valid ISO Language Code.&lt;br/&gt;These codes are the lower-case, two-letter codes as defined by ISO-639. 
-	 * &lt;a href=&quot;http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt&quot;&gt;http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt&lt;/a&gt;
+     * &lt;a href=&quot;http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt&quot;&gt;http://www.ics.uci.edu/pub/ietf/http/related/iso639.txt&lt;/a&gt;
      * @type {String}
      */
-	Language : '',
-	
-<span id='Appverse-I18N-Locale-property-Country'>	/**
+    Language: '',
+
+<span id='Appverse-I18N-Locale-property-Country'>    /**
 </span>     * A valid ISO Country Code.&lt;br/&gt;These codes are the upper-case, two-letter codes as defined by ISO-3166. 
-	 * &lt;a href=&quot;http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html&quot;&gt;http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html&lt;/a&gt;
+     * &lt;a href=&quot;http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html&quot;&gt;http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html&lt;/a&gt;
      * @type {String}
      */
-	Country : ''
+    Country: ''
 
 };
 
@@ -2259,25 +2503,31 @@ Appverse.Notification.NotificationData = {
 </span>     * The message text to be shown on this notification.
      * @type {String}
      */
-	AlertMessage : '',
-	
-<span id='Appverse-Notification-NotificationData-property-Sound'>	/**
+    AlertMessage: '',
+
+<span id='Appverse-Notification-NotificationData-property-Sound'>    /**
 </span>     * The name of a sound file in the application bundle, that would be played as an alert. If the sound file doesn't exist or 'default' is specified as the value, the default alert sound is played. 
      * @type {String}
      */
-	Sound : 'default',
-	
-<span id='Appverse-Notification-NotificationData-property-Badge'>	/**
+    Sound: 'default',
+
+<span id='Appverse-Notification-NotificationData-property-Badge'>    /**
 </span>     * The number to display as the badge of the application icon. To remove the badge, value should be set to 0.
      * @type {int}
      */
-	Badge : 0,
-	
-<span id='Appverse-Notification-NotificationData-property-CustomDataJsonString'>	/**
+    Badge: 0,
+
+<span id='Appverse-Notification-NotificationData-property-CustomDataJsonString'>    /**
 </span>     * Custom payload values received on this notification. JSON structured with primitive types: dictionary (object), array, string, number, and boolean.
      * @type {String}
      */
-	CustomDataJsonString : ''
+    CustomDataJsonString: '',
+	
+<span id='Appverse-Notification-NotificationData-property-AppWasRunning'>	/**
+</span>     * A flag indicating if the incoming notification data was received with the app running, or clicked from the notification center. Default value is false.
+     * @type {Boolean}
+     */
+	AppWasRunning: false
 };
 
 <span id='Appverse-Notification-SchedulingData'>/**
@@ -2291,25 +2541,25 @@ Appverse.Notification.NotificationData = {
  * @version 3.9
  */
 Appverse.Notification.SchedulingData = {
-	
-<span id='Appverse-Notification-SchedulingData-property-FireDate'>	/**
+
+<span id='Appverse-Notification-SchedulingData-property-FireDate'>    /**
 </span>     * The fire date for the scheduled local notification. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.DateTime DateTime}.
-	 * @type {Appverse.DateTime}
+     * @type {Appverse.DateTime}
      */
-	FireDate : '',
-	
-<span id='Appverse-Notification-SchedulingData-property-RepeatInterval'>	/**
+    FireDate: '',
+
+<span id='Appverse-Notification-SchedulingData-property-RepeatInterval'>    /**
 </span>     * The repeat interval for the scheduled local notification
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_NO_REPEAT LOCAL_NOTIFICATION_REPEAT_INTERVAL_NO_REPEAT}, 
-	 * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_HOURLY LOCAL_NOTIFICATION_REPEAT_INTERVAL_HOURLY}, 
-	 * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_DAILY LOCAL_NOTIFICATION_REPEAT_INTERVAL_DAILY}, 
-	 * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_WEEKLY LOCAL_NOTIFICATION_REPEAT_INTERVAL_WEEKLY} 
-	 * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_MONTHLY LOCAL_NOTIFICATION_REPEAT_INTERVAL_MONTHLY} 
-	 * &amp; {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_YEARLY LOCAL_NOTIFICATION_REPEAT_INTERVAL_YEARLY} 
-	 * @type {int}
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_NO_REPEAT LOCAL_NOTIFICATION_REPEAT_INTERVAL_NO_REPEAT}, 
+     * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_HOURLY LOCAL_NOTIFICATION_REPEAT_INTERVAL_HOURLY}, 
+     * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_DAILY LOCAL_NOTIFICATION_REPEAT_INTERVAL_DAILY}, 
+     * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_WEEKLY LOCAL_NOTIFICATION_REPEAT_INTERVAL_WEEKLY} 
+     * {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_MONTHLY LOCAL_NOTIFICATION_REPEAT_INTERVAL_MONTHLY} 
+     * &amp; {@link Appverse.Notification#LOCAL_NOTIFICATION_REPEAT_INTERVAL_YEARLY LOCAL_NOTIFICATION_REPEAT_INTERVAL_YEARLY} 
+     * @type {int}
      */
-	RepeatInterval : 0
+    RepeatInterval: 0
 };
 
 // *****************************************
@@ -2332,7 +2582,7 @@ Appverse.Webtrekk.WebtrekkParametersCollection = {
 </span>     * Array of Webtrekk parameters. &lt;br/&gt;&lt;br/&gt;For further information see, {@link Appverse.Webtrekk.WebtrekkParameter WebtrekkParameter}.
      * @type {WebtrekkParameter}
      */
-	AdditionalParameters : []
+    AdditionalParameters: []
 
 };
 
@@ -2352,13 +2602,13 @@ Appverse.Webtrekk.WebtrekkParameter = {
 </span>     * The name of the additional parameter.
      * @type {String}
      */
-	Name : '',
-	
-<span id='Appverse-Webtrekk-WebtrekkParameter-property-Value'>	/**
+    Name: '',
+
+<span id='Appverse-Webtrekk-WebtrekkParameter-property-Value'>    /**
 </span>     * The value of the additional parameter.
      * @type {String}
      */
-	Value : ''
+    Value: ''
 
 };
 
@@ -2380,48 +2630,48 @@ Appverse.Webtrekk.WebtrekkParameter = {
  * @version 4.0
  */
 Appverse.AppLoader.ModuleContext = {
-	
-<span id='Appverse-AppLoader-ModuleContext-property-User'>	/**
+
+<span id='Appverse-AppLoader-ModuleContext-property-User'>    /**
 </span>     * The  current user (name). It is used by the API to store user contents under a specific folder, only accessible by this user.
      * @type {String}
      */
-	User: '',
-	
-<span id='Appverse-AppLoader-ModuleContext-property-Credentials'>	/**
+    User: '',
+
+<span id='Appverse-AppLoader-ModuleContext-property-Credentials'>    /**
 </span>     * The current user credentials. OPTIONAL.&lt;br/&gt; It should be the &lt;b&gt;&quot;username:password&quot;&lt;/b&gt; string concatenation encoded in &lt;a href=&quot;http://en.wikipedia.org/wiki/Base64&quot;&gt;&lt;b&gt;Base64&lt;/b&gt;&lt;/a&gt;.&lt;br/&gt; If provided, the &lt;a href=&quot;http://en.wikipedia.org/wiki/Basic_access_authentication#Client_side&quot;&gt;&lt;b&gt;HTTP Basic Authentication&lt;/b&gt;&lt;/a&gt; header (Authorization) will be send when updating modules.
      * @type {String}
      */
-	Credentials: '',
-	
-<span id='Appverse-AppLoader-ModuleContext-property-LoadingMessage_UpdateModules'>	/**
+    Credentials: '',
+
+<span id='Appverse-AppLoader-ModuleContext-property-LoadingMessage_UpdateModules'>    /**
 </span>     * The custom text (localized by the application) for the native loading mask that is shown when updating a bunch of modules (by calling the method &lt;b&gt;Appverse.AppLoader.UpdateModules&lt;/b&gt;).
      * @type {String}
      */
-	LoadingMessage_UpdateModules: 'Updating Modules',
-	
-<span id='Appverse-AppLoader-ModuleContext-property-LoadingMessage_UpdateModule'>	/**
+    LoadingMessage_UpdateModules: 'Updating Modules',
+
+<span id='Appverse-AppLoader-ModuleContext-property-LoadingMessage_UpdateModule'>    /**
 </span>     * The custom text (localized by the application) for the native loading mask that is shown when updating a single module (by calling the method &lt;b&gt;Appverse.AppLoader.UpdateModule&lt;/b&gt;, or calling the &lt;b&gt;Appverse.AppLoader.LoadModule&lt;/b&gt; with the 'autoUpload' flag set to true).
      * @type {String}
      */
-	LoadingMessage_UpdateModule: 'Updating Module',
-	
-<span id='Appverse-AppLoader-ModuleContext-property-LoadingMessage_DeleteModule'>	/**
+    LoadingMessage_UpdateModule: 'Updating Module',
+
+<span id='Appverse-AppLoader-ModuleContext-property-LoadingMessage_DeleteModule'>    /**
 </span>     * The custom text (localized by the application) for the native loading mask that is shown when deleting a bunch of modules (by calling the method &lt;b&gt;Appverse.AppLoader.DeleteModules&lt;/b&gt;).
      * @type {String}
      */
-	LoadingMessage_DeleteModule: 'Deleting Modules',
-		
-<span id='Appverse-AppLoader-ModuleContext-property-AlertMessage_Title'>	/**
+    LoadingMessage_DeleteModule: 'Deleting Modules',
+
+<span id='Appverse-AppLoader-ModuleContext-property-AlertMessage_Title'>    /**
 </span>     * The custom text (localized by the application) for the native notification alert &lt;b&gt;title&lt;/b&gt; that is shown when an error occurres loading a module (by calling the method &lt;b&gt;Appverse.AppLoader.LoadModule&lt;/b&gt;).
      * @type {String}
      */
-	AlertMessage_Title: 'AppLoader Alert',
-	
-<span id='Appverse-AppLoader-ModuleContext-property-AlertMessage_LoadModuleError'>	/**
+    AlertMessage_Title: 'AppLoader Alert',
+
+<span id='Appverse-AppLoader-ModuleContext-property-AlertMessage_LoadModuleError'>    /**
 </span>     * The custom text (localized by the application) for the native notification alert &lt;b&gt;body&lt;/b&gt; that is shown when an error occurres loading a module (by calling the method &lt;b&gt;Appverse.AppLoader.LoadModule&lt;/b&gt;).
      * @type {String}
      */
-	AlertMessage_LoadModuleError: 'The module could not be loaded',
+    AlertMessage_LoadModuleError: 'The module could not be loaded',
 };
 
 <span id='Appverse-AppLoader-Module'>/**
@@ -2435,24 +2685,24 @@ Appverse.AppLoader.ModuleContext = {
  * @version 4.0
  */
 Appverse.AppLoader.Module = {
-	
-<span id='Appverse-AppLoader-Module-property-Id'>	/**
+
+<span id='Appverse-AppLoader-Module-property-Id'>    /**
 </span>     * The  module unique identifier.
      * @type {String}
      */
-	Id: '',
-	
-<span id='Appverse-AppLoader-Module-property-Version'>	/**
+    Id: '',
+
+<span id='Appverse-AppLoader-Module-property-Version'>    /**
 </span>     * The  module version.
      * @type {Untiy.AppLoader.ModuleVersion}
      */
-	Version: null,
+    Version: null,
 
-<span id='Appverse-AppLoader-Module-property-LoadUrl'>	/**
+<span id='Appverse-AppLoader-Module-property-LoadUrl'>    /**
 </span>     * The loading url (remote host) where the contents of this module could be updated from.
      * @type {String}
      */
-	LoadUrl: ''
+    LoadUrl: ''
 };
 
 <span id='Appverse-AppLoader-ModuleVersion'>/**
@@ -2467,23 +2717,23 @@ Appverse.AppLoader.Module = {
  */
 Appverse.AppLoader.ModuleVersion = {
 
-<span id='Appverse-AppLoader-ModuleVersion-property-Major'>	/**
+<span id='Appverse-AppLoader-ModuleVersion-property-Major'>    /**
 </span>     * The major component of this module version.
      * @type {String}
      */
-	Major: '',
-	
-<span id='Appverse-AppLoader-ModuleVersion-property-Minor'>	/**
+    Major: '',
+
+<span id='Appverse-AppLoader-ModuleVersion-property-Minor'>    /**
 </span>     * The minor component of this module version.
      * @type {String}
      */
-	Minor: '',
-	
-<span id='Appverse-AppLoader-ModuleVersion-property-Revision'>	/**
+    Minor: '',
+
+<span id='Appverse-AppLoader-ModuleVersion-property-Revision'>    /**
 </span>     * The revision component of this module version.
      * @type {String}
      */
-	Revision: ''
+    Revision: ''
 };
 
 <span id='Appverse-AppLoader-ModuleParam'>/**
@@ -2499,17 +2749,17 @@ Appverse.AppLoader.ModuleVersion = {
  */
 Appverse.AppLoader.ModuleParam = {
 
-<span id='Appverse-AppLoader-ModuleParam-property-Name'>	/**
+<span id='Appverse-AppLoader-ModuleParam-property-Name'>    /**
 </span>     * The name of this module parameter.
      * @type {String}
      */
-	Name: '',
-	
-<span id='Appverse-AppLoader-ModuleParam-property-Value'>	/**
+    Name: '',
+
+<span id='Appverse-AppLoader-ModuleParam-property-Value'>    /**
 </span>     * The value of this module parameter.
      * @type {String}
      */
-	Value: ''
+    Value: ''
 };
 
 // *****************************************
@@ -2528,28 +2778,115 @@ Appverse.AppLoader.ModuleParam = {
  */
 Appverse.Security.KeyPair = {
 
-<span id='Appverse-Security-KeyPair-property-Key'>	/**
+<span id='Appverse-Security-KeyPair-property-Key'>    /**
 </span>     * The name of the key
      * @type {String}
      */
-	Key: '',
-	
-<span id='Appverse-Security-KeyPair-property-Value'>	/**
+    Key: '',
+
+<span id='Appverse-Security-KeyPair-property-Value'>    /**
 </span>     * The value to be stored
      * @type {String}
      */
-	Value: ''
+    Value: '',
+	
+<span id='Appverse-Security-KeyPair-property-Encryption'>	/**
+</span>     * Whether the value should be encrypted or not
+     * @type {Boolean}
+     */
+    Encryption: ''
 };
 
- 
- 
+<span id='Appverse-NFC-NFCPaymentSecurityException'>/**
+</span> * @class Appverse.NFC.NFCPaymentSecurityException
+ * @namespace Appverse.NFC
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represents the data returned when a Security exception is thrown when starting NFC payment engine while checking security&lt;br&gt;&lt;br&gt; See more information at &lt;b&gt;Appverse.NFC&lt;/b&gt;.
+ * @author maps
+ * @version 4.5
+ */
+Appverse.NFC.NFCPaymentSecurityException = {
+<span id='Appverse-NFC-NFCPaymentSecurityException-property-Message'>    /**
+</span>     * The exception description (not localized)
+     * @type {String}
+     */
+    Message: '',
+
+<span id='Appverse-NFC-NFCPaymentSecurityException-property-Type'>    /**
+</span>     * The type of exception. 
+     * &lt;br/&gt;Possible values: {@link Appverse.NFC#SECURITY_ERROR_UNKNOWN SECURITY_ERROR_UNKNOWN}, {@link Appverse.NFC#SECURITY_ERROR_DEVICE_ROOTED SECURITY_ERROR_DEVICE_ROOTED}, {@link Appverse.NFC#SECURITY_ERROR_LOCK_DISABLED SECURITY_ERROR_LOCK_DISABLED} &amp; {@link Appverse.NFC#SECURITY_ERROR_USB_DEBUG_ENABLED SECURITY_ERROR_USB_DEBUG_ENABLED}
+     * @type {int}
+     */
+    Type: 0
+};
+
+
+
+<span id='Appverse-NFC-NFCPaymentProperty'>/**
+</span> * @class Appverse.NFC.NFCPaymentProperty
+ * @namespace Appverse.NFC
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represents an NFC property to be settled for the NFC payment feature (before starting the payment engine)&lt;br&gt;&lt;br&gt; See more information at &lt;b&gt;Appverse.NFC&lt;/b&gt;.
+ * @author maps
+ * @version 4.5
+ */
+Appverse.NFC.NFCPaymentProperty = {
+<span id='Appverse-NFC-NFCPaymentProperty-property-Key'>    /**
+</span>     * The name of the property key. Available keys could be found at:&lt;br/&gt; {@link Appverse.NFC#PROPERTY_APPLICATION_ID}, {@link Appverse.NFC#PROPERTY_APPLICATION_LABEL}, {@link Appverse.NFC#PROPERTY_AID_NAME_LENGTH}, {@link Appverse.NFC#PROPERTY_DEBUG_MODE}, {@link Appverse.NFC#PROPERTY_VIBRATION_DURATION} and {@link Appverse.NFC#PROPERTY_TIMER_PERIOD}
+     * @type {String}
+     */
+    Key: '',
+
+<span id='Appverse-NFC-NFCPaymentProperty-property-Value'>    /**
+</span>     * The value to be settled for this NFC property
+     * @type {String}
+     */
+    Value: ''
+};
+
+<span id='Appverse-NFC-NFCPaymentSuccess'>/**
+</span> * @class Appverse.NFC.NFCPaymentSuccess
+ * @namespace Appverse.NFC
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Represents the payment summary data returned for a successful NFC payment against a POS device&lt;br&gt;&lt;br&gt; See more information at &lt;b&gt;Appverse.NFC&lt;/b&gt;.
+ * @author maps
+ * @version 4.5
+ */
+Appverse.NFC.NFCPaymentSuccess = {
+
+<span id='Appverse-NFC-NFCPaymentSuccess-property-Amount'>    /**
+</span>     * The amount formatted as follows &quot;XX.YY&quot;, where XX is the integer part and YY is the decimal part of the amount.
+     * @type {String}
+     */
+    Amount: '',
+
+<span id='Appverse-NFC-NFCPaymentSuccess-property-Date'>    /**
+</span>     * The date formatted as follows &quot;dd / MM / yyyy&quot;, where dd is the day, MM is the month and yyyy is the year.
+     * @type {String}
+     */
+    Date: '',
+
+<span id='Appverse-NFC-NFCPaymentSuccess-property-Time'>    /**
+</span>     * The time formatted as follows &quot;HH: mm&quot;, where HH is the hour and mm is the minute.
+     * @type {String}
+     */
+    Time: ''
+};
+
+
 // *****************************************
 // ********** APPVERSE MODULES ***********
 // *****************************************
 
- 
+
 //Appverse.Beacon.DistanceType
- 
+
 <span id='Appverse-Beacon-Beacon'>/**
 </span> * @class Appverse.Beacon.Beacon
  * @namespace Appverse.Beacon
@@ -2562,43 +2899,43 @@ Appverse.Security.KeyPair = {
  * @version 5.0
  */
 Appverse.Beacon.Beacon = {
-	
+
 <span id='Appverse-Beacon-Beacon-property-Address'>    /**
 </span>     * The Address asociated
      * @type {String}
      */
     Address: '',
-            
+
 <span id='Appverse-Beacon-Beacon-property-Name'>    /**
 </span>     * The name of the beacon device
      * @type {String}
      */
     Name: '',
-            
+
 <span id='Appverse-Beacon-Beacon-property-UUID'>    /**
 </span>     * The UUID region
      * @type {String}
      */
     UUID: '',
-            
-    
-<span id='Appverse-Beacon-Beacon-property-Distance'>     /** 
+
+
+<span id='Appverse-Beacon-Beacon-property-Distance'>    /** 
 </span>     * Tne Distance name to the beacon 
-	 * &lt;br/&gt;Possible values: 
-	 * {@link Appverse.Beacon#IMMEDIATE},
-	 * {@link Appverse.Beacon#NEAR}, 
-	 * {@link Appverse.Beacon#FAR}, 
-	 * {@link Appverse.Beacon#UNKNOWN}, 
+     * &lt;br/&gt;Possible values: 
+     * {@link Appverse.Beacon#IMMEDIATE},
+     * {@link Appverse.Beacon#NEAR}, 
+     * {@link Appverse.Beacon#FAR}, 
+     * {@link Appverse.Beacon#UNKNOWN}, 
      * @type {int}
      */
     Distance: 0,
-            
+
 <span id='Appverse-Beacon-Beacon-property-Meters'>    /**
 </span>     * The distance to the beacon
      * @type {double}
      */
     Meters: 0,
-            
+
 <span id='Appverse-Beacon-Beacon-property-Major'>    /**
 </span>     * The major version of the device
      * @type {int}
@@ -2609,7 +2946,7 @@ Appverse.Beacon.Beacon = {
      * @type {int}
      */
     Minor: 0,
-            
+
 <span id='Appverse-Beacon-Beacon-property-Timestamp'>    /**
 </span>     * Time when scan was done
      * @type {long}
@@ -2629,34 +2966,127 @@ Appverse.Beacon.Beacon = {
  */
 Appverse.Scanner.MediaQRContent = {
 
-<span id='Appverse-Scanner-MediaQRContent-property-Text'>	/**
+<span id='Appverse-Scanner-MediaQRContent-property-Text'>    /**
 </span>     * The media text included inside the QR Code.
-	 * @type {String}
+     * @type {String}
      */
-	Text: '',
-	
-<span id='Appverse-Scanner-MediaQRContent-property-QRType'>	/**
+    Text: '',
+
+<span id='Appverse-Scanner-MediaQRContent-property-QRType'>    /**
 </span>     * The media QR Code type.
-	 * &lt;br/&gt;Possible values: {@link Appverse.Scanner#QRTYPE_ADDRESSBOOK QRTYPE_ADDRESSBOOK}, 
-	 * {@link Appverse.Scanner#QRTYPE_EMAIL_ADDRESS QRTYPE_EMAIL_ADDRESS}, 
-	 * {@link Appverse.Scanner#QRTYPE_TEXT QRTYPE_TEXT},
-	 * {@link Appverse.Scanner#QRTYPE_GEO QRTYPE_GEO},
-	 * {@link Appverse.Scanner#QRTYPE_TEL QRTYPE_TEL},
-	 * {@link Appverse.Scanner#QRTYPE_SMS QRTYPE_SMS},
-	 * {@link Appverse.Scanner#QRTYPE_CALENDAR QRTYPE_CALENDAR}, 
-	 * {@link Appverse.Scanner#QRTYPE_WIFI QRTYPE_WIFI}, 
-	 * {@link Appverse.Scanner#QRTYPE_ISBN QRTYPE_ISBN}, 
-	 * {@link Appverse.Scanner#QRTYPE_PRODUCT QRTYPE_PRODUCT} &amp; {@link Appverse.Scanner#QRTYPE_URI QRTYPE_URI}
-	 * @type {int}
+     * &lt;br/&gt;Possible values: {@link Appverse.Scanner#QRTYPE_ADDRESSBOOK QRTYPE_ADDRESSBOOK}, 
+     * {@link Appverse.Scanner#QRTYPE_EMAIL_ADDRESS QRTYPE_EMAIL_ADDRESS}, 
+     * {@link Appverse.Scanner#QRTYPE_TEXT QRTYPE_TEXT},
+     * {@link Appverse.Scanner#QRTYPE_GEO QRTYPE_GEO},
+     * {@link Appverse.Scanner#QRTYPE_TEL QRTYPE_TEL},
+     * {@link Appverse.Scanner#QRTYPE_SMS QRTYPE_SMS},
+     * {@link Appverse.Scanner#QRTYPE_CALENDAR QRTYPE_CALENDAR}, 
+     * {@link Appverse.Scanner#QRTYPE_WIFI QRTYPE_WIFI}, 
+     * {@link Appverse.Scanner#QRTYPE_ISBN QRTYPE_ISBN}, 
+     * {@link Appverse.Scanner#QRTYPE_PRODUCT QRTYPE_PRODUCT} &amp; {@link Appverse.Scanner#QRTYPE_URI QRTYPE_URI}
+     * @type {int}
      */
-	QRType: 0,
-	
-<span id='Appverse-Scanner-MediaQRContent-property-BarcodeType'>	/**
+    QRType: 0,
+
+<span id='Appverse-Scanner-MediaQRContent-property-BarcodeType'>    /**
 </span>     * The Barcode type.
-	 * @type {int}
+     * @type {int}
      */
-	BarcodeType: 0,
+    BarcodeType: 0,
+
+<span id='Appverse-Scanner-MediaQRContent-property-Contact'>    /**
+</span>     * The Barcode Contact.
+     * @type {Appverse.Scanner.VCard}
+     */
+    Contact: {},
+
+<span id='Appverse-Scanner-MediaQRContent-property-Coord'>    /**
+</span>     * The Barcode Coordinate.
+     * @type {Appverse.Scanner.Coordinate}
+     */
+    Coord: {},
+
+<span id='Appverse-Scanner-MediaQRContent-property-Size'>    /**
+</span>     * The Barcode size.
+     * @type {int}
+     */
+    Size: 0
 };
+
+<span id='Appverse-Scanner-VCard'>/**
+</span> * @class Appverse.Scanner.VCard
+ * @namespace Appverse.Scanner
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Provides information about a QR Code Contact content.
+ * @author frmi
+ * @version 5.0.12
+ */
+Appverse.Scanner.VCard = {
+<span id='Appverse-Scanner-VCard-property-Name'>    /**
+</span>     * The Contact Name.
+     * @type {String}
+     */
+    Name: '',
+
+<span id='Appverse-Scanner-VCard-property-Address'>    /**
+</span>     * The Contact Address.
+     * @type {String}
+     */
+    Address: '',
+
+<span id='Appverse-Scanner-VCard-property-Phone'>    /**
+</span>     * The Contact Phone.
+     * @type {String}
+     */
+    Phone: '',
+
+<span id='Appverse-Scanner-VCard-property-Email'>    /**
+</span>     * The Contact Email.
+     * @type {String}
+     */
+    Email: '',
+
+<span id='Appverse-Scanner-VCard-property-Url'>    /**
+</span>     * The Contact Url.
+     * @type {String}
+     */
+    Url: '',
+
+<span id='Appverse-Scanner-VCard-property-Note'>    /**
+</span>     * The Contact Note.
+     * @type {String}
+     */
+    Note: ''
+
+}
+
+
+<span id='Appverse-Scanner-Coordinate'>/**
+</span> * @class Appverse.Scanner.Coordinate
+ * @namespace Appverse.Scanner
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Provides information about a QR Code Location content.
+ * @author frmi
+ * @version 5.0.12
+ */
+Appverse.Scanner.Coordinate = {
+
+<span id='Appverse-Scanner-Coordinate-property-Latitude'>    /**
+</span>     * The Barcode Coordinate Latitude.
+     * @type {float}
+     */
+    Latitude: 0,
+
+<span id='Appverse-Scanner-Coordinate-property-Longitude'>    /**
+</span>     * The Barcode Coordinate Longitude.
+     * @type {float}
+     */
+    Longitude: 0
+}
 
 
 <span id='Appverse-PushNotifications-RegistrationToken'>/**
@@ -2671,23 +3101,23 @@ Appverse.Scanner.MediaQRContent = {
  */
 Appverse.PushNotifications.RegistrationToken = {
 
-<span id='Appverse-PushNotifications-RegistrationToken-property-StringRepresentation'>	/**
+<span id='Appverse-PushNotifications-RegistrationToken-property-StringRepresentation'>    /**
 </span>     * The string representation of this registration token (could be in hexadecimal format).
      * @type {String}
      */
-	StringRepresentation : '',
-	
-<span id='Appverse-PushNotifications-RegistrationToken-property-Binary'>	/**
+    StringRepresentation: '',
+
+<span id='Appverse-PushNotifications-RegistrationToken-property-Binary'>    /**
 </span>     * The binary representation of this registration token.
      * @type {byte[]}
      */
-	Binary : [],
-	
-<span id='Appverse-PushNotifications-RegistrationToken-property-BinaryLength'>	/**
+    Binary: [],
+
+<span id='Appverse-PushNotifications-RegistrationToken-property-BinaryLength'>    /**
 </span>     * The length of the binary representation of this registration token.
      * @type {int}
      */
-	BinaryLength : 0,
+    BinaryLength: 0
 
 };
 
@@ -2702,22 +3132,459 @@ Appverse.PushNotifications.RegistrationToken = {
  * @version 5.0
  */
 Appverse.PushNotifications.RegistrationError = {
-<span id='Appverse-PushNotifications-RegistrationError-property-Code'>	/**
+<span id='Appverse-PushNotifications-RegistrationError-property-Code'>    /**
 </span>     * The error code.
-	 * &lt;br/&gt;Possible values: {@link Appverse.Notification#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT}, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID} &amp; {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER}
+     * &lt;br/&gt;Possible values: {@link Appverse.Notification#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT}, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID} &amp; {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER}
      * @type {String}
      */
-	Code : '',
-	
-<span id='Appverse-PushNotifications-RegistrationError-property-LocalizedDescription'>	/**
+    Code: '',
+
+<span id='Appverse-PushNotifications-RegistrationError-property-LocalizedDescription'>    /**
 </span>     * The error description (already localized on the device current locale).
      * @type {String}
      */
-	LocalizedDescription : ''
+    LocalizedDescription: ''
+};
+
+// *****************************************
+// *********** APPVERSE APPSFLYER API **************
+// *****************************************
+
+<span id='Appverse-AppsFlyer-AppsFlyerInitialization'>/**
+</span> * @class Appverse.AppsFlyer.AppsFlyerInitialization
+ * @namespace Appverse.AppsFlyer
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * AppsFlyer Initialization data to be be used for intialize later track event calls.
+ * @author maps
+ * @version 5.0.9
+ */
+Appverse.AppsFlyer.AppsFlyerInitialization = {
+
+<span id='Appverse-AppsFlyer-AppsFlyerInitialization-property-DevKey'>    /**
+</span>     * Unique developer ID accessible from AppsFlyer account.
+     * @type {String}
+     */
+    DevKey: '',
+
+<span id='Appverse-AppsFlyer-AppsFlyerInitialization-property-AppID'>    /**
+</span>     * Application ID (only for iOS - Apple Store ID).
+     * @type {String}
+     */
+    AppID: '',
+
+<span id='Appverse-AppsFlyer-AppsFlyerInitialization-property-CurrencyCode'>    /**
+</span>     * Acceptable ISO currency code. Default is USD.
+     * @type {String}
+     */
+    CurrencyCode: 'USD',
+
+<span id='Appverse-AppsFlyer-AppsFlyerInitialization-property-CustomerUserID'>    /**
+</span>     * Customer ID that will be added to the reports. Optional.
+     * @type {String}
+     */
+    CustomerUserID: '',
+
+<span id='Appverse-AppsFlyer-AppsFlyerInitialization-property-CommunicationsProtocol'>    /**
+</span>     * Enumeration: 0 (HTTP) or 1 (HTTPs) (default is HTTP)
+     * @type {int}
+     */
+    CommunicationsProtocol: 0,
+
+<span id='Appverse-AppsFlyer-AppsFlyerInitialization-property-UseHttpFallback'>    /**
+</span>     * True to allow the HTTP fallback in case HTTPs is configured but not enabled. Default is false.
+     * @type {Boolean}
+     */
+    UseHttpFallback: false
+
+};
+
+<span id='Appverse-AppsFlyer-AppsFlyerTrackEvent'>/**
+</span> * @class Appverse.AppsFlyer.AppsFlyerTrackEvent
+ * @namespace Appverse.AppsFlyer
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * AppsFlyer track event data.
+ * @author maps
+ * @version 5.0.9
+ */
+Appverse.AppsFlyer.AppsFlyerTrackEvent = {
+
+<span id='Appverse-AppsFlyer-AppsFlyerTrackEvent-property-EventName'>    /**
+</span>     * The track event name.
+     * @type {String}
+     */
+    EventName: '',
+
+<span id='Appverse-AppsFlyer-AppsFlyerTrackEvent-property-EventRevenueValue'>    /**
+</span>     * The track event revenue value.
+     * @type {String}
+     */
+    EventRevenueValue: ''
+
 };
 
 
+// *****************************************
+// *********** APPVERSE ADFORM API **************
+// *****************************************
 
+<span id='Appverse-Adform-AdformTrackPoint'>/**
+</span> * @class Appverse.Adform.AdformTrackPoint
+ * @namespace Appverse.Adform
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Adform Tracking Point Obj
+ * @author frmi
+ * @version 5.0.10
+ */
+Appverse.Adform.AdformTrackPoint = {
+
+<span id='Appverse-Adform-AdformTrackPoint-property-SectionName'>    /**
+</span>     * Custom section name for that track point.
+     * @type {String}
+     */
+    SectionName: '',
+
+<span id='Appverse-Adform-AdformTrackPoint-property-CustomParameters'>    /**
+</span>     * Array of additional parameters to be tracked for this trackpoint.
+     * @type {Appverse.Adform.AdformCustomParameter} array
+     */
+    CustomParameters: ''
+
+};
+
+
+<span id='Appverse-Adform-AdformCustomParameter'>/**
+</span> * @class Appverse.Adform.AdformCustomParameter
+ * @namespace Appverse.Adform
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Parameter to be tracked for this trackpoint.
+ * @author frmi
+ * @version 5.0.10
+ */
+Appverse.Adform.AdformCustomParameter = {
+
+<span id='Appverse-Adform-AdformCustomParameter-property-Key'>    /**
+</span>     * The name of the key
+     * @type {String}
+     */
+    Key: '',
+
+<span id='Appverse-Adform-AdformCustomParameter-property-Value'>    /**
+</span>     * The value to be stored
+     * @type {String}
+     */
+    Value: ''
+};
+
+
+// ************************************************
+// *********** APPVERSE InfoCert API **************
+// ************************************************
+
+<span id='Appverse-InfoCert-DeviceDataID'>/**
+</span> * @class Appverse.InfoCert.DeviceDataID
+ * @namespace Appverse.InfoCert
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * DeviceIdData from de device instance
+ * @author frmi
+ * @version 5.0.10
+ */
+Appverse.InfoCert.DeviceDataID = {
+<span id='Appverse-InfoCert-DeviceDataID-property-HardwareId'>    /**
+</span>     * The hardwareid returned
+     * @type {String}
+     */
+    HardwareId: '',
+
+<span id='Appverse-InfoCert-DeviceDataID-property-SoftwareId'>    /**
+</span>     * The hardwareid returned
+     * @type {String}
+     */
+    SoftwareId: ''
+}
+
+<span id='Appverse-InfoCert-TransactionResult'>/**
+</span> * @class Appverse.InfoCert.TransactionResult
+ * @namespace Appverse.InfoCert
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * TransactionResult returned from the server
+ * @author frmi
+ * @version 5.0.10
+ */
+Appverse.InfoCert.TransactionResult = {
+<span id='Appverse-InfoCert-TransactionResult-property-TransactionId'>    /**
+</span>     * The trasaction id 
+     * @type {long}
+     */
+    TransactionId: 0,
+
+<span id='Appverse-InfoCert-TransactionResult-property-OtpData'>    /**
+</span>     * The OTP token
+     * @type {String}
+     */
+    OtpData: '',
+
+<span id='Appverse-InfoCert-TransactionResult-property-DeviceDataId'>    /**
+</span>     * The DeviceID data 
+     * @type {Appverse.InfoCert.DeviceDataID}
+     */
+    DeviceDataId: {}
+
+}
+
+<span id='Appverse-InfoCert-STPError'>/**
+</span> * @class Appverse.InfoCert.STPError
+ * @namespace Appverse.InfoCert
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * STPError returned from the server
+ * @author frmi
+ * @version 5.0.10
+ */
+Appverse.InfoCert.STPError = {
+<span id='Appverse-InfoCert-STPError-property-Code'>    /**
+</span>     * The error code
+     * @type {int}
+     */
+    Code: 0,
+
+<span id='Appverse-InfoCert-STPError-property-Description'>    /**
+</span>     * The error description
+     * @type {String}
+     */
+    Description: ''
+}
+
+
+
+// ************************************************
+// *********** APPVERSE RSA API **************
+// ************************************************
+
+<span id='Appverse-RSA-InitializationData'>/**
+</span> * @class Appverse.RSA.InitializationData
+ * @namespace Appverse.RSA
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Parameter to init RSA SDK
+ * @author frmi
+ * @version 5.0.11
+ */
+Appverse.RSA.InitializationData = {
+
+<span id='Appverse-RSA-InitializationData-property-Mode'>    /**
+</span>     * Mode for collecting info
+     * &lt;br/&gt;Possible values: {@link Appverse.RSA#BASIC_DEVICE_DATA_ONLY BASIC_DEVICE_DATA_ONLY},  {@link Appverse.RSA#DEVICE_DATA_ONLY DEVICE_DATA_ONLY},  {@link Appverse.RSA#ALL_DEVICE_DATA_AND_LOCATION ALL_DEVICE_DATA_AND_LOCATION}
+     * @author frmi
+     */
+    Mode: 0,
+
+<span id='Appverse-RSA-InitializationData-property-Timeout'>    /**
+</span>     * The minutes for collect location info
+     * @type {int}
+     * @version 5.0.11
+     */
+    Timeout: 0,
+
+<span id='Appverse-RSA-InitializationData-property-BestLocationAge'>    /**
+</span>     * The minutes for elapsed time since the last measure of location.
+     * @type {int}
+     */
+    BestLocationAge: 0,
+
+<span id='Appverse-RSA-InitializationData-property-MaxLocationAge'>    /**
+</span>     * The days for maximum age of the cached location.
+     * @type {int}
+     */
+    MaxLocationAge: 0,
+
+<span id='Appverse-RSA-InitializationData-property-Accuracy'>    /**
+</span>     * The radius(in meters) of accuracy required to stop the collection of location data.
+     * @type {int}
+     */
+    Accuracy: 0,
+
+<span id='Appverse-RSA-InitializationData-property-SilentPeriod'>    /**
+</span>     * The minutes required to pass between location collection attempts.
+     * @type {int}
+     */
+    SilentPeriod: 0,
+
+<span id='Appverse-RSA-InitializationData-property-Timestamp'>    /**
+</span>     * Wether the timestamp should be added to json or not
+     * &lt;br/&gt;Possible values: 0=false, 1=true
+     * @type {int}
+     */
+    Timestamp: 0
+
+}
+
+
+
+// ************************************************
+// *********** APPVERSE USPG API **************
+// ************************************************
+
+
+
+<span id='Appverse-USPG-Param'>/**
+</span> * @class Appverse.USPG.Param
+ * @namespace Appverse.USPG
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Provides additional information support
+ * @author frmi
+ * @version 5.0.12
+ */
+Appverse.USPG.Param = {
+<span id='Appverse-USPG-Param-property-Key'>    /**
+</span>     * The name of the key
+     * @type {String}
+     */
+    Key: '',
+
+<span id='Appverse-USPG-Param-property-Value'>    /**
+</span>     * The value to be stored
+     * @type {String}
+     */
+    Value: ''
+
+};
+
+<span id='Appverse-USPG-ID'>/**
+</span> * @class Appverse.USPG.ID
+ * @namespace Appverse.USPG
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Provides information about a USPG user
+ * @author frmi
+ * @version 5.0.12
+ */
+Appverse.USPG.ID = {
+<span id='Appverse-USPG-ID-property-ApplicationId'>    /**
+</span>     * Identification defined by UniCredit for single application of the single Merchant that integrates the library
+     * @type {String}
+     */
+    ApplicationId: '',
+
+<span id='Appverse-USPG-ID-property-MerchantId'>    /**
+</span>     * Identification defined by UniCredit for single Merchant
+     * @type {String}
+     */
+    MerchantId: '',
+
+<span id='Appverse-USPG-ID-property-AppVersion'>    /**
+</span>     * Third-party application (Merchant)
+     * @type {String}
+     */
+    AppVersion: '',
+
+<span id='Appverse-USPG-ID-property-Username'>    /**
+</span>     * User identification (username) on the third part platform (Merchant) that integrates the library
+     * @type {String}
+     */
+    Username: '',
+
+<span id='Appverse-USPG-ID-property-Params'>    /**
+</span>     * Array of {Appverse.USPG.Param} for additional parameters. For future use, not currently used.
+     * @type {Appverse.USPG.Param}
+     */
+    Params: []
+
+};
+
+
+<span id='Appverse-USPG-Payment'>/**
+</span> * @class Appverse.USPG.Payment
+ * @namespace Appverse.USPG
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Provides information about a USPG Payment for its authorization
+ * @author frmi
+ * @version 5.0.12
+ */
+Appverse.USPG.Payment = {
+<span id='Appverse-USPG-Payment-property-Amount'>    /**
+</span>     * The amount of the payment to be made
+     * @type {String}
+     */
+    Amount: '',
+
+<span id='Appverse-USPG-Payment-property-Currency'>    /**
+</span>     * Currency in which the payment will be made.
+     * if null EUR will be used
+     * @type {String}
+     */
+    Currency: '',
+
+<span id='Appverse-USPG-Payment-property-PaymentID'>    /**
+</span>     * Identification of the payment generated by third-party application
+     * @type {String}
+     */
+    PaymentID: '',
+
+<span id='Appverse-USPG-Payment-property-Pin'>    /**
+</span>     * Pin to secure the payment
+     * @type {String}
+     */
+    Pin: '',
+
+<span id='Appverse-USPG-Payment-property-Description'>    /**
+</span>     * Description of the payment
+     * @type {String}
+     */
+    Description: '',
+
+<span id='Appverse-USPG-Payment-property-Params'>    /**
+</span>     * Array of {Appverse.USPG.Param} for additional parameters. For future use, not currently used
+     * @type {Appverse.USPG.Param}
+     */
+    Params: []
+
+};
+
+
+<span id='Appverse-USPG-Response'>/**
+</span> * @class Appverse.USPG.Response
+ * @namespace Appverse.USPG
+ * @extends Object
+ * This is a sample class.&lt;br/&gt;&lt;br/&gt;
+ * Used only for Documentation purposes (the class does not really exist in this package, do not try to instantiate it).&lt;br/&gt;&lt;br/&gt;
+ * Provides information about a USPG Response
+ * @author frmi
+ * @version 5.0.12
+ */
+Appverse.USPG.Response = {
+<span id='Appverse-USPG-Response-property-Code'>    /**
+</span>     * An enumerable code that indicates the operation , at high level, outcome
+     * @type {String}
+     */
+    Code: '',
+
+<span id='Appverse-USPG-Response-property-Message'>    /**
+</span>     * A string containing an eventual natural language message corresponding to the result of the operation. The message can be nil if the return code is &quot;USPG_RC_OK.&quot;
+     * @type {String}
+     */
+    Message: '',
+
+
+};
 </pre>
 </body>
 </html>

@@ -15,143 +15,171 @@
   </script>
 </head>
 <body onload="prettyPrint(); highlight();">
-  <pre class="prettyprint lang-js">
-
-/*
- * Beacon INTERFACES
+  <pre class="prettyprint lang-js">/*
+ * PUSH NOTIFICATIONS INTERFACES
  */
 
-<span id='Appverse-Beacon-method-constructor'><span id='Appverse-Beacon'>/**
-</span></span> * @class Appverse.Beacon 
- * Module class to listen for Beacon events.  
- * &lt;br&gt;This interface provides features for beacons handling.&lt;br&gt;
- * &lt;br&gt; @version 4.7
- * &lt;pre&gt;Usage: Appverse.Beacon.&amp;lt;metodName&amp;gt;([params]).&lt;br&gt;Example: Appverse.Beacon.StartMonitoringRegion('xxx-xxxx-xxxx').&lt;/pre&gt;
+<span id='Appverse-PushNotifications-method-constructor'><span id='Appverse-PushNotifications'>/**
+</span></span> * @class Appverse.PushNotifications
+ * Module class to access Appverse PushNotifications module interface.
+ * &lt;br&gt;This interface provides features to register and unregister the device and app to receive remote notifications.&lt;br&gt;
+ * &lt;br&gt; @version 5.0.3
+ * &lt;pre&gt;Usage: Appverse.PushNotifications.&amp;lt;metodName&amp;gt;([params]).&lt;br&gt;Example: Appverse.PushNotifications.RegisterForRemoteNotifications('',[1,2]).&lt;/pre&gt;
  * @component
  * @aside guide appverse_modules
- * @constructor Constructs a new Beacon interface.
- * @return {Appverse.Beacon} A new Beacon interface.
+ * @constructor Constructs a new PushNotifications interface.
+ * @return {Appverse.PushNotifications} A new PushNotifications interface.
  */
-Beacon = function() {
-<span id='Appverse-Beacon-cfg-serviceName'>    /**
+PushNotifications = function() {
+<span id='Appverse-PushNotifications-cfg-serviceName'>    /**
 </span>     * @cfg {String}
-     * Beacon service name (as configured on Platform Service Locator).
-     * &lt;br&gt;Method to be overrided by JS applications, to handle this event.
-     * &lt;br&gt; @version 4.7
+     * PushNotifications service name (as configured on Platform Service Locator).
+     * &lt;br&gt; @version 5.0.3
      */
-    this.serviceName = &quot;beacon&quot;;
-	
-<span id='Appverse-Beacon-property-IMMEDIATE'>	/**
-</span>     * Distance Type as Immediate.
-     * &lt;br&gt; @version 4.7
+    this.serviceName = &quot;push&quot;;
+
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_NONE'>    /**
+</span>     * None Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
      * @type int
      */
-    this.IMMEDIATE = 0;
-	
-<span id='Appverse-Beacon-property-NEAR'>	/**
-</span>     * Distance Type as Near.
-     * &lt;br&gt; @version 4.7
+    this.REMOTE_NOTIFICATION_TYPE_NONE = 0;
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_BADGE'>    /**
+</span>     * Badge Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
      * @type int
      */
-    this.NEAR = 1;
-	
-<span id='Appverse-Beacon-property-FAR'>	/**
-</span>     * Distance Type as Far.
-     * &lt;br&gt; @version 4.7
+    this.REMOTE_NOTIFICATION_TYPE_BADGE = 1;
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_SOUND'>    /**
+</span>     * Sound Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
      * @type int
      */
-    this.FAR = 2;
-	
-<span id='Appverse-Beacon-property-UNKNOWN'>	/**
-</span>     * Distance Type as Unknown.
-     * &lt;br&gt; @version 4.7
+    this.REMOTE_NOTIFICATION_TYPE_SOUND = 2;
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_ALERT'>    /**
+</span>     * Alert Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
      * @type int
      */
-    this.UNKNOWN = 3;
-	
-<span id='Appverse-Beacon-event-OnEntered'>	/**
-</span>     * @event OnEntered Event when called when a previously detected beacon is found again.
-     * &lt;br&gt;Method to be overrided by JS applications, to handle this event.
-     * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
-	 * @param {Appverse.Beacon.Beacon[]} beacons
-     * @aside guide application_listeners
-     * &lt;br&gt; @version 4.7
+    this.REMOTE_NOTIFICATION_TYPE_ALERT = 3;
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY'>    /**
+</span>     * Content Availability Remote Notification Type.
+     * &lt;br&gt; @version 5.0.3
+     * @type int
+     */
+    this.REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY = 4;
+
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT'>    /**
+</span>     * Default registration exception code for remote notifications.
+     * &lt;br&gt; @version 5.0.3
+     * @type String
+     */
+    this.REMOTE_NOTIFICATION_REGISTRATION_FAILURE_DEFAULT = &quot;99&quot;;
+
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID'>    /**
+</span>     * Registration exception code for remote notifications indicating unsuccessful registration due to a different sender id previous registration.
+     * &lt;br&gt; @version 5.0.3
+     * @type String
+     */
+    this.REMOTE_NOTIFICATION_REGISTRATION_FAILURE_MISMATCH_SENDERID = &quot;10&quot;;
+
+<span id='Appverse-PushNotifications-property-REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER'>    /**
+</span>     * Registration exception code send by the GCM Server for remote notifications (both registration and unregistration processes)
+     * &lt;br&gt; @version 5.0.3
+     * @type String
+     */
+    this.REMOTE_NOTIFICATION_REGISTRATION_FAILURE_GCM_SERVER = &quot;11&quot;;
+
+<span id='Appverse-PushNotifications-event-OnRemoteNotificationReceived'>	/**
+</span>	 * @event OnRemoteNotificationReceived Fired on remote notification arrival.
+	 * &lt;br&gt; For further information see, {@link Appverse.Notification.NotificationData NotificationData}.
+     * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * @aside guide application_listeners
+	 * &lt;br&gt; @version 5.0.3
+	 * @event
+	 * @param {Appverse.Notification.NotificationData} notificationData The notification data received (visual data and custom provider data)
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+	 *
 	 */
-    this.OnEntered = function(beacons) {
-    };
+	this.OnRemoteNotificationReceived = function(notificationData) {
+      console.log(arguments);
+      console.log('%c Override OnRemoteNotificationReceived method! ', 'background: #222; color: #bada55');
+	};
 
-<span id='Appverse-Beacon-event-OnExited'>    /**
-</span>     * @event OnExited Event when called when a previously detected beacon is not found.
-     * &lt;br&gt;Method to be overrided by JS applications, to handle this event.
-     * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
-	 * @param {Appverse.Beacon.Beacon[]} beacons
-     * @aside guide application_listeners
-     * &lt;br&gt; @version 4.7
-     */
-    this.OnExited = function(beacons) {
-    };
+<span id='Appverse-PushNotifications-event-OnRegisterForRemoteNotificationsSuccess'>	/**
+</span>	 * @event OnRegisterForRemoteNotificationsSuccess Fired on successfully registration for remote notifications.
+	 * &lt;br&gt; For further information see, {@link Appverse.PushNotifications.RegistrationToken RegistrationToken}.
+     * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * @aside guide application_listeners
+	 * &lt;br&gt; @version 5.0.3
+	 * @event
+	 * @param {Appverse.PushNotifications.RegistrationToken} registrationToken The registration token (&quot;device token&quot; for iOS or &quot;registration ID&quot; for Android) data received from the Notifications Service (APNs for iOS or GMC for Android).
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+	 *
+	 */
+	this.OnRegisterForRemoteNotificationsSuccess = function(registrationToken) {
+      console.log(arguments);
+      console.log('%c Override OnRegisterForRemoteNotificationsSuccess method! ', 'background: #222; color: #bada55');
+	};
 
-<span id='Appverse-Beacon-event-OnDiscover'>    /**
-</span>     * @event OnDiscover Event called when a new beacon is found.
-     * &lt;br&gt;Method to be overrided by JS applications, to handle this event.
-     * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
-     * @param {Appverse.Beacon.Beacon[]} beacons
-     * @aside guide application_listeners
-     * &lt;br&gt; @version 4.7
-     */
-    this.OnDiscover = function(beacons) {
-    };
-	
-<span id='Appverse-Beacon-event-OnUpdateProximity'>    /**
-</span>     * @event OnUpdateProximity Event called when the distance to the known beacon changed.
-     * &lt;br&gt;Method to be overrided by JS applications, to handle this event.
-     * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
-	 * @param {Appverse.Beacon.Beacon} beacon
-     * @param {double} from
-     * @param {double} to
-     * @aside guide application_listeners
-     * &lt;br&gt; @version 4.7
-     */
-    this.OnUpdateProximity = function(beacon, from, to) {
-    };
+<span id='Appverse-PushNotifications-event-OnRegisterForRemoteNotificationsFailure'>	/**
+</span>	 * @event OnRegisterForRemoteNotificationsFailure Fired on failed registration for remote notifications.
+	 * &lt;br&gt; For further information see, {@link Appverse.PushNotifications.RegistrationError RegistrationError}.
+     * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * @aside guide application_listeners
+	 * &lt;br&gt; @version 5.0.3
+	 * @event
+	 * @param {Appverse.PushNotifications.RegistrationError} registrationError The registration error data received from the Notifications Service (APNs for iOS or GMC for Android).
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+	 *
+	 */
+	this.OnRegisterForRemoteNotificationsFailure = function(registrationError) {
+      console.log(arguments);
+      console.log('%c Override OnRegisterForRemoteNotificationsFailure method! ', 'background: #222; color: #bada55');
+	};
 
-}
+<span id='Appverse-PushNotifications-event-OnUnRegisterForRemoteNotificationsSuccess'>	/**
+</span>	 * @event OnUnRegisterForRemoteNotificationsSuccess Fired on successfully unregistration for remote notifications.
+     * &lt;br&gt; Method to be overrided by JS applications, to handle this event.
+	 * @aside guide application_listeners
+	 * &lt;br&gt; @version 5.0.3
+	 * @event
+	 * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/error.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
+	 *
+	 */
+	this.OnUnRegisterForRemoteNotificationsSuccess = function() {
+      console.log(arguments);
+      console.log('%c Override OnUnRegisterForRemoteNotificationsSuccess method! ', 'background: #222; color: #bada55');
+	};
 
-Appverse.Beacon = new Beacon();
-
-
-            
-<span id='Appverse-Beacon-method-StartMonitoringRegion'>/**
-</span> * Start monitoring a region looking for beacons with an UUID
- * &lt;br&gt; @version 4.7
- * @param {String} id of the region
- * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
- */
-Beacon.prototype.StartMonitoringRegion = function(id)
-{
-    post_to_url_async(Appverse.Beacon.serviceName, &quot;StartMonitoringRegion&quot;, get_params([id]));
 };
 
-<span id='Appverse-Beacon-method-StartMonitoringAllRegions'>/**
-</span> * Start monitoring looking for all the beacons
- * &lt;br&gt; @version 4.7 
+Appverse.PushNotifications = new PushNotifications();
+
+<span id='Appverse-PushNotifications-method-RegisterForRemoteNotifications'>/**
+</span> * Registers this application and device for receiving remote notifications.
+ * &lt;br&gt; Returned data should be handled by overriding the corresponding Platform Listeners Appverse.OnRegisterForRemoteNotificationsSuccess and Appverse.OnRegisterForRemoteNotificationsFailure
+ * &lt;br&gt; @version 5.0.3
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ * @param {String} senderId The sender identifier. This parameter is required for some platforms (such as the Android platform), in iOS will be just ignored.
+ * @param {int[]} types The remote notifications types accepted by this application. For further information see, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_NONE REMOTE_NOTIFICATION_TYPE_NONE}, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_BADGE REMOTE_NOTIFICATION_TYPE_BADGE}, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_SOUND REMOTE_NOTIFICATION_TYPE_SOUND}, {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_ALERT REMOTE_NOTIFICATION_TYPE_ALERT} and {@link Appverse.PushNotifications#REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY REMOTE_NOTIFICATION_TYPE_CONTENT_AVAILABILITY}
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
  */
-Beacon.prototype.StartMonitoringAllRegions = function()
+PushNotifications.prototype.RegisterForRemoteNotifications = function(senderId, types)
 {
-    post_to_url_async(Appverse.Beacon.serviceName, &quot;StartMonitoringAllRegions&quot;, null);
+    post_to_url_async(Appverse.PushNotifications.serviceName, &quot;RegisterForRemoteNotifications&quot;, get_params([senderId, types]), null, null);
 };
 
-<span id='Appverse-Beacon-method-StopMonitoringBeacons'>/**
-</span> * Stop monitoring for beacons
- * &lt;br&gt; @version 4.7
+<span id='Appverse-PushNotifications-method-UnRegisterForRemoteNotifications'>/**
+</span> * Un-registers this application and device from receiving remote notifications.
+ * &lt;br&gt; Returned data should be handled by overriding the corresponding Platform Listeners Appverse.OnUnRegisterForRemoteNotificationsSuccess
+ * &lt;br&gt; @version 5.0.3 (listener callback only available on 4.0)
  * @method
- * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/error.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/error.png&quot;/&gt;&lt;/pre&gt;
+ * &lt;pre&gt; Available in: &lt;br&gt; iOS &lt;img src=&quot;resources/images/check.png&quot;/&gt; | android &lt;img src=&quot;resources/images/check.png&quot;/&gt; | windows &lt;img src=&quot;resources/images/check.png&quot;/&gt; | emulator &lt;img src=&quot;resources/images/check.png&quot;/&gt;&lt;/pre&gt;
  */
-Beacon.prototype.StopMonitoringBeacons = function() {
-    post_to_url_async(Appverse.Beacon.serviceName, &quot;StopMonitoringBeacons&quot;, null);
+PushNotifications.prototype.UnRegisterForRemoteNotifications = function()
+{
+    post_to_url_async(Appverse.PushNotifications.serviceName, &quot;UnRegisterForRemoteNotifications&quot;, null, null, null);
 };
 </pre>
 </body>

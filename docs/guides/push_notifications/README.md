@@ -4,7 +4,7 @@ Enabling Push Notifications
 On iOS devices
 ---------------------
 
-Ensure that your application "bundle id" has been enabled to receive <b>Push Notifications</b> on the <b>Apple iOS Developer Program Portal</b>.
+Ensure that your application "bundle id" has been enabled to receive <b>Push Notifications</b> on the <b>Apple iOS Developer Program Portal</b> and you should always send the <b>mobile probision file</b> when using this functionality.
 
 There are two environments to be enabled per application:
 
@@ -22,6 +22,20 @@ Once you application is configured for enabling push notifications, you could fo
 
 On Android devices
 ---------------------
+
+#UPDATE
+Now you need to include new app icons for the notifications in android above Lollipop: this new icons must be white-on-transparent background images (silhouette).
+<br>
+This icons must be placed in the AndroidResources folder named as follows with the according dimensions:
+
+- Icon-notification-36.png 
+- Icon-notification-48.png
+- Icon-notification-72.png
+- Icon-notification-96.png
+- Icon-notification-144.png
+- Icon-notification-192.png
+
+Additionally you can specify the color of the background for the notification using the <b>bgcolor</b> node in the notification-config.xml
 
 ### Sender ID
 
@@ -43,6 +57,8 @@ The configuration file should be placed at the <b>/app/config/</b> folder with t
 				<field name="largeicon" type="RN_LARGE_ICON"/>
 				<field name="smallicon" type="RN_SMALL_ICON"/>
 				<field name="ledcolor" type="RN_LED_COLOR_ARGB"/>
+
+				<style name="bgcolor" value="#213e7f"/>
 			</android>
 		</notification-config>	
 
@@ -118,7 +134,8 @@ Your app should override some **platform event listeners** in order to:
 	
 * Be notified about an **INCOMING REMOTE NOTIFICATION**,  by overriding the **Appverse.PushNotifications.OnRemoteNotificationReceived** method.
 	* When called, this method will receive as an argument the **notification data** information.
-	* This method is not called when the notification is received and the application is not running.
+	* This method is called when the notification is received whether the application is running or if the app is launched from a notification item, but is not called if you receive a notification but you do not use the notification item to open the app. ****
+	
 	* For further details check the **Appverse.Notification.NotificationData** class.
 	
 * Be notified about a **SUCESSFUL UNREGISTRATION**, by overriding the **Appverse.PushNotifications.OnUnRegisterForRemoteNotificationsSuccess** method. <br/><img src="resources/images/warning.png"/> This method is just called on **Android** Platform.

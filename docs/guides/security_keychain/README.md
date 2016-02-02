@@ -9,6 +9,9 @@ For example it could be used to implement a Single Sign-On (SSO) authentication 
 
 ## Security new API methods
 
+### UPDATE: There is a new attribute in the KeyPair Object <a href="http://builder.gft.com/appstore/appverse-docs/index.html#!/api/Appverse.Security.KeyPair-property-Encryption">Encryption</a>: If you send a true in this attribute the platform will encode(for store methods) the value,  and decode (for Get methods) the value.
+
+
 The functionality to access this storage system is located in the **Security API**.
 Below you can find a list of the methods used to access the storage and a brief description of their behaviour.
 
@@ -125,6 +128,92 @@ For this application to read something from the shared keychain it should execut
 
 **In order for this code to successfully retrieve an object value all the previously listed requirements must be met**
 Example at Appverse Github: <a href="https://github.com/Appverse/appverse-mobile/tree/master/appverse-samples" target="_blank">iOS Native Application Example</a>
+
+
+## Security Keychain Protection
+
+We have expanded the **Appverse.Security** API by including a protection feature when accessing an stored security keychain item.
+
+This feature is known in iOS as **Access Control Lists** (ACLs).
+
+This feature is not included by default in the Appverse Security API. Developers have to explicitly configure which keychain items the application wants to protect.
+
+### How to protect keychain items
+
+The protection is enabled when a key is stored (individually), but the project selects which keys will be protected on build time, using a new configuration file.
+
+#### "security-config.xml" file
+
+
+The following is an example of the "security-config.xml" configuration file that should be located at the **/Web/app/config/** folder (like all Appverse API config files):
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+		<security-config>
+
+		<!--
+		List here the keys of the security keychain items that must be protected by passcode. 
+		ONLY FOR iOS devices (available since iOS 8 and for iPhone 5s and above devices) 
+		
+		This is a expanded feature in the Security Keychain that includes the use of ACLs.
+		
+		A device with Touch ID enabled will first request the user to enter the fingerprint 
+		in order to get the value of any protected key, or passcode (as a second choice)
+		
+		This protection implies:
+			- access to these security keychain items is limited to this device 
+			and requires a passcode to be set 
+			- and the data is only available if the device is currently unlocked.
+			- if the user removes the passcode on the device, these items are automatically removed.	
+			- if a request to the keychain returns multiple matching items, 
+			authentication may be required (if any of hte items are passcode protected)
+		-->
+			<keychain-items-with-passcode-protection>
+		
+				<key>mykey1</key>
+				<key>mykey3</key>
+		
+			</keychain-items-with-passcode-protection>
+
+	</security-config>
+
+
+### What does it imply?
+
+Each time a protected key is accessed, by any of the following methods, the user will be prompted for authenticating:
+
+* Calling the **Appverse.Security.GetStoredKeyValuePair** method that matches a previous protected stored item, 
+	+ or by calling **Appverse.Security.GetStoredKeyValuePairs** passing an array of keys to match that contains any previous protected stored item key.
+* Calling the **Appverse.Security.StoreKeyValuePair** method that updates any previous protected stored item, 
+	+ or by calling **Appverse.Security.StoreKeyValuePairs** passing an array of keys to store that contains any previous protected stored item key.
+* Calling the **Appverse.Security.RemoveStoredKeyValuePair** method that removes any previous protected stored item, 
+	+ or by calling **Appverse.Security.RemoveStoredKeyValuePairs** passing an array of keys to remove that contains any previous protected stored item key.
+
+Only for iOS >= 8, otherwise the key items won't be protected.
+
+If the device hasn't got available the touch ID (but has a passcode activated), the user will be prompted to enter the passcode directly.
+
+This protection implies that:
+
+* the access to these security keychain items is limited to this device and requires a passcode to be set 
+* the data is only available if the device is currently unlocked
+* if the user removes the passcode on the device, **these items are automatically removed** from the application keychain.	
+* if a request to the keychain returns multiple matching items, authentication may be required (in case any of the items are passcode/touch_id protected)
+
+In this case, the authentication screen (native overlay) is slightly different from the other in Local Authentication.
+
+<img src="guides/touchid/touch-id-screen-keychain-protected.png" width="320" />
+
+There is no reason text here (projecs cannot customize this screen), and the fallback mechanism is implemented by the Operating System requesting the device passcode.
+
+<img src="guides/touchid/passcode-auth-screen.png" width="320" style="border: 1px solid;"/>
+
+
+**BEWARE**
+
++ In order to get an emulation, you must activate the according Custom Result under the Security submenu, as it says, it will work only under an iOS 8 device. 
+
+<img src="guides/touchid/touchidemulation.png" width="320" />
+
 
 ### In Android
 

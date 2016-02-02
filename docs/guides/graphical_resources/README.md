@@ -310,12 +310,14 @@ Android - Splash Screens
 
 <pre>
 
-Name						Build Required		Dimensions			Description					Devices
-------------				---------------		------------		------------				------------
-launch_portrait.png			[optional]			 640 x  960 px		Launch Image - Portrait		Smartphone
-launch_portrait_tablet.png	[optional]			 800 x 1232 px		Launch Image - Portrait		Tablet
-launch_landscape.png		[optional]			1024 x  748 px		Launch Image - Landscape	Smartphone
-launch_landscape_tablet.png	[optional]			1280 x  752 px		Launch Image - Landscape	Tablet
+Name						Build Required		Dimensions				Description							Devices
+------------				---------------		------------			------------						------------
+launch_portrait.png			[optional]			 640 x  960 px			Launch Image - Portrait				Smartphone
+launch_portrait_tablet.png	[optional]			 800 x 1232 px			Launch Image - Portrait				Tablet
+launch_landscape.png		[optional]			1024 x  748 px			Launch Image - Landscape			Smartphone
+launch_landscape_tablet.png	[optional]			1280 x  752 px			Launch Image - Landscape			Tablet
+
+splash.9.png 				[optional]			Not fixed dimensions	Launch Image - All orientations		Smartphone/Tablet
 
 </pre>
 
@@ -345,10 +347,21 @@ launch_landscape_tablet.png	[optional]			1280 x  752 px		Launch Image - Landscap
   <figcaption style="color:grey;text-align:center;">launch_landscape_tablet.png<br>[1280 x 752 px]</figcaption>
 </figure>
 </td>
+<td style="vertical-align:bottom;text-align: center;">
+<figure>
+  <img src="resources/images/splash.9.png" title="Smartphone/Tablet Launch Image - All orientations" style="border: 5px dashed grey; padding:2px;"  width="302px" height="110px">
+  <figcaption style="color:grey;text-align:center;">splash.9..png<br>[- x - px]</figcaption>
+</figure>
+</td>
 </tr>
 </table>
 
 (*) Images displayed reduced (real dimension on download)
+
+(*) When the splash.9.png is present, the other android splash pngs will be removed from the binary and the 9-patch PNG will be used as the app splash screen.
+
+(*) A 9-patch image is automatically adjusted for the container view. For the splash, it is recommended to use a center logo that will be expanded to all corners.
+
 
 Windows Phone 8.1 - Icons
 --------------------
